@@ -7,8 +7,15 @@ const docteurSchema = new Schema({
 	email: { type: String, required: true, unique: true },
 	telephone: { type: String, required: true },
 	password: { type: String, required: true },
-	specialite: { type: String, required: true },
 	photo: { type: String }, // URL de la photo
+	specialite: { 
+		type: mongoose.Schema.Types.ObjectId, 
+		ref: 'Specialite', //Référence de la collection des spécialités
+		required: true 
+	  },
+	  disponibilites: [{ 
+		date: String, 
+		heure: String 
+	  }]
 	});
-module.exports = Docteur: mongoose.model('Docteur', docteurSchema);
-
+module.exports = mongoose.model('Docteur', docteurSchema);
