@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-export const patientSchema = new Schema({
+export const PatientSchema = new Schema({
   id: { type: Number, required: true },
   nom: { type: String, required: true },
   prenom: { type: String, required: true },
@@ -13,3 +13,5 @@ export const patientSchema = new Schema({
   date_naissance: { type: Date, required: true },
   sexe: { type: String, required: true },
 });
+
+module.exports = mongoose.model('Patient', PatientSchema);
