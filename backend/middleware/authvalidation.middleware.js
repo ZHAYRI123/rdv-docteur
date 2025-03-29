@@ -1,7 +1,7 @@
 /**work on the user input validation. 
  * We create a function called login-validation and register-validation in the “middleware” file and create a file called “authvalidation.middleware.js”.
+ * NB: we use “validatorjs ”package for validation,install it using this command “npm install validatorjs” */
 
-NB: we use “validatorjs ”package for validation,install it using this command “npm install validatorjs” */
 const validator = require("../utils/validate")
 const regsiterValidation = async (req, res, next) => {
     const validateRule = {
