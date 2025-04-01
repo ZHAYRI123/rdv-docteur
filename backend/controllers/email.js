@@ -45,96 +45,101 @@ const rejectionMail = (to, receiver_name, sender_name, reason) => {
 	const mailOptions = {
 		from: process.env.EMAIL,
 		to: to,
-		subject: 'Consultation Rejection',
-		text: `Dear ${receiver_name},\n\nYour consultation with Dr. ${sender_name} has been rejected. \nReason: ${reason}\n\nRegards,\nBasmah_Hospital`,
-		html: `<p>Dear ${receiver_name},</p><br><p>Your consultation with Dr. ${sender_name} has been rejected.</p><p><b>Reason</b>: ${reason}.</p><br><p>Regards,</p><p>Basmah_Hospital</p>`,
+		subject: 'Rejet de consultation',
+		text: `Cher(e) ${receiver_name},\n\nVotre consultation avec le Dr. ${sender_name} a été rejetée.\nRaison : ${reason}\n\nCordialement,\nBasmah_Hospital`,
+		html: `<p>Cher(e) ${receiver_name},</p><br><p>Votre consultation avec le Dr. ${sender_name} a été rejetée.</p><p><b>Raison</b> : ${reason}.</p><br><p>Cordialement,</p><p>Basmah_Hospital</p>`,
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.error(error);
 		} else {
-			console.log('Email Envoyé: ' + info.response);
+			console.log('E-mail envoyé : ' + info.response);
 		}
 	});
 };
 
+//Confirmation d’un rendez-vous
 const appointmentMail = (to, receiver_name, sender_name, Specialité, date, time) => {
 	const mailOptions = {
 		from: process.env.EMAIL,
 		to: to,
-		subject: 'Appointment Confirmed',
-		text: `Dear ${receiver_name},\n\nYour consultation with Dr. ${sender_name} has been confirmed.\nSpecialité: ${Specialité}\nDate: ${date}\nHeure: ${time}\n\nRegards,\nBasmah_Hospital`,
-		html: `<p>Dear ${receiver_name},</p><br><p>Your consultation with Dr. ${sender_name} has been confirmed.</p><p><b>Specialité</b>: ${Specialité}</p><p><b>Location</b>: ${location}</p><p><b>Date</b>: ${date}</p><p><b>Heure</b>: ${time}</p><br><p>Regards,</p><p>Basmah_Hospital</p>`,
+		subject: 'Rendez-vous confirmé',
+		text: `Cher(e) ${receiver_name},\n\nVotre consultation avec le Dr. ${sender_name} a été confirmée.\nSpécialité : ${Specialité}\nDate : ${date}\nHeure : ${time}\n\nCordialement,\nBasmah_Hospital`,
+		html: `<p>Cher(e) ${receiver_name},</p><br><p>Votre consultation avec le Dr. ${sender_name} a été confirmée.</p><p><b>Spécialité</b> : ${Specialité}</p><p><b>Date</b> : ${date}</p><p><b>Heure</b> : ${time}</p><br><p>Cordialement,</p><p>Basmah_Hospital</p>`,
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.error(error);
 		} else {
-			console.log('Email Envoyé: ' + info.response);
+			console.log('E-mail envoyé : ' + info.response);
 		}
 	});
 };
 
+//Email de fin de consultation
 const completionMail = (to, receiver_name, sender_name, Doc_Email) => {
 	const mailOptions = {
 		from: process.env.EMAIL,
 		to: to,
-		subject: 'Consultation Completed',
-		text: `Dear ${receiver_name},\n\nYour consultation with Dr. ${sender_name} has been completed. Hope you have received the proper treatment. If you have any querries, doubts or problems, please contact Dr. ${sender_name} through their email address: ${Doc_Email} for the NEXT 7 DAYS.\n\nRegards,\nBasmah_Hospital`,
-		html: `<p>Dear ${receiver_name},</p><br><p>Your consultation with Dr. ${sender_name} has been completed. Hope you have received the proper treatment. If you have any querries, doubts or problems, please go to 'Your Consultations' on the website and submit your feedback through the 'Feedback' option in the Completed Consulations section.</p> <p>
-		Please note, this will be valid for the <b>NEXT 7 DAYS</b> only.</p><br><p>Regards,</p><p>Basmah_Hospital</p>`,
+		subject: 'Consultation terminée',
+		text: `Cher(e) ${receiver_name},\n\nVotre consultation avec le Dr. ${sender_name} est terminée. Nous espérons que vous avez reçu le traitement approprié. Si vous avez des questions, des doutes ou des problèmes, veuillez contacter le Dr. ${sender_name} à l'adresse e-mail suivante : ${Doc_Email} dans les 7 prochains jours.\n\nCordialement,\nBasmah_Hospital`,
+		html: `<p>Cher(e) ${receiver_name},</p><br><p>Votre consultation avec le Dr. ${sender_name} est terminée. Nous espérons que vous avez reçu le traitement approprié.</p><p>Si vous avez des questions ou des préoccupations, vous pouvez soumettre un avis via la section "Consultations terminées" sur notre site web.</p><p><b>Attention</b> : Cette option est valable uniquement pendant les <b>7 prochains jours</b>.</p><br><p>Cordialement,</p><p>Basmah_Hospital</p>`,
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.error(error);
 		} else {
-			console.log('Email sent: ' + info.response);
+			console.log('E-mail envoyé : ' + info.response);
 		}
 	});
 };
 
+//Email de réception d’un avis (feedback)
 const feedbackMail = (to, receiver_name, sender_name) => {
 	const mailOptions = {
 		from: process.env.EMAIL,
 		to: to,
-		subject: 'You have received a feedback!',
-		text: `Hello Dr. ${receiver_name},\n You have received a feedback from your patient ${sender_name}. Please click the feedback button in the 'COMPLETED CONSULTATIONS' section to view the feedback.\n\n Regards,\nBasmah_Hospital`,
-		html: `<p>Hello Dr. ${receiver_name},</p><p>You have received a feedback from your patient ${sender_name}. Please click the feedback button in the 'COMPLETED CONSULTATIONS' section to view the feedback.</p><br><p>Regards,</p><p>Basmah_Hospital</p>`,
+		subject: 'Vous avez reçu un avis !',
+		text: `Bonjour Dr. ${receiver_name},\n\nVous avez reçu un avis de votre patient(e) ${sender_name}. Veuillez cliquer sur le bouton "Avis" dans la section "CONSULTATIONS TERMINÉES" pour le consulter.\n\nCordialement,\nBasmah_Hospital`,
+		html: `<p>Bonjour Dr. ${receiver_name},</p><p>Vous avez reçu un avis de votre patient(e) ${sender_name}. Veuillez cliquer sur le bouton "Avis" dans la section "CONSULTATIONS TERMINÉES" pour le consulter.</p><br><p>Cordialement,</p><p>Basmah_Hospital</p>`,
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.error(error);
 		} else {
-			console.log('Email sent: ' + info.response);
+			console.log('E-mail envoyé : ' + info.response);
 		}
 	});
 };
 
+//Email de réponse à un avis
 const replyMail = (to, receiver_name, sender_name) => {
 	const mailOptions = {
 		from: process.env.EMAIL,
 		to: to,
-		subject: 'You have received a reply!',
-		text: `Hello ${receiver_name},\n You have received a reply from Dr. ${sender_name}. Please click the feedback button in the 'COMPLETED CONSULTATIONS' section to view the reply.\n\n Regards,\nOMCS`,
-		html: `<p>Hello ${receiver_name},</p><p>You have received a reply from Dr. ${sender_name}. Please click the reply button in the 'COMPLETED CONSULTATIONS' section to view the reply.</p><br><p>Regards,</p><p>OMCS</p>`,
+		subject: 'Vous avez reçu une réponse !',
+		text: `Bonjour ${receiver_name},\n\nVous avez reçu une réponse du Dr. ${sender_name}. Veuillez cliquer sur le bouton "Réponse" dans la section "CONSULTATIONS TERMINÉES" pour la consulter.\n\nCordialement,\nOMCS`,
+		html: `<p>Bonjour ${receiver_name},</p><p>Vous avez reçu une réponse du Dr. ${sender_name}. Veuillez cliquer sur le bouton "Réponse" dans la section "CONSULTATIONS TERMINÉES" pour la consulter.</p><br><p>Cordialement,</p><p>OMCS</p>`,
 	};
 
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.error(error);
 		} else {
-			console.log('Email sent: ' + info.response);
+			console.log('E-mail envoyé : ' + info.response);
 		}
 	});
 };
 
+//Route API pour envoyer un e-mail
 emailRouter.post('/sendMail', authenticateToken, async (req, res) => {
 	try {
-		const { to, Doc_Email, context, receiver_name, sender_name, Specialité, date, time, reason} = req.body;
+		const { to, Doc_Email, context, receiver_name, sender_name, Specialité, date, time, reason } = req.body;
+
 		if (context === 'rejection') {
 			rejectionMail(to, receiver_name, sender_name, reason);
 		}
@@ -142,7 +147,7 @@ emailRouter.post('/sendMail', authenticateToken, async (req, res) => {
 			appointmentMail(to, receiver_name, sender_name, Specialité, date, time);
 		}
 		if (context === 'completion') {
-			completionMail(to , receiver_name, sender_name, Doc_Email);
+			completionMail(to, receiver_name, sender_name, Doc_Email);
 		}
 		if (context === 'feedback') {
 			feedbackMail(to, receiver_name, sender_name);
@@ -150,10 +155,11 @@ emailRouter.post('/sendMail', authenticateToken, async (req, res) => {
 		if (context === 'reply') {
 			replyMail(to, receiver_name, sender_name);
 		}
-		return res.status(200).json({ message: 'Mail sent' });
+
+		return res.status(200).json({ message: 'E-mail envoyé' });
 	} catch (error) {
 		console.error(error);
-		return res.status(500).json({ message: 'Internal server error' });
+		return res.status(500).json({ message: 'Erreur interne du serveur' });
 	}
 });
 
