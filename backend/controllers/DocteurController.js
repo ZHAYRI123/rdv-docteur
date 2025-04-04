@@ -1,17 +1,71 @@
 import Docteur from "../models/Docteur";
-import Admin from "../models/Admin";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+const { JWT_SECRET } = process.env;
+
+if (!JWT_SECRET) {
+    throw new Error("JWT_SECRET is not defined in environment variables");
+}
+
+function generateToken(user, role) {
+  return jwt.sign({ userId: user._id, email: user.email, role: role }, JWT_SECRET, { expiresIn: '1h' });
+}
+
+function authenticateToken(req, res, next) {
+  const token = req.headers['authorization'];
+
+  if (!token) {
+    return res.status(401).send('Token not provided');
+  }
+
+  const tokenParts = token.split(' ');
+  const jwtToken = tokenParts[1];
+
+  jwt.verify(jwtToken, JWT_SECRET, (err, decoded) => {
+    if (err) {
+      return res.status(403).send('Invalid token');
+    }
+    req.user = decoded;
+    next();
+  });
+}
+//loginDoctor
+export const loginDoctor = async (req, res) => {
+  try {
+		const { email, password } = req.body;
+		const docteur = await Docteur.findOne({ email: email });
+		if (!docteur) return res.status(404).send('No account found with this email address. Please sign up!');
+		const isPasswordCorrect = await bcrypt.compare(password, docteur.password);
+		if (!isPasswordCorrect) return res.status(400).send('Incorrect password');
+
+		const token = generateToken(docteur, 'doctor');
+		return res.json({ token });
+	} catch (error) {
+		console.error(error);
+		return res.status(500).json({ message: 'Internal server error' });
+	}
+}
+
 
 //Ajouter un docteur
 export const createDocteur = async (req, res) => {
   try {
-    const newDocteur = await Docteur.create({
-      nom: req.body.nom,
-      prenom: req.body.prenom,
-      email: req.body.email,
-      password: req.body.password,
-      specialite: req.body.specialite,
-    });
-    res.status(201).json(newDocteur);
+    const docteurData = req.body;
+		const docteur = await Doctor.findOne({ email: docteurData.email });
+		if (docteur) return res.status(400).send('Doctor already exists');
+
+		const password = docteurData.password;
+		const hashedPassword = await bcrypt.hash(password, 10);
+
+		const newDocteurData = {
+			...docteurData,
+			password: hashedPassword,
+    };
+    const newDocteur = new Docteur(newDocteurData);
+		await newDocteur.save();
+
+		const token = generateToken(newDocteur, 'doctor');
+		return res.json({ token });
   } catch (error) {
     res.status(500).json({ message: "Error de la creatio" });
   }
