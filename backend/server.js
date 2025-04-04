@@ -13,7 +13,10 @@ connectDB();
 // Middlewares
 app.use(cors());
 app.use(express.json());
-app.use(routes);
+//app.use(routes);
+app.get('/test', (req, res) => {
+    res.status(200).json({ message: ' Le serveur fonctionne correctement !' });
+  });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log('Serveur sur http://localhost:${PORT}'));
+app.listen(PORT, () => console.log(`Serveur sur http://localhost:${PORT}`));
