@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose';
+
+const { Schema } = mongoose;
 
 const hopitalSchema = new Schema({
     nom: { type: String, required: true },
@@ -9,4 +10,7 @@ const hopitalSchema = new Schema({
     password: { type: String, required: true },
     photo: { type: String }, // URL de la photo
     });
-module.exports = mongoose.model('Hopital', hopitalSchema);
+
+const Hopital = mongoose.model('Hopital', hopitalSchema);
+
+export default Hopital;

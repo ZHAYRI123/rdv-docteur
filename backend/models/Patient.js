@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 
 
-export const PatientSchema = new Schema({
+const PatientSchema = new Schema({
   id: { type: String, required: true },
   nom: { type: String, required: true },
   prenom: { type: String, required: true },
@@ -14,4 +14,6 @@ export const PatientSchema = new Schema({
   sexe: { type: String, required: true },
 });
 
-module.exports = mongoose.model('Patient', PatientSchema);
+const Patient = mongoose.model('Patient', PatientSchema);
+
+export default Patient;
