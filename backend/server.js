@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './config/db.js';
 import doctorRouter from './Routes/DocteurRoute.js'
+import patientRouter from './Routes/PatientRoute.js'
+import emailRouter from './Routes/email.js'
 
 dotenv.config();
 const app = express();
@@ -17,7 +19,10 @@ app.use(cors());
 app.use(express.json());
 
 //Routes
-app.use('/doctors', doctorRouter);
+app.use('/doctor', doctorRouter);
+app.use('/patient', patientRouter);
+app.use('/email', emailRouter);
+
 
 
 // Route de test
