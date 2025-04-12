@@ -1,6 +1,5 @@
 import Login from './login.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 function App() {
 	return (
 		<>
@@ -12,6 +11,8 @@ function App() {
 				</Routes>
 			</BrowserRouter>
 		</>
+
+
 	);
 }
 
