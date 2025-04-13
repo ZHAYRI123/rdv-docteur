@@ -7,6 +7,7 @@ function App() {
 			<BrowserRouter>
 				<Navbar />
 				<Routes>
+					<Route path='/hospital-login' element={<Login isHospital={true} />} />
 					<Route path='/doctor-login' element={<Login isDoctor={true} />} />
 					<Route path='/patient-login' element={<Login isDoctor={false} />} />
 				</Routes>
