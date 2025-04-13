@@ -9,6 +9,7 @@ const hopitalSchema = new Schema({
     telephone: { type: String, required: true },
     password: { type: String, required: true },
     photo: { type: String }, // URL de la photo
+    role: { type: String, default: "hopital" }
     });
 
 const Hopital = mongoose.model('Hopital', hopitalSchema);
