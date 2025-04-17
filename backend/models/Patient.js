@@ -12,6 +12,7 @@ const PatientSchema = new Schema({
   password: { type: String, required: true },
   date_naissance: { type: Date, required: true },
   sexe: { type: String, required: true },
+  role: { type: String, default: "patient" }
 });
 
 const Patient = mongoose.model('Patient', PatientSchema);

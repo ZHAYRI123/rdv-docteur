@@ -14,10 +14,11 @@ const docteurSchema = new Schema({
 		ref: 'Specialite', //Référence de la collection des spécialités
 		required: true 
 	  },
-	  disponibilites: [{ 
+	disponibilites: [{ 
 		date: String, 
 		heure: String 
-	  }]
+	}],
+	role: { type: String, default: 'docteur' }
 	});
 
 const Docteur = mongoose.model('Docteur', docteurSchema);

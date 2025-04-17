@@ -5,6 +5,9 @@ import connectDB from './config/db.js';
 import doctorRouter from './Routes/DocteurRoute.js'
 import patientRouter from './Routes/PatientRoute.js'
 import emailRouter from './Routes/email.js'
+import hopitalRouter from './Routes/hopitalRoute.js'
+import specialiteRouter from './Routes/specialiteRoute.js'
+import rdvRouter from './Routes/RdvRoute.js'
 
 dotenv.config();
 const app = express();
@@ -22,6 +25,12 @@ app.use(express.json());
 app.use('/doctor', doctorRouter);
 app.use('/patient', patientRouter);
 app.use('/email', emailRouter);
+app.use('/loginHopital', hopitalRouter);
+app.use('/Hopital', specialiteRouter);
+app.use('/rdv', rdvRouter);
+
+
+
 
 
 
