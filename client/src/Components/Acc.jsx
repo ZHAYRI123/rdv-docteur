@@ -1,8 +1,9 @@
+import backgImage from "../image/image.png";
 function Acc() {
   return (
     <section className="relative w-full h-screen">
       <div className="absolute inset-0">
-        <img src="/image/image.png" className="w-full h-full object-cover" alt="Background" />
+        <img src={backgImage} className="w-full h-full object-cover" alt="Background" />
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full max-w-2xl px-4">
