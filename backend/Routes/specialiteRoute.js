@@ -1,8 +1,44 @@
 import Specialite from '../models/specialite';
 import Docteur from '../models/Docteur';
+import jwt from "jsonwebtoken";
+import express from "express";
 
+const specialiteRouter = express.Router();
+const { JWT_SECRET } = process.env;
+
+if (!JWT_SECRET) {
+  throw new Error("Le JWT_SECRET n'est pas défini dans les variables d'environnement");
+}
+
+// user c'est hopital
+function authorizeHopital(req, res, next) {
+  if (req.user.role !== 'hopital') {
+    return res.status(403).json({ message: "Accès réservé aux hôpitaux" });
+  }
+  next();
+}
+
+// Middleware pour authentifier le token JWT
+function authenticateToken(req, res, next) {
+  const token = req.headers['authorization'];
+
+  if (!token) {
+    return res.status(401).send("Token non fourni");
+  }
+
+  const tokenParts = token.split(' ');
+  const jwtToken = tokenParts[1];
+
+  jwt.verify(jwtToken, JWT_SECRET, (err, decoded) => {
+     if (err) {
+      return res.status(403).send("Token invalide");
+    }
+    req.user = decoded;
+    next();
+  });
+}
 //Ajouter une spécialité
-export const createSpecialite = async (req, res) => {
+specialiteRouter.post('/createSpecialite', authenticateToken, authorizeHopital, async (req, res) => {
   try {
     const newSpecialite = await Specialite.create({
       nom: req.body.nom,
@@ -12,20 +48,20 @@ export const createSpecialite = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error de la creatio" });
   }
-};
+});
 
 // Récupérer toutes les spécialités
-export const getAllSpecialites = async (req, res) => {
+specialiteRouter.post('/getAllSpecialites', authenticateToken, authorizeHopital, async (req, res) => {
   try {
     const specialites = await Specialite.find();
     res.status(200).json(specialites);
   } catch (error) {
     res.status(500).json({ message: "Error da l'affichage" });
   }
-};
+});
 
 //récupérer une spécialité ET afficher les docteurs associés à cette spécialité
-export const getSpecialiteWithDocteurs = async (req, res) => {
+specialiteRouter.post('/getSpecialiteWithDocteurs', authenticateToken, authorizeHopital, async (req, res) => {
     try {
       const { id } = req.params;
   
@@ -45,10 +81,10 @@ export const getSpecialiteWithDocteurs = async (req, res) => {
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
-  };
+  });
 
 //Supprimer une spécialité par son ID et ses docteurs
-export const deleteSpecialite = async (req, res) => {
+specialiteRouter.delete('/deleteSpecialite/:id', authenticateToken, authorizeHopital, async (req, res) => {
     try {
       const { id } = req.params;
   
@@ -68,5 +104,6 @@ export const deleteSpecialite = async (req, res) => {
     } catch (error) {
       res.status(500).json({ message: error.message });
     }
-  };
+  });
   
+  module.exports = specialiteRouter;
