@@ -1,19 +1,19 @@
 function Cards() {
   const cards = [
     {
-      image: "/image/ia.png",
+      image: "../image/aiMedical.png",
       alt: "IA",
       text: "Discutez avec notre ia pour vous guider a prendre le meilleur rendez-vous en repondant a une serie de question",
       buttonText: "Discuter avec l'IA"
     },
     {
-      image: "/image/medicament.png",
+      image: "../image/rdv.png",
       alt: "Prendre rendez-vous",
       text: "Vous voulez prendre directement rendez-vous avec un medecin ?",
       buttonText: "Prendre rendez-vous"
     },
     {
-      image: "/image/protection.png",
+      image: "../image/protection.png",
       alt: "Protection des Données",
       text: "La protection des données personnelles chez Basmah",
       buttonText: "Découvrir"
