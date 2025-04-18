@@ -9,7 +9,7 @@ function Header() {
             <img src={logo} alt="Basmah Logo" class="h-16 w-32" />
           </a>
           <div class="space-x-6">
-          <Link to="/patient-login" className="text-zinc-900 hover:text-blue-500 transition-colors">
+          <Link to="/login/patient" className="text-zinc-900 hover:text-blue-500 transition-colors">
             Connection
           </Link>
           <Link to="/signup" className="text-zinc-900 hover:text-blue-500 transition-colors">
