@@ -76,7 +76,7 @@ const Signup = () => {
         <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
           <img className='mx-auto h-32 w-32' src={logo} alt='Basmah Company' />
           <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
-            Patient Sign Up
+            Patient inscription
           </h2>
         </div>
 
@@ -84,7 +84,7 @@ const Signup = () => {
           <form className='space-y-6' onSubmit={handleSignup}>
             <div>
               <label htmlFor='email' className='block text-sm font-medium leading-6 text-gray-900'>
-                Email address
+                Addresse email
               </label>
               <div className='mt-2'>
                 <input
@@ -101,7 +101,7 @@ const Signup = () => {
 
             <div>
               <label htmlFor='password' className='block text-sm font-medium leading-6 text-gray-900'>
-                Password
+                Mot de passe
               </label>
               <div className='mt-2'>
                 <input
@@ -126,7 +126,7 @@ const Signup = () => {
                 className='h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded'
               />
               <label htmlFor='showPassword' className='ml-2 block text-sm text-gray-900'>
-                Show Password
+                Afficher le mot de passe
               </label>
             </div>
 

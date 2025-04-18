@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Fragment } from 'react';
 import { Disclosure} from '@headlessui/react';
 
@@ -46,7 +46,10 @@ const Navbar = () => {
 						<div class='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
 							<div class='flex flex-shrink-0 items-center'>
 								<div class='flex justify-center items-center'>
-									<img class='h-16 w-32' src={logo} alt='Basmah' />
+									<Link to='/'>
+										<img class='h-16 w-32' src={logo} alt='Basmah' />
+									</Link>
+									
 									<h1 class='m-2 text-white text-lg font-bold'>Basmah</h1>
 								</div>
 							</div>
