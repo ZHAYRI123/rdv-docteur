@@ -1,4 +1,6 @@
 import backgImage from "../image/image.png";
+import Hopital from "../Pages/Hopital/hopital";
+import { Link } from "react-router-dom";
 function Acc() {
   return (
     <section className="relative w-full h-screen">
@@ -13,14 +15,18 @@ function Acc() {
             Choisissez votre rôle pour continuer.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/hopital" 
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition-colors">
+            <Link
+              to="/hospital"
+              className="bg-blue-500 text-white font-bold py-3 px-8 rounded-md transition-colors"
+            >
               Hopital
-            </a>
-            <a href="/patient"
-              className="bg-white hover:bg-gray-100 text-blue-500 font-bold py-3 px-8 rounded-md transition-colors">
+            </Link>
+            <Link 
+              to="/patient-login"
+              className="bg-white text-blue-500 font-bold py-3 px-8 rounded-md transition-colors"
+            >
               Patient
-            </a>
+            </Link>
           </div>
         </div>
       </div>
