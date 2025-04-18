@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import logo from '../image/logo.png';
 
@@ -132,6 +132,17 @@ const Login = ({ type = 'patient' }) => {
                             </button>
                         </div>
                     </form>
+                    {type === 'patient' && (
+                        <p className="mt-10 text-center text-sm text-gray-500">
+                            Pas encore membre?{' '}
+                            <Link
+                                to="/signup"
+                                className="font-semibold leading-6 text-green-600 hover:text-green-500"
+                            >
+                                Inscrivez-vous
+                            </Link>
+                        </p>
+                    )}
                 </div>
             </div>
         </>

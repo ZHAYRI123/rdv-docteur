@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import logo from '../image/logo.png';
 
 const Signup = () => {
   const [showpassword, setshowpassword] = useState(false);
-  const navigator = useNavigate();
+  // const navigator = useNavigate();
 
   const handleSignup = async (event) => {
     event.preventDefault();
@@ -135,15 +135,15 @@ const Signup = () => {
                 type='submit'
                 className='flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
               >
-                Sign up
+                S'inscrire
               </button>
             </div>
           </form>
 
           <p className='mt-10 text-center text-sm text-gray-500'>
-            Already have an account?{' '}
-            <a href='/login' className='font-semibold leading-6 text-green-600 hover:text-green-500'>
-              Log in
+            Vous avez déjà un compte?{' '}
+            <a href='/login/patient' className='font-semibold leading-6 text-green-600 hover:text-green-500'>
+              Se connecter
             </a>
           </p>
         </div>
