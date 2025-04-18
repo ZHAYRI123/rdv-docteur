@@ -34,7 +34,7 @@ function Features() {
         <div key={index} className="container mx-auto px-4 mb-16">
           <div className={`flex flex-col ${feature.imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8`}>
             <div className="md:w-1/2">
-              <img src={feature.image} alt={feature.title} className="rounded-lg shadow-lg w-64" />
+              <img src={feature.image} alt={feature.title} className="rounded-lg shadow-lg w-64w" />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">{feature.title}</h2>

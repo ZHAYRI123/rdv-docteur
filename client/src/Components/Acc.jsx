@@ -1,5 +1,4 @@
 import backgImage from "../image/image.png";
-import Hopital from "../Pages/Hopital/hopital";
 import { Link } from "react-router-dom";
 function Acc() {
   return (
@@ -22,7 +21,7 @@ function Acc() {
               Hopital
             </Link>
             <Link 
-              to="/patient-login"
+              to="/login/patient"
               className="bg-white text-blue-500 font-bold py-3 px-8 rounded-md transition-colors"
             >
               Patient

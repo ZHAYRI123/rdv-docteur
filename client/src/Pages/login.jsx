@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import logo from '../image/logo.png';
 
-const Login = ({ isDoctor }) => {
+const Login = ({ type = 'patient' }) => {
     const [showpassword, setshowpassword] = useState(false);
     const navigator = useNavigate();
 
@@ -14,37 +14,52 @@ const Login = ({ isDoctor }) => {
         const loginData = { email, password };
 
         try {
-            const endpoint = isDoctor ? 'doctor/loginDoctor' : 'patient/loginPatient';
-            const response = await fetch(`http://localhost:5000/${endpoint}`, {
+            const endpoints = {
+                hospital: 'hospital/loginHospital',
+                doctor: 'doctor/loginDoctor',
+                patient: 'patient/loginPatient',
+                admin: 'admin/login'
+            };
+
+            const response = await fetch(`http://localhost:5000/${endpoints[type]}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(loginData),
             });
 
-            if (response.status === 404) {
-                toast.error('No account found with this email address!');
-                return;
-            } else if (response.status === 400) {
-                toast.error('Incorrect password');
-                return;
-            } else if (response.status === 500) {
-                toast.error('Internal server error');
+            if (!response.ok) {
+                const error = await response.json();
+                toast.error(error.message || 'Login failed');
                 return;
             }
 
             const { token } = await response.json();
             toast.success('Logged in successfully');
             
-            document.cookie = `jwtToken=${token}; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}; path=/`;
+            document.cookie = `jwtToken=${token}; path=/`;
             localStorage.setItem('userEmail', email);
-            localStorage.setItem('isDoctor', isDoctor);
-            
-            const dashboardPath = isDoctor ? '/doctor-dashboard' : '/patient-dashboard';
-            navigator(dashboardPath);
+            localStorage.setItem('userType', type);
+
+            const redirectPaths = {
+                hospital: '/hospital/admin',
+                doctor: '/doctor-dashboard',
+                patient: '/patient-dashboard',
+            };
+
+            navigator(redirectPaths[type]);
         } catch (error) {
-            console.log(error);
-            toast.error('Internal server error');
+            console.error(error);
+            toast.error('An error occurred during login');
         }
+    };
+
+    const getTitle = () => {
+        const titles = {
+            hospital: 'Administration Login',
+            doctor: 'Doctor Login',
+            patient: 'Patient Login',
+        };
+        return titles[type] || 'Login';
     };
 
     return (
@@ -52,23 +67,16 @@ const Login = ({ isDoctor }) => {
             <Toaster />
             <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-24 lg:px-8'>
                 <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-                    <img 
-                        className='mx-auto h-16 w-32' 
-                        src={logo} 
-                        alt='Basmah Company' 
-                    />
+                    <img className='mx-auto h-16 w-32' src={logo} alt='Basmah Company' />
                     <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
-                        {isDoctor ? 'Doctor Login' : 'Patient Login'}
+                        {getTitle()}
                     </h2>
                 </div>
 
                 <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
                     <form className='space-y-6' onSubmit={handleLogin}>
                         <div>
-                            <label 
-                                htmlFor='email' 
-                                className='block text-sm font-medium leading-6 text-gray-900'
-                            >
+                            <label htmlFor='email' className='block text-sm font-medium leading-6 text-gray-900'>
                                 Email address
                             </label>
                             <div className='mt-2'>
@@ -85,10 +93,7 @@ const Login = ({ isDoctor }) => {
                         </div>
 
                         <div>
-                            <label 
-                                htmlFor='password' 
-                                className='block text-sm font-medium leading-6 text-gray-900'
-                            >
+                            <label htmlFor='password' className='block text-sm font-medium leading-6 text-gray-900'>
                                 Password
                             </label>
                             <div className='mt-2'>
@@ -113,10 +118,7 @@ const Login = ({ isDoctor }) => {
                                 onChange={() => setshowpassword(!showpassword)}
                                 className='h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded'
                             />
-                            <label 
-                                htmlFor='showPassword' 
-                                className='ml-2 block text-sm text-gray-900'
-                            >
+                            <label htmlFor='showPassword' className='ml-2 block text-sm text-gray-900'>
                                 Show Password
                             </label>
                         </div>
@@ -130,16 +132,6 @@ const Login = ({ isDoctor }) => {
                             </button>
                         </div>
                     </form>
-
-                    <p className='mt-10 text-center text-sm text-gray-500'>
-                        Not a member?{' '}
-                        <Link 
-                            to='/signup'
-                            className='font-semibold leading-6 text-green-600 hover:text-green-500'
-                        >
-                            Sign up
-                        </Link>
-                    </p>
                 </div>
             </div>
         </>

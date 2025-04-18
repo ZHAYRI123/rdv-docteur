@@ -37,13 +37,13 @@ const LoginCard = () => {
     {
       title: "Administrateur",
       description: "Accédez aux fonctionnalités de gestion de l'hôpital",
-      path: "/hospital/admin",
+      path: "/login/hospital",
       hoverColor: "blue"
     },
     {
       title: "Médecin",
       description: "Gérez vos rendez-vous et dossiers patients",
-      path: "/doctor-login",
+      path: "/login/doctor",
       hoverColor: "teal"
     }
   ];
