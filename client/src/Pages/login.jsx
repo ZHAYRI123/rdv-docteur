@@ -55,9 +55,9 @@ const Login = ({ type = 'patient' }) => {
 
     const getTitle = () => {
         const titles = {
-            hospital: 'Administration Login',
-            doctor: 'Doctor Login',
-            patient: 'Patient Login',
+            hospital: 'Administration Connexion',
+            doctor: 'Docteur Connexion',
+            patient: 'Patient Connexion',
         };
         return titles[type] || 'Login';
     };
@@ -77,7 +77,7 @@ const Login = ({ type = 'patient' }) => {
                     <form className='space-y-6' onSubmit={handleLogin}>
                         <div>
                             <label htmlFor='email' className='block text-sm font-medium leading-6 text-gray-900'>
-                                Email address
+                                Addresse email
                             </label>
                             <div className='mt-2'>
                                 <input
@@ -94,7 +94,7 @@ const Login = ({ type = 'patient' }) => {
 
                         <div>
                             <label htmlFor='password' className='block text-sm font-medium leading-6 text-gray-900'>
-                                Password
+                                Mot de passe
                             </label>
                             <div className='mt-2'>
                                 <input
@@ -119,7 +119,7 @@ const Login = ({ type = 'patient' }) => {
                                 className='h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded'
                             />
                             <label htmlFor='showPassword' className='ml-2 block text-sm text-gray-900'>
-                                Show Password
+                                Afficher le mot de passe
                             </label>
                         </div>
 
@@ -128,7 +128,7 @@ const Login = ({ type = 'patient' }) => {
                                 type='submit'
                                 className='flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                             >
-                                Log in
+                                Connexion
                             </button>
                         </div>
                     </form>
