@@ -43,7 +43,7 @@ const LoginCard = () => {
     {
       title: "Médecin",
       description: "Gérez vos rendez-vous et dossiers patients",
-      path: "/medecin",
+      path: "/doctor-login",
       hoverColor: "teal"
     }
   ];

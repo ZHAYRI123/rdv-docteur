@@ -1,19 +1,23 @@
+import aiMed from "../image/aiMedical.png";
+import rdv from "../image/rdv.png";
+import protection from "../image/protection.png";
+
 function Cards() {
   const cards = [
     {
-      image: "../image/aiMedical.png",
+      image: aiMed,
       alt: "IA",
       text: "Discutez avec notre ia pour vous guider a prendre le meilleur rendez-vous en repondant a une serie de question",
       buttonText: "Discuter avec l'IA"
     },
     {
-      image: "../image/rdv.png",
+      image: rdv,
       alt: "Prendre rendez-vous",
       text: "Vous voulez prendre directement rendez-vous avec un medecin ?",
       buttonText: "Prendre rendez-vous"
     },
     {
-      image: "../image/protection.png",
+      image: protection,
       alt: "Protection des Données",
       text: "La protection des données personnelles chez Basmah",
       buttonText: "Découvrir"
