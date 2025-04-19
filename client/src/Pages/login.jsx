@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import loginImg from "../image/login.png";
-import Signup from './signup';
 
 const Login = ({ userType = 'patient' }) => {
 	const [setIsLogin] = useState(true);
@@ -131,18 +130,18 @@ const Login = ({ userType = 'patient' }) => {
 						</form>
 
 						{userType === 'patient' && (
-							<p className='mt-10 text-center text-sm text-gray-500'>
-								Pas encore de compte ?{' '}
-								<button type='button' onClick={() => setIsLogin(false)} className='font-semibold text-green-600 hover:text-green-500 underline'>
-									Créer un compte
-								</button>
-							</p>
-						)}
-					</div>
-				</div>
-			) : (
-				<Signup />
-			)
+                        <p className="mt-10 text-center text-sm text-gray-500">
+                            Pas encore membre?{' '}
+                            <Link
+                                to="/signup"
+                                className="font-semibold leading-6 text-green-600 hover:text-green-500"
+                            >
+                                Inscrivez-vous
+                            </Link>
+                        </p>
+                    )}
+                </div>
+            </div>
 		</>
 	);
 };
