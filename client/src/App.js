@@ -21,9 +21,9 @@ function App() {
       <NavbarWrapper />
       <Routes>
         <Route path='/' element={<Landing />} />
-        <Route path='/login/hospital' element={<Login type="hospital" />} />
-        <Route path='/login/doctor' element={<Login type="doctor" />} />
-        <Route path='/login/patient' element={<Login type="patient" />} />
+        <Route path='/login/hospital' element={<Login userType="hospital" />} />
+        <Route path='/login/doctor' element={<Login userType="doctor" />} />
+        <Route path='/login/patient' element={<Login userType="patient" />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/hospital' element={<Hopital />} />
         <Route path='/hospital/admin' element={<Admin />} />

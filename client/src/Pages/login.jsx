@@ -5,7 +5,7 @@ import loginImg from "../image/login.png";
 import Signup from './signup';
 
 const Login = ({ userType = 'patient' }) => {
-	const [isLogin, setIsLogin] = useState(true);
+	const [setIsLogin] = useState(true);
 	const [showPassword, setShowPassword] = useState(false);
 	const navigate = useNavigate();
 
@@ -64,7 +64,7 @@ const Login = ({ userType = 'patient' }) => {
 			setTimeout(() => {
 				if (userType === 'patient') navigate('/patient-dashboard');
 				else if (userType === 'doctor') navigate('/doctor-dashboard');
-				else navigate('/hopital-dashboard');
+				else navigate('/hospital/admin');
 			}, 1500);
 
 		} catch (err) {
@@ -76,17 +76,25 @@ const Login = ({ userType = 'patient' }) => {
 	const Handleshowpassword = () => {
 		setShowPassword(!showPassword);
 	};
+
+    const getTitle = () => {
+        const titles = {
+            hospital: 'Administration Connexion',
+            doctor: 'Docteur Connexion',
+            patient: 'Patient Connexion',
+        };
+        return titles[userType] || 'Login';
+    };
 	return (
 		<>
 			<Toaster />
-			{isLogin ? (
-				<div className='flex min-h-full flex-1 flex-col justify-center px-6 py-24 lg:px-8'>
-					<div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-						<img className='mx-auto h-20 w-auto' src={loginImg} alt='login_image' />
-						<h2 className='mt-1 text-center text-2xl font-bold text-gray-900'>
-							{userType === 'doctor' ? 'Connexion Médecin' : userType === 'hopital' ? 'Connexion Hôpital' : 'Connexion Patient'}
-						</h2>
-					</div>
+			 <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-24 lg:px-8'>
+                            <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
+                                <img className='mx-auto h-20 w-auto' src={loginImg} alt='Basmah Company' />
+                                <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
+                                    {getTitle()}
+                                </h2>
+                            </div>
 
 					<div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
 						<form className='space-y-6' action='/' method='POST' id='loginForm'>
@@ -134,7 +142,7 @@ const Login = ({ userType = 'patient' }) => {
 				</div>
 			) : (
 				<Signup />
-			)}
+			)
 		</>
 	);
 };
