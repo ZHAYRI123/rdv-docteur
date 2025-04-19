@@ -1,19 +1,24 @@
+import login from "../image/login.png";
 import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
-import logo from '../image/logo.png';
 
 const Signup = () => {
   const [showpassword, setshowpassword] = useState(false);
+  const [prenom, setPrenom] = useState('');
+  const [nom, setNom] = useState('');
+  const [email, setEmail] = useState('');
+  const [telephone, setTelephone] = useState('');
+  const [password, setPassword] = useState('');
+  const [dateNaissance, setDateNaissance] = useState('');
+  const [sexe, setSexe] = useState('');
   // const navigator = useNavigate();
 
   const handleSignup = async (event) => {
     event.preventDefault();
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
 
-    if (email === '' || password === '') {
-      toast.error('Please fill all the fields');
+    if (email === '' || password === ''|| prenom === ''|| nom === ''|| sexe === ''|| telephone === ''|| dateNaissance === '') {
+      toast.error('Merci de remplir tous les champs');
       return;
     }
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -22,22 +27,29 @@ const Signup = () => {
       return;
     }
     if (password.length < 6) {
-      toast.error('Password must be at least 6 characters long');
+      toast.error('Mot de passe trop court (6 caractères minimum)');
       return;
     }
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/;
     if (!passwordRegex.test(password)) {
-      toast.error('Password must have an upper case letter, a lower case letter, a number and a special character');
+      toast.error('Le mot de passe doit contenir une majuscule, une minuscule, un chiffre et un caractère spécial');
       return;
     }
 
     const signupData = {
-      email: email,
-      password: password,
+      id: crypto.randomUUID(), // ou laisse le backend générer l’ID
+      nom,
+      prenom,
+      email,
+      telephone: Number(telephone),
+      password,
+      date_naissance: dateNaissance,
+      sexe,
+      role: "patient"
     };
 
     try {
-      const response = await fetch('http://localhost:5000/patient/createPatient', {
+      const response = await fetch('http://localhost:5000/patient/addPatient', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +58,7 @@ const Signup = () => {
       });
       
       if (response.status === 400) {
-        toast.error('Email already in use!');
+        toast.error('Email déjà utilisé !');
         return;
       } else if (response.status === 500) {
         toast.error('Internal server error');
@@ -74,15 +86,112 @@ const Signup = () => {
       <Toaster />
       <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-24 lg:px-8'>
         <div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-          <img className='mx-auto h-32 w-32' src={logo} alt='Basmah Company' />
-          <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
+          <img className='mx-auto h-20 w-auto' src={login} alt='login_image' />
+          <h2 className='mt-1 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
             Patient inscription
           </h2>
         </div>
-
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-white border border-gray-300 rounded-xl shadow-lg p-6">
         <div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
           <form className='space-y-6' onSubmit={handleSignup}>
+
+            {/* Prénom */}
             <div>
+              <label htmlFor='prenom' className='block text-sm font-medium leading-6 text-gray-900'>
+                  Prénom
+              </label>
+              <div className='mt-2'>
+              <input
+                id='prenom'
+                name='prenom'
+                type='text'
+                value={prenom}
+                onChange={(e) => setPrenom(e.target.value)}
+                required
+                placeholder='Prénom'
+                className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2'
+              />
+            </div>
+          </div>
+
+            {/* Nom */}
+            <div>
+              <label htmlFor='nom' className='block text-sm font-medium leading-6 text-gray-900'>
+                Nom
+              </label>
+              <div className='mt-2'>
+                <input
+                  id='nom'
+                  name='nom'
+                  type='text'
+                  value={nom}
+                  onChange={(e) => setNom(e.target.value)}
+                  required
+                  placeholder='Nom'
+                  className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2'
+                />
+              </div>
+            </div>
+
+            {/* Sexe */}
+            <div>
+              <label htmlFor='sexe' className='block text-sm font-medium leading-6 text-gray-900'>
+                Sexe
+              </label>
+            <div className='mt-2'>
+              <select
+                id='sexe'
+                name='sexe'
+                value={sexe}
+                onChange={(e) => setSexe(e.target.value)}
+                required
+                className='block w-full rounded-md border-0 py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm'
+              >
+                <option value=''>Sélectionner</option>
+                <option value='Homme'>Homme</option>
+                <option value='Femme'>Femme</option>
+              </select>
+            </div>
+          </div>
+
+            {/* Téléphone */}
+            <div>
+              <label htmlFor='telephone' className='block text-sm font-medium leading-6 text-gray-900'>
+                Téléphone
+              </label>
+              <div className='mt-2'>
+                <input
+                  id='telephone'
+                  name='telephone'
+                  type='tel'
+                  value={telephone}
+                  onChange={(e) => setTelephone(e.target.value)}
+                  required
+                  placeholder='Téléphone'
+                  className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2'
+                />
+              </div>
+            </div>
+
+            {/* Date de naissance */}
+           <div>
+              <label htmlFor='dateNaissance' className='block text-sm font-medium leading-6 text-gray-900'>
+                Date de naissance
+              </label>
+            <div className='mt-2'>
+              <input
+                id='dateNaissance'
+                name='dateNaissance'
+                type='date'
+                value={dateNaissance}
+                onChange={(e) => setDateNaissance(e.target.value)}
+                required
+                className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 p-2'
+              />
+            </div>
+          </div>
+
+          <div>
               <label htmlFor='email' className='block text-sm font-medium leading-6 text-gray-900'>
                 Addresse email
               </label>
@@ -98,7 +207,7 @@ const Signup = () => {
                 />
               </div>
             </div>
-
+            
             <div>
               <label htmlFor='password' className='block text-sm font-medium leading-6 text-gray-900'>
                 Mot de passe
@@ -147,6 +256,7 @@ const Signup = () => {
             </a>
           </p>
         </div>
+      </div>
       </div>
     </>
   );

@@ -40,17 +40,15 @@ const Navbar = () => {
 
 	return (
 		<>
-			<Disclosure as='nav' class='bg-green-800 fixed w-screen z-50 top-0'>
+			<Disclosure as='nav' class='bg-purple-50 fixed w-screen z-50 top-0'>
 				<div class='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
 					<div class='relative flex h-16 text-center justify-center '>
 						<div class='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
 							<div class='flex flex-shrink-0 items-center'>
 								<div class='flex justify-center items-center'>
 									<Link to='/'>
-										<img class='h-16 w-32' src={logo} alt='Basmah' />
+										<img class='mx-auto h-20 w-auto' src={logo} alt='Basmah' />
 									</Link>
-									
-									<h1 class='m-2 text-white text-lg font-bold'>Basmah</h1>
 								</div>
 							</div>
 						</div>
