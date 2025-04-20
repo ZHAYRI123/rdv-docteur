@@ -200,6 +200,8 @@ const Signup = () => {
                   id='email'
                   name='email'
                   type='email'
+                  value={email} // Ajout de value
+                  onChange={(e) => setEmail(e.target.value)} // Ajout de onChange
                   autoComplete='email'
                   required
                   placeholder='Email'
@@ -217,6 +219,8 @@ const Signup = () => {
                   id='password'
                   name='password'
                   type={showpassword ? 'text' : 'password'}
+                  value={password} // Ajout de value
+                  onChange={(e) => setPassword(e.target.value)} // Ajout de onChange
                   autoComplete='new-password'
                   required
                   placeholder='Password'

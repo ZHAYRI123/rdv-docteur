@@ -147,4 +147,28 @@ patientRouter.put('/updatePatient/:id', async (req, res) => {
 	}
 });
 
+// Ajouter cette route
+patientRouter.put('/updateProfile', authenticateToken, async (req, res) => {
+  try {
+    const { email } = req.user; // Email from JWT token
+    const updateData = req.body;
+    
+    // Trouver et mettre à jour le patient
+    const patient = await Patient.findOneAndUpdate(
+      { email },
+      updateData,
+      { new: true }
+    );
+
+    if (!patient) {
+      return res.status(404).json({ message: 'Patient non trouvé' });
+    }
+
+    res.status(200).json(patient);
+  } catch (error) {
+    console.error('Erreur mise à jour profil:', error);
+    res.status(500).json({ message: 'Erreur serveur lors de la mise à jour' });
+  }
+});
+
 export default patientRouter;
