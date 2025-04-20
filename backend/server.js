@@ -25,8 +25,8 @@ app.use(express.json());
 app.use('/doctor', doctorRouter);
 app.use('/patient', patientRouter);
 app.use('/email', emailRouter);
-app.use('/loginHopital', hopitalRouter);
-app.use('/Hopital', specialiteRouter);
+app.use('/hopital', hopitalRouter);
+app.use('/specialite', specialiteRouter);
 app.use('/rdv', rdvRouter);
 
 
