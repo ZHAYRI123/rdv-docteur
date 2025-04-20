@@ -28,7 +28,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <span className="text-gray-600">Admin Panel</span>
             <Link
-              to="/hopital"
+              to="/hospital"
               className="text-zinc-600 hover:text-blue-500 transition-colors"
             >
               Déconnexion
