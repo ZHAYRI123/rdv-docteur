@@ -1,5 +1,5 @@
-import Specialite from '../models/specialite';
-import Docteur from '../models/Docteur';
+import Specialite from '../models/specialite.js';
+import Docteur from '../models/Docteur.js';
 import jwt from "jsonwebtoken";
 import express from "express";
 
@@ -106,4 +106,4 @@ specialiteRouter.delete('/deleteSpecialite/:id', authenticateToken, authorizeHop
     }
   });
   
-  module.exports = specialiteRouter;
+  export default specialiteRouter;

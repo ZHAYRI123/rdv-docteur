@@ -1,15 +1,14 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema;
-import Patient from './Patient.js';
-import Docteur from './Docteur.js';
+const { Schema } = mongoose;
 
-export const RdvSchema = new Schema({
+const RdvSchema = new Schema({
   id: { type: String, required: true },
   date: { type: Date, required: true },
   heure: { type: String, required: true },
-  patient_id: { type: Patient, required: true },
-  docteur_id: { type: Docteur, required: true }
+  patient_id: { type: Schema.Types.ObjectId, ref: 'Patient', required: true },
+  docteur_id: { type: Schema.Types.ObjectId, ref: 'Docteur', required: true }
 });
 
-modules.exports = mongoose.model('Rdv', RdvSchema);
+const Rdv = mongoose.model('Rdv', RdvSchema);
+export default Rdv;

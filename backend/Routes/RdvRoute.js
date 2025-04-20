@@ -1,6 +1,6 @@
-import Docteur from "../models/Docteur";
-import Patient from "../models/Patient";
-import Rdv from "../models/Rdv";
+import Docteur from "../models/Docteur.js";
+import Patient from "../models/Patient.js";
+import Rdv from "../models/Rdv.js";
 import jwt from "jsonwebtoken";
 import express from "express";
 
