@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Calendar from './Calendar';
+import logo from "../../image/logo.png";
 
 const Admin = () => {
   return (
@@ -22,12 +23,12 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Basmah Logo" className="h-16 w-32" />
+            <img src={logo} alt="Basmah Logo" className="h-16 w-32" />
           </Link>
           <div className="flex items-center gap-4">
             <span className="text-gray-600">Admin Panel</span>
             <Link
-              to="/hopital"
+              to="/hospital"
               className="text-zinc-600 hover:text-blue-500 transition-colors"
             >
               Déconnexion

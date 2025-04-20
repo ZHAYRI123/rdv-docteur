@@ -12,8 +12,7 @@ if (!JWT_SECRET) {
   throw new Error("JWT_SECRET non défini");
 }
 
-// Route de login hôpital
-hopitalRouter.post('/loginHopital', async (req, res) => {
+hopitalRouter.post('/login', async (req, res) => {
   try {
     const { email, password } = req.body;
     const hopital = await Hopital.findOne({ email });

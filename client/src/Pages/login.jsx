@@ -21,7 +21,7 @@ const Login = ({ userType = 'patient' }) => {
 		const urlMap = {
 			patient: 'http://localhost:5000/patient/loginPatient',
 			doctor: 'http://localhost:5000/doctor/loginDoctor',
-			hopital: 'http://localhost:5000/hopital/loginHopital',
+			hospital: 'http://localhost:5000/hopital/login',
 		};
 
 		const url = urlMap[userType];
