@@ -150,4 +150,16 @@ doctorRouter.put('/updateDoctor/:id', authenticateToken, async (req, res) => {
   }
 });
 
+doctorRouter.post('/getByEmail', authenticateToken, async (req, res) => {
+	try {
+		const { email } = req.body;
+		const doctor = await Doctor.findOne({ email });
+		if (!doctor) return res.status(404).json({ message: 'Doctor not found' });
+		res.json(doctor);
+	} catch (error) {
+		console.error(error);
+		return res.status(500).json({ message: 'Internal server error' });
+	}
+});
+
 export default doctorRouter;
