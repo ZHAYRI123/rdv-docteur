@@ -1,108 +1,137 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const PatientProfile = () => {
-	const navigator = useNavigate();
-	const email = localStorage.getItem('userEmail');
-	const [patient, setPatient] = useState({});
+  const [patientData, setPatientData] = useState({
+    prenom: '',
+    nom: '',
+    email: '',
+    dateNaissance: '',
+    telephone: '',
+    sexe: ''
+  });
+  const [isLoading, setIsLoading] = useState(true);
 
-	function getJwtToken() {
-		const cookies = document.cookie.split(';').map((cookie) => cookie.trim());
-		for (const cookie of cookies) {
-			const [name, value] = cookie.split('=');
-			if (name === 'jwtToken') {
-				return value;
-			}
-		}
-		return null;
-	}
+  useEffect(() => {
+    const fetchPatientData = async () => {
+      try {
+        const token = getJwtToken();
+        if (!token) {
+          toast.error('Session expirée');
+          return;
+        }
 
-	const authFetch = async (url, options = {}) => {
-		const token = getJwtToken();
+        const response = await fetch('http://localhost:5000/patient/getByEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({ 
+            email: localStorage.getItem('userEmail') 
+          })
+        });
 
-		const headers = {
-			'Content-Type': 'application/json',
-		};
+        if (!response.ok) {
+          throw new Error('Erreur lors du chargement des données');
+        }
 
-		if (token) {
-			headers['Authorization'] = `Bearer ${token}`;
-		}
+        const data = await response.json();
+        if (data) {
+          setPatientData(data);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        toast.error('Erreur lors du chargement du profil');
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-		if (options.headers) {
-			Object.assign(headers, options.headers);
-		}
+    fetchPatientData();
+  }, []);
 
-		return await fetch(url, {
-			...options,
-			headers: headers,
-		});
-	};
+  const calculateAge = (dateNaissance) => {
+    if (!dateNaissance) return 'Non renseigné';
+    const today = new Date();
+    const birthDate = new Date(dateNaissance);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  };
 
-	useEffect(() => {
-		const token = getJwtToken();
-		if (!token) {
-			alert('Accès refusé. Veuillez vous connecter !');
-			navigator('/patient-login');
-		}
+  function getJwtToken() {
+    const cookies = document.cookie.split(';');
+    for (const cookie of cookies) {
+      const [name, value] = cookie.trim().split('=');
+      if (name === 'jwtToken') return value;
+    }
+    return null;
+  }
 
-		const fetchPatient = async () => {
-			try {
-				const response = await authFetch('http://localhost:5000/patient/getByEmail', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({ email }),
-				});
-				if (response.status === 404) setPatient({});
-				if (response.status === 500) alert('Erreur interne du serveur');
-				const data = await response.json();
-				return setPatient(data);
-			} catch (error) {
-				console.log(error);
-			}
-		};
-		fetchPatient();
-		//eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [email]);
+  if (isLoading) {
+    return <div className="w-96 p-6 bg-white rounded-lg shadow-lg">Chargement...</div>;
+  }
 
-	const handleEdit = () => {
-		navigator('/update-profile');
-	};
+  return (
+    <div className="w-96 p-6 bg-white rounded-lg shadow-lg">
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Mon Profil</h2>
+        
+        {patientData && (
+          <div className="grid gap-4">
+            <div className="border-b pb-3">
+              <h3 className="text-sm font-medium text-gray-500 mb-1">Nom complet</h3>
+              <p className="text-lg font-medium text-gray-900">
+                {`${patientData.prenom} ${patientData.nom}`.trim() || 'Non renseigné'}
+              </p>
+            </div>
 
-	return (
-		<>
-			<div className='min-h-dvh min-w-80 bg-white shadow overflow-hidden sm:rounded-lg'>
-				<div className='px-4 py-5 sm:px-6'>
-					<h3 className='text-lg leading-6 font-medium text-gray-900'>Informations du patient</h3>
-					<p className='mt-1 max-w-2xl text-sm text-gray-500'>Vos informations personnelles.</p>
-				</div>
-				<div className='border-t border-gray-200'>
-					<dl>
-						<div className='bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6'>
-							<dt className='text-sm font-medium text-gray-500'>Nom</dt>
-							<dd className='text-sm text-gray-900 sm:col-span-2'>{patient.name}</dd>
-						</div>
-						<div className='bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6'>
-							<dt className='text-sm font-medium text-gray-500'>Adresse e-mail</dt>
-							<dd className='text-sm text-gray-900 sm:col-span-2'>{patient.email}</dd>
-						</div>
-						<div className='bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6'>
-							<dt className='text-sm font-medium text-gray-500'>Âge</dt>
-							<dd className='text-sm text-gray-900 sm:col-span-2'>{patient.age}</dd>
-						</div>
-					</dl>
-				</div>
-				<button
-					className='m-8 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'
-					onClick={handleEdit}
-				>
-					Modifier le profil
-				</button>
-			</div>
-		</>
-	);
+            <div className="border-b pb-3">
+              <h3 className="text-sm font-medium text-gray-500 mb-1">Email</h3>
+              <p className="text-lg font-medium text-gray-900">
+                {patientData.email || 'Non renseigné'}
+              </p>
+            </div>
+
+            <div className="border-b pb-3">
+              <h3 className="text-sm font-medium text-gray-500 mb-1">Âge</h3>
+              <p className="text-lg font-medium text-gray-900">
+                {calculateAge(patientData.dateNaissance) !== 'Non renseigné' 
+                  ? `${calculateAge(patientData.dateNaissance)} ans` 
+                  : 'Non renseigné'}
+              </p>
+            </div>
+
+            <div className="border-b pb-3">
+              <h3 className="text-sm font-medium text-gray-500 mb-1">Téléphone</h3>
+              <p className="text-lg font-medium text-gray-900">
+                {patientData.telephone || 'Non renseigné'}
+              </p>
+            </div>
+
+            <div className="border-b pb-3">
+              <h3 className="text-sm font-medium text-gray-500 mb-1">Sexe</h3>
+              <p className="text-lg font-medium text-gray-900">
+                {patientData.sexe || 'Non renseigné'}
+              </p>
+            </div>
+          </div>
+        )}
+
+        <Link 
+          to="/update-profile"
+          className="mt-6 block w-full text-center bg-green-600 text-white py-3 px-4 rounded-md hover:bg-green-700 transition-colors font-medium"
+        >
+          Modifier le profil
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default PatientProfile;

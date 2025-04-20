@@ -87,10 +87,14 @@ doctorRouter.post('/createDoctor', async (req, res) => {
 // Récupérer tous les docteurs
 doctorRouter.get('/all', async (req, res) => {
   try {
-    const docteurs = await Docteur.find();
+    const docteurs = await Docteur.find({});
     res.status(200).json(docteurs);
   } catch (error) {
-    res.status(500).json({ message: "Erreur lors de l'affichage des docteurs" });
+    console.error('Error fetching doctors:', error);
+    res.status(500).json({ 
+      message: "Erreur lors de la récupération des docteurs",
+      error: error.message 
+    });
   }
 });
 
@@ -151,15 +155,15 @@ doctorRouter.put('/updateDoctor/:id', authenticateToken, async (req, res) => {
 });
 
 doctorRouter.post('/getByEmail', authenticateToken, async (req, res) => {
-	try {
-		const { email } = req.body;
-		const doctor = await Doctor.findOne({ email });
-		if (!doctor) return res.status(404).json({ message: 'Doctor not found' });
-		res.json(doctor);
-	} catch (error) {
-		console.error(error);
-		return res.status(500).json({ message: 'Internal server error' });
-	}
+  try {
+    const { email } = req.body;
+    const doctor = await Docteur.findOne({ email }); // Changer Doctor en Docteur
+    if (!doctor) return res.status(404).json({ message: 'Docteur non trouvé' });
+    res.json(doctor);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Erreur interne du serveur' });
+  }
 });
 
 export default doctorRouter;
