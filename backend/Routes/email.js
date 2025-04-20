@@ -1,12 +1,18 @@
 //Nodemailer pour envoyer des e-mails
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 //Charge les variables d’environnement depuis le fichier .env
-require('dotenv').config();
-const express = require('express');
+import dotenv from 'dotenv';
+import express from 'express';
 //Permet de sécuriser les routes avec des tokens.
-const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
+
+dotenv.config();
 const { JWT_SECRET } = process.env;
 const emailRouter = express.Router();
+
+
+
+
 
 // fonction protège les routes en s’assurant qu’un utilisateur est authentifié avec un token JWT
 function authenticateToken(req, res, next) {
@@ -163,4 +169,4 @@ emailRouter.post('/sendMail', authenticateToken, async (req, res) => {
 	}
 });
 
-module.exports = emailRouter;
+export default emailRouter;
