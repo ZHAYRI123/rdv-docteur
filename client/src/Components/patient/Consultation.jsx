@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import RdvReservé from './Rdv_Reservés/RdvReservé';
 import PendingConsulations from './Consultations_En_Attente/ConsultationsEnAttente';
-import CompletedConsultations from './Consultations_Terminees/ConsultationsTerminees';
+import CompletedConsultations from './consultations_terminées/ConsultationsTerminées';
 
 export default function Consultations() {
 	function getJwtToken() {

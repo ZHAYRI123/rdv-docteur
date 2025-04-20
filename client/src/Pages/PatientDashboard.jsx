@@ -3,7 +3,7 @@ import { useLocation, useNavigate, Routes, Route, Link, Outlet } from 'react-rou
 import PatientProfile from '../Components/patient/PatientProfile';
 import DoctorData from '../Components/patient/DoctorData';
 import toast, { Toaster } from 'react-hot-toast';
-import Consultations from '../Components/Patient/Consultations';
+import Consultations from '../Components/patient/Consultation';
 
 const PatientDashBoard = () => {
 	const [isLoading, setIsLoading] = useState(true);

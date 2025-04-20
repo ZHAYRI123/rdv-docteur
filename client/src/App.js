@@ -8,6 +8,7 @@ import Hopital from './Pages/Hopital/hopital';
 import Admin from './Pages/Hopital/Admin';
 import AddDoctor from './Pages/Hopital/AddDoctor';
 import DoctorDashboard from './Pages/Doctor/Doctor';
+import PatientDashBoard from './Pages/PatientDashboard';
 
 const NavbarWrapper = () => {
   const showNavbar = ['/login/hospital', '/login/doctor', '/login/patient', '/signup'];
@@ -29,6 +30,7 @@ function App() {
         <Route path='/hospital/admin' element={<Admin />} />
         <Route path='/hospital/admin/add-doctor' element={<AddDoctor />} />
         <Route path='/doctor-dashboard' element={<DoctorDashboard />} />
+        <Route path='/patient-dashboard/*' element={<PatientDashBoard />} />
       </Routes>
     </BrowserRouter>
   );

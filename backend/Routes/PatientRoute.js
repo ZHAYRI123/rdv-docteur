@@ -54,7 +54,7 @@ patientRouter.post('/loginPatient', async (req, res) => {
 		}
 
 		const token = generateToken(patient, 'patient');
-		return res.json({ token });
+		return res.json({ token, role: "patient"  });
 	} catch (error) {
 		console.error(error);
 		return res.status(500).json({ message: "Erreur interne du serveur" });
@@ -85,6 +85,18 @@ patientRouter.post('/addPatient', async (req, res) => {
 	}
 });
 
+patientRouter.post('/getByEmail', authenticateToken, async (req, res) => {
+	try {
+		const { email } = req.body;
+		const patient = await Patient.findOne({ email });
+		if (!patient) return res.status(404).json({ message: 'Patient not found' });
+		return res.json(patient);
+	} catch (error) {
+		console.error(error);
+		return res.status(500).json({ message: 'Internal server error' });
+	}
+});
+
 // Récupérer tous les patients
 patientRouter.get('/getAllPatients', async (req, res) => {
 	try {
@@ -94,6 +106,7 @@ patientRouter.get('/getAllPatients', async (req, res) => {
 		res.status(500).json({ message: "Erreur lors de la récupération des patients" });
 	}
 });
+
 
 // Récupérer un patient par ID
 patientRouter.get('/getPatient/:id', async (req, res) => {
