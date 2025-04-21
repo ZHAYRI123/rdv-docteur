@@ -90,7 +90,14 @@ patientRouter.post('/getByEmail', authenticateToken, async (req, res) => {
 		const { email } = req.body;
 		const patient = await Patient.findOne({ email });
 		if (!patient) return res.status(404).json({ message: 'Patient not found' });
-		return res.json(patient);
+		return res.json({
+			nom: patient.nom,
+			prenom: patient.prenom,
+			email: patient.email,
+			telephone: patient.telephone,
+			dateNaissance: patient.dateNaissance, // 👈 BIEN inclure ça
+			sexe: patient.sexe
+		  });
 	} catch (error) {
 		console.error(error);
 		return res.status(500).json({ message: 'Internal server error' });
