@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../image/logo.png';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const DoctorDashboard = () => {
   const [patients, setPatients] = useState([]);
@@ -244,6 +245,7 @@ const DoctorDashboard = () => {
 
 const Header = () => {
   const [doctorName, setDoctorName] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchDoctorInfo = async () => {
@@ -253,8 +255,7 @@ const Header = () => {
           console.error('No token found');
           return;
         }
-
-        console.log('Fetching doctor info...'); // Debug log
+    
         const response = await fetch('http://localhost:5000/doctor/me', {
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -264,11 +265,14 @@ const Header = () => {
         
         if (response.ok) {
           const data = await response.json();
-          console.log('Doctor data:', data); // Debug log
           setDoctorName(`Dr. ${data.nom} ${data.prenom}`);
         } else {
-          const error = await response.text();
+          const error = await response.json();
           console.error('Error response:', error);
+          if (response.status === 401 || response.status === 403) {
+            // Handle unauthorized access
+            navigate('/login/doctor');
+          }
         }
       } catch (error) {
         console.error('Error fetching doctor info:', error);
