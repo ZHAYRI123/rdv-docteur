@@ -21,42 +21,44 @@ function generateToken(user, role) {
   );
 }
 
-// Middleware pour authentifier le token JWT
-function authenticateToken(req, res, next) {
-  const token = req.headers['authorization'];
 
-  if (!token) {
-    return res.status(401).send("Token non fourni");
-  }
-
-  const tokenParts = token.split(' ');
-  const jwtToken = tokenParts[1];
-
-  jwt.verify(jwtToken, JWT_SECRET, (err, decoded) => {
-     if (err) {
-      return res.status(403).send("Token invalide");
-    }
-    req.user = decoded;
-    next();
-  });
-}
 
 // Connexion d'un docteur
 doctorRouter.post('/loginDoctor', async (req, res) => {
   try {
     const { email, password } = req.body;
-    const docteur = await Docteur.findOne({ email: email });
+    const docteur = await Docteur.findOne({ email });
 
-    if (!docteur) return res.status(404).send("Aucun compte trouvé avec cette adresse e-mail. Veuillez demandez a l'administration de vous ajouter!");
+    if (!docteur) {
+      return res.status(404).json({ message: "Docteur non trouvé" });
+    }
 
-    const isPasswordCorrect = await bcrypt.compare(password, docteur.password);
-    if (!isPasswordCorrect) return res.status(400).send("Mot de passe incorrect");
+    const validPassword = await bcrypt.compare(password, docteur.password);
+    if (!validPassword) {
+      return res.status(400).json({ message: "Mot de passe incorrect" });
+    }
 
-    const token = generateToken(docteur, 'doctor');
-    return res.json({ token });
+    const token = jwt.sign(
+      { 
+        userId: docteur._id,
+        role: 'doctor'
+      },
+      JWT_SECRET,
+      { expiresIn: '24h' }
+    );
+
+    res.json({
+      token,
+      docteur: {
+        id: docteur._id,
+        nom: docteur.nom,
+        prenom: docteur.prenom,
+        email: docteur.email
+      }
+    });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({ message: "Erreur interne du serveur" });
+    console.error('Login error:', error);
+    res.status(500).json({ message: error.message });
   }
 });
 
@@ -174,76 +176,64 @@ doctorRouter.post('/getByEmail', authenticateToken, async (req, res) => {
   }
 });
 
-// Add this route for getting doctor's patients
-doctorRouter.get('/patients', authenticateToken, async (req, res) => {
-  try {
-    // 
-    const appointments = await RDV.find({ docteur: req.user.userId })
-      .distinct('patient');
-    
-    // Get patient details
-    const patients = await Patient.find({ _id: { $in: appointments } });
-    res.json(patients);
-  } catch (error) {
-    console.error('Error fetching patients:', error);
-    res.status(500).json({ message: "Erreur lors de la récupération des patients" });
+function authenticateToken(req, res, next) {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader && authHeader.split(' ')[1];
+
+  if (!token) {
+    return res.status(401).json({ message: 'Token manquant' });
   }
-});
 
-// 
-doctorRouter.get('/appointments', authenticateToken, async (req, res) => {
   try {
-    const appointments = await RDV.find({ docteur: req.user.userId })
-      .populate('patient', 'nom prenom')
-      .sort({ date: 1, heure: 1 });
-    
-    res.json(appointments);
+    const decoded = jwt.verify(token, JWT_SECRET);
+    req.user = decoded;
+    next();
   } catch (error) {
-    console.error('Error fetching appointments:', error);
-    res.status(500).json({ message: "Erreur lors de la récupération des rendez-vous" });
+    console.error('Token verification error:', error);
+    return res.status(403).json({ message: 'Token invalide' });
   }
-});
+}
 
-
+// Add these routes after your existing routes
 doctorRouter.get('/me', authenticateToken, async (req, res) => {
   try {
-    console.log('User ID:', req.user.userId); // Add debug log
     const docteur = await Docteur.findById(req.user.userId);
     if (!docteur) {
       return res.status(404).json({ message: "Docteur non trouvé" });
     }
-    res.json({ 
+    res.json({
       nom: docteur.nom,
-      prenom: docteur.prenom
+      prenom: docteur.prenom,
+      id: docteur._id
     });
   } catch (error) {
-    console.error('Error fetching doctor info:', error);
-    res.status(500).json({ message: "Erreur lors de la récupération des informations" });
+    console.error('Error in /me:', error);
+    res.status(500).json({ message: error.message });
   }
 });
 
-// Update appointment status
-doctorRouter.put('/appointments/:id', authenticateToken, async (req, res) => {
+doctorRouter.get('/appointments', authenticateToken, async (req, res) => {
   try {
-    const { id } = req.params;
-    const { status } = req.body;
-
-    const appointment = await RDV.findByIdAndUpdate(
-      id,
-      { status },
-      { new: true }
-    );
-
-    if (!appointment) {
-      return res.status(404).json({ message: "Rendez-vous non trouvé" });
-    }
-
-    res.json(appointment);
+    const appointments = await RDV.find({ docteur: req.user.userId })
+      .populate('patient', 'nom prenom')
+      .sort({ date: 1 });
+    res.json(appointments);
   } catch (error) {
-    console.error('Error updating appointment:', error);
-    res.status(500).json({ message: "Erreur lors de la mise à jour du rendez-vous" });
+    console.error('Error in /appointments:', error);
+    res.status(500).json({ message: error.message });
   }
 });
 
+doctorRouter.get('/patients', authenticateToken, async (req, res) => {
+  try {
+    const rdvs = await RDV.find({ docteur: req.user.userId })
+      .distinct('patient');
+    const patients = await Patient.find({ _id: { $in: rdvs } });
+    res.json(patients);
+  } catch (error) {
+    console.error('Error in /patients:', error);
+    res.status(500).json({ message: error.message });
+  }
+});
 
 export default doctorRouter;
