@@ -38,6 +38,7 @@ const PatientProfile = () => {
         }
 
         const data = await response.json();
+        console.log('Patient data reçue:', data);
         if (data) {
           setPatientData(data);
         }
@@ -63,6 +64,7 @@ const PatientProfile = () => {
     }
     return age;
   };
+  const age = calculateAge(patientData.dateNaissance);
 
   function getJwtToken() {
     const cookies = document.cookie.split(';');
@@ -101,9 +103,7 @@ const PatientProfile = () => {
             <div className="border-b pb-3">
               <h3 className="text-sm font-medium text-gray-500 mb-1">Âge</h3>
               <p className="text-lg font-medium text-gray-900">
-                {calculateAge(patientData.dateNaissance) !== 'Non renseigné' 
-                  ? `${calculateAge(patientData.dateNaissance)} ans` 
-                  : 'Non renseigné'}
+                {typeof age === 'number' ? `${age} ans` :'Non renseigné' }
               </p>
             </div>
 
