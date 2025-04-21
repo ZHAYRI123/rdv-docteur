@@ -25,6 +25,7 @@ const UpdateProfile = () => {
     }
     return age;
   };
+  const age = calculateAge(formData.dateNaissance);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -146,7 +147,7 @@ const UpdateProfile = () => {
             <div className="py-4">
               <h3 className="text-sm font-medium text-gray-500 mb-1">Âge</h3>
               <p className="text-xl font-medium text-gray-900">
-                {calculateAge(formData.dateNaissance) ? `${calculateAge(formData.dateNaissance)} ans` : 'Non renseigné'}
+                {typeof age === 'number' ? `${age} ans` : 'Non renseigné'}
               </p>
             </div>
             <div className="py-4">
