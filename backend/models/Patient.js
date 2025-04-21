@@ -10,7 +10,7 @@ const PatientSchema = new Schema({
   email: { type: String, required: true },
   telephone: { type: Number, required: true },
   password: { type: String, required: true },
-  date_naissance: { type: Date, required: true },
+  dateNaissance: { type: Date, required: true },
   sexe: { type: String, required: true },
   role: { type: String, default: "patient" }
 });
