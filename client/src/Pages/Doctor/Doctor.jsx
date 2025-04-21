@@ -1,100 +1,161 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Calendar from '../Hopital/Calendar';
 import logo from '../../image/logo.png';
+import { toast } from 'react-toastify';
 
 const DoctorDashboard = () => {
   const [patients, setPatients] = useState([]);
-  const [activeTab, setActiveTab] = useState('consultations');
+  const [appointments, setAppointments] = useState([]);
+  const [activeTab, setActiveTab] = useState('appointments');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchPatients = async () => {
-      try {
-        const response = await fetch('http://localhost:5000/doctor/patients', {
-          headers: {
-            'Authorization': `Bearer ${localStorage.getItem('token')}`
-          }
-        });
-        const data = await response.json();
-        setPatients(data);
-      } catch (error) {
-        console.error('Error fetching patients:', error);
-      }
-    };
-
+    fetchAppointments();
     fetchPatients();
   }, []);
 
-  return (
-    <div className="bg-gray-50">
-      <Header />
-      <main className="pt-20 px-4 pb-8">
-        <div className="container mx-auto">
-          <div className="mb-6 flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-800">Dashboard Médecin</h1>
-            <div className="flex gap-4">
-              <button
-                onClick={() => setActiveTab('consultations')}
-                className={`px-4 py-2 rounded-lg ${
-                  activeTab === 'consultations'
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 text-gray-700'
-                }`}
-              >
-                Dossiers Patients
-              </button>
-              <button
-                onClick={() => setActiveTab('appointments')}
-                className={`px-4 py-2 rounded-lg ${
-                  activeTab === 'appointments'
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 text-gray-700'
-                }`}
-              >
-                Rendez-vous
-              </button>
-            </div>
-          </div>
+  const fetchPatients = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:5000/doctor/patients', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setPatients(data);
+      } else {
+        toast.error('Erreur lors du chargement des patients');
+      }
+    } catch (error) {
+      console.error('Error fetching patients:', error);
+      toast.error('Erreur de connexion au serveur');
+    }
+  };
 
-          {activeTab === 'consultations' ? (
-            <PatientRecords patients={patients} />
-          ) : (
-            <Calendar />
-          )}
-        </div>
-      </main>
-    </div>
-  );
-};
+  const fetchAppointments = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:5000/doctor/appointments', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Appointments error:', errorText);
+        throw new Error(errorText);
+      }
+  
+      const data = await response.json();
+      setAppointments(data);
+    } catch (error) {
+      console.error('Error fetching appointments:', error);
+      toast.error('Erreur lors du chargement des rendez-vous');
+    } finally {
+      setLoading(false);
+    }
+  };
 
-const Header = () => {
-  return (
-    <header className="fixed top-0 w-full bg-white shadow-lg z-50">
-      <nav className="container mx-auto px-4 py-3">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Basmah Logo" className="h-16 w-32" />
-          </Link>
-          <div className="flex items-center gap-4">
-            <span className="text-gray-600">Dr. {localStorage.getItem('doctorName')}</span>
-            <Link
-              to="/hospital"
-              className="text-zinc-600 hover:text-blue-500 transition-colors"
-            >
-              Déconnexion
-            </Link>
-          </div>
-        </div>
-      </nav>
-    </header>
-  );
-};
+  const handleAppointmentAction = async (appointmentId, status) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch(`http://localhost:5000/doctor/appointments/${appointmentId}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ status })
+      });
 
-const PatientRecords = ({ patients }) => {
-  return (
+      if (response.ok) {
+        toast.success(`Rendez-vous ${status === 'approved' ? 'approuvé' : 'rejeté'}`);
+        fetchAppointments();
+      } else {
+        toast.error("Erreur lors de la mise à jour du rendez-vous");
+      }
+    } catch (error) {
+      console.error('Error updating appointment:', error);
+      toast.error('Erreur de connexion au serveur');
+    }
+  };
+
+  const AppointmentsList = () => (
     <div className="bg-white rounded-lg shadow p-6">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-gray-800">Dossiers Patients</h2>
+        <h2 className="text-xl font-bold text-gray-800">Rendez-vous</h2>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Patient</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Heure</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {appointments.map((appointment) => (
+              <tr key={appointment._id}>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm font-medium text-gray-900">
+                    {appointment.patient.nom} {appointment.patient.prenom}
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-500">
+                    {new Date(appointment.date).toLocaleDateString()}
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <div className="text-sm text-gray-500">{appointment.heure}</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
+                    ${appointment.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 
+                      appointment.status === 'approved' ? 'bg-green-100 text-green-800' : 
+                      'bg-red-100 text-red-800'}`}>
+                    {appointment.status === 'pending' ? 'En attente' :
+                     appointment.status === 'approved' ? 'Approuvé' : 'Rejeté'}
+                  </span>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {appointment.status === 'pending' && (
+                    <div className="flex space-x-2">
+                      <button
+                        onClick={() => handleAppointmentAction(appointment._id, 'approved')}
+                        className="text-green-600 hover:text-green-900"
+                      >
+                        Approuver
+                      </button>
+                      <button
+                        onClick={() => handleAppointmentAction(appointment._id, 'rejected')}
+                        className="text-red-600 hover:text-red-900"
+                      >
+                        Rejeter
+                      </button>
+                    </div>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+
+  const PatientRecords = ({ patients }) => (
+    <div className="bg-white rounded-lg shadow p-6">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-xl font-bold text-gray-800">Mes Patients</h2>
         <div className="relative">
           <input
             type="search"
@@ -109,31 +170,22 @@ const PatientRecords = ({ patients }) => {
           <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nom</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Dernière Visite</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Prénom</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Téléphone</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {patients.map((patient, index) => (
-              <tr key={index}>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm font-medium text-gray-900">{patient.name}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <div className="text-sm text-gray-500">{patient.lastVisit}</div>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                    {patient.status}
-                  </span>
-                </td>
+            {patients.map((patient) => (
+              <tr key={patient._id}>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.nom}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.prenom}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.email}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.telephone}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <button className="text-blue-600 hover:text-blue-900 mr-4">
                     Voir Dossier
-                  </button>
-                  <button className="text-green-600 hover:text-green-900">
-                    Nouveau RDV
                   </button>
                 </td>
               </tr>
@@ -142,6 +194,109 @@ const PatientRecords = ({ patients }) => {
         </table>
       </div>
     </div>
+  );
+
+  if (loading) {
+    return <div>Chargement...</div>;
+  }
+
+  return (
+    <div className="bg-gray-50">
+      <Header />
+      <main className="pt-20 px-4 pb-8">
+        <div className="container mx-auto">
+          <div className="mb-6 flex justify-between items-center">
+            <h1 className="text-2xl font-bold text-gray-800">Dashboard Médecin</h1>
+            <div className="flex gap-4">
+              <button
+                onClick={() => setActiveTab('appointments')}
+                className={`px-4 py-2 rounded-lg ${
+                  activeTab === 'appointments'
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-200 text-gray-700'
+                }`}
+              >
+                Rendez-vous
+              </button>
+              <button
+                onClick={() => setActiveTab('patients')}
+                className={`px-4 py-2 rounded-lg ${
+                  activeTab === 'patients'
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-200 text-gray-700'
+                }`}
+              >
+                Mes Patients
+              </button>
+            </div>
+          </div>
+
+          {activeTab === 'appointments' ? (
+            <AppointmentsList />
+          ) : (
+            <PatientRecords patients={patients} />
+          )}
+        </div>
+      </main>
+    </div>
+  );
+};
+
+const Header = () => {
+  const [doctorName, setDoctorName] = useState('');
+
+  useEffect(() => {
+    const fetchDoctorInfo = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          console.error('No token found');
+          return;
+        }
+
+        console.log('Fetching doctor info...'); // Debug log
+        const response = await fetch('http://localhost:5000/doctor/me', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Doctor data:', data); // Debug log
+          setDoctorName(`Dr. ${data.nom} ${data.prenom}`);
+        } else {
+          const error = await response.text();
+          console.error('Error response:', error);
+        }
+      } catch (error) {
+        console.error('Error fetching doctor info:', error);
+      }
+    };
+
+    fetchDoctorInfo();
+  }, []);
+
+  return (
+    <header className="fixed top-0 w-full bg-white shadow-lg z-50">
+      <nav className="container mx-auto px-4 py-3">
+        <div className="flex justify-between items-center">
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logo} alt="Basmah Logo" className="h-16 w-32" />
+          </Link>
+          <div className="flex items-center gap-4">
+            <span className="text-gray-600">{doctorName}</span>
+            <Link
+              to="/hospital"
+              className="text-zinc-600 hover:text-blue-500 transition-colors"
+            >
+              Déconnexion
+            </Link>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 

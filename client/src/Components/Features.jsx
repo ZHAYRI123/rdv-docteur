@@ -23,7 +23,7 @@ function Features() {
       title: "Vos Document de sante, toujours avec vous",
       description: "Chez Basmah, Conservez vos ordonnances, résultats d'examen et certificats dans un environnement sécurisé. Partagez-les en direct avec vos praticiens avant, pendant ou après vos rendez-vous médicaux.",
       image: protection,
-      buttonText: "En savoir plus",
+      buttonText: "Accéder à mes documents",
       imagePosition: "left"
     }
   ];

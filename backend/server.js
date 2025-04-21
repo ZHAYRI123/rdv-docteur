@@ -8,7 +8,6 @@ import emailRouter from './Routes/email.js'
 import hopitalRouter from './Routes/hopitalRoute.js'
 import specialiteRouter from './Routes/specialiteRoute.js'
 import rdvRouter from './Routes/RdvRoute.js'
-
 dotenv.config();
 const app = express();
 
@@ -28,10 +27,6 @@ app.use('/email', emailRouter);
 app.use('/hopital', hopitalRouter);
 app.use('/specialite', specialiteRouter);
 app.use('/rdv', rdvRouter);
-
-
-
-
 
 
 // Route de test

@@ -3,6 +3,8 @@ import Login from './Pages/login';
 import Landing from './Pages/Landing';
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Signup from './Pages/signup';
 import Hopital from './Pages/Hopital/hopital';
 import Admin from './Pages/Hopital/Admin';
@@ -20,6 +22,7 @@ const NavbarWrapper = () => {
 function App() {
   return (
     <BrowserRouter>
+      <ToastContainer position="top-right" autoClose={3000} />
       <NavbarWrapper />
       <Routes>
         <Route path='/' element={<Landing />} />

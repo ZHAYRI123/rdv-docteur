@@ -56,6 +56,9 @@ const Login = ({ userType = 'patient' }) => {
 			const { token } = await response.json();
 			toast.success('Connexion réussie');
 
+			localStorage.setItem('token', token);
+
+
 			document.cookie = `jwtToken=${token}; expires=${new Date(new Date().getTime() + 3600000).toUTCString()}; path=/`;
 			localStorage.setItem('userEmail', email);
 			localStorage.setItem('userType', userType);

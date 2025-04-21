@@ -2,6 +2,8 @@ import Specialite from '../models/specialite.js';
 import Docteur from '../models/Docteur.js';
 import jwt from "jsonwebtoken";
 import express from "express";
+import dotenv from 'dotenv';
+dotenv.config();
 
 const specialiteRouter = express.Router();
 const { JWT_SECRET } = process.env;
@@ -51,7 +53,7 @@ specialiteRouter.post('/createSpecialite', authenticateToken, authorizeHopital, 
 });
 
 // Récupérer toutes les spécialités
-specialiteRouter.post('/getAllSpecialites', authenticateToken, authorizeHopital, async (req, res) => {
+specialiteRouter.get('/getAllSpecialites', authenticateToken, authorizeHopital, async (req, res) => {
   try {
     const specialites = await Specialite.find();
     res.status(200).json(specialites);
@@ -61,7 +63,7 @@ specialiteRouter.post('/getAllSpecialites', authenticateToken, authorizeHopital,
 });
 
 //récupérer une spécialité ET afficher les docteurs associés à cette spécialité
-specialiteRouter.post('/getSpecialiteWithDocteurs', authenticateToken, authorizeHopital, async (req, res) => {
+specialiteRouter.get('/getSpecialiteWithDocteurs', authenticateToken, authorizeHopital, async (req, res) => {
     try {
       const { id } = req.params;
   
