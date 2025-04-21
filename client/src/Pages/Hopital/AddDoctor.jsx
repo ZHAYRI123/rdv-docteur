@@ -1,16 +1,18 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import DoctorForm from './DoctorForm';
+
 const AddDoctor = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    specialty: '',
+    nom: '',
+    prenom: '',
     email: '',
-    phone: '',
-    startTime: '',
-    endTime: ''
+    password: '',
+    telephone: '',
+    specialite: '',
+    role: 'docteur'
   });
 
   const handleChange = (e) => {
@@ -22,20 +24,34 @@ const AddDoctor = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  
     try {
-      const response = await fetch('http://localhost:3000/doctor/create', {
+      const response = await fetch('http://localhost:5000/doctor/createDoctor', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          nom: formData.nom,
+          prenom: formData.prenom,
+          email: formData.email,
+          password: formData.password,
+          telephone: formData.telephone,
+          specialite: formData.specialite
+        })
       });
-
+  
+      const data = await response.json();
+  
       if (response.ok) {
-        navigate('/hospital/admin');
+        localStorage.setItem('token', data.token);  // Stocke le token JWT
+        toast.success("Médecin créé avec succès !");
+        navigate('/hospital/admin');  // Redirige vers la page d'administration
+      } else {
+        toast.error(data.message || "Erreur lors de la création du docteur.");
       }
     } catch (error) {
-      console.error('Error:', error);
+      toast.error("Erreur de connexion au serveur.");
     }
   };
 

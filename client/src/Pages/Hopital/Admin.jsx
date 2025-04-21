@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import Calendar from './Calendar';
 import logo from "../../image/logo.png";
+import SpecialityManagement from "./specialite";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+
 
 const Admin = () => {
   return (
@@ -9,8 +13,9 @@ const Admin = () => {
       <main className="pt-20 px-4 pb-8">
         <div className="container mx-auto">
           <StatisticsSection />
+          <SpecialityManagement />
           <DoctorManagement />
-          <calendar />
+          <Calendar />
         </div>
       </main>
     </div>
@@ -71,17 +76,92 @@ const StatisticsSection = () => {
 };
 
 const DoctorManagement = () => {
-  const doctors = [
-    {
-      name: "Dr. Mohamed Cheick",
-      specialty: "Cardiologie",
-      email: "m.cheick@basmah.com"
-    }
-  ];
+  const [doctors, setDoctors] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [specialities, setSpecialities] = useState([]);
 
-  const handleDelete = (email) => {
-    console.log(`Delete doctor with email: ${email}`);
+  useEffect(() => {
+    fetchDoctors();
+    fetchSpecialities();
+  }, []);
+
+  const fetchSpecialities = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:5000/specialite/getAllSpecialites', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setSpecialities(data);
+      }
+    } catch (error) {
+      console.error('Error fetching specialities:', error);
+    }
   };
+
+  const fetchDoctors = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:5000/doctor/all', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setDoctors(data);
+      } else {
+        toast.error('Erreur lors du chargement des médecins');
+      }
+    } catch (error) {
+      console.error('Fetch error:', error);
+      toast.error('Erreur de connexion au serveur');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getSpecialityName = (specialityId) => {
+    const speciality = specialities.find(s => s._id === specialityId);
+    return speciality ? speciality.nom : 'Non spécifié';
+  };
+
+  const handleDelete = async (id) => {
+    if (window.confirm('Êtes-vous sûr de vouloir supprimer ce médecin ?')) {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`http://localhost:5000/doctor/${id}`, { // Changed from docteur to doctor
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+  
+        if (response.ok) {
+          toast.success('Médecin supprimé avec succès');
+          fetchDoctors(); // Refresh the list
+        } else {
+          const errorData = await response.text();
+          console.error('Server response:', errorData);
+          toast.error('Erreur lors de la suppression');
+        }
+      } catch (error) {
+        console.error('Delete error:', error);
+        toast.error('Erreur de connexion au serveur');
+      }
+    }
+  };
+
+  if (loading) {
+    return <div>Chargement...</div>;
+  }
 
   return (
     <section className="bg-white rounded-lg shadow p-6 mb-8">
@@ -100,20 +180,26 @@ const DoctorManagement = () => {
           <thead className="bg-gray-50">
             <tr>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nom</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Prénom</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Spécialité</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Téléphone</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {doctors.map((doctor, index) => (
-              <tr key={index}>
-                <td className="px-6 py-4 whitespace-nowrap">{doctor.name}</td>
-                <td className="px-6 py-4 whitespace-nowrap">{doctor.specialty}</td>
+            {doctors.map((doctor) => (
+              <tr key={doctor._id}>
+                <td className="px-6 py-4 whitespace-nowrap">{doctor.nom}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{doctor.prenom}</td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {getSpecialityName(doctor.specialite)}
+                </td>
                 <td className="px-6 py-4 whitespace-nowrap">{doctor.email}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{doctor.telephone}</td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <button
-                    onClick={() => handleDelete(doctor.email)}
+                    onClick={() => handleDelete(doctor._id)}
                     className="text-red-500 hover:text-red-700 transition-colors"
                   >
                     Supprimer
@@ -123,11 +209,10 @@ const DoctorManagement = () => {
             ))}
           </tbody>
         </table>
-        <Calendar />
       </div>
     </section>
   );
-};
+}
 
 
 export default Admin;
