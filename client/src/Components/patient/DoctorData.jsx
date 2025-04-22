@@ -27,10 +27,12 @@ function DoctorData() {
 
 		const fetchData = async () => {
 			try {
+				
 				const doctorResponse = await fetch('http://localhost:5000/doctor/getAll', {
 					method: 'GET',
 					headers: {
-						Authorization: `Bearer ${getJwtToken()}`,
+						'Authorization': `Bearer ${getJwtToken()}`,
+						'Content-Type': 'application/json',
 					},
 				});
 

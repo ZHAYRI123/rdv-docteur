@@ -74,7 +74,9 @@ patientRouter.post('/addPatient', async (req, res) => {
 		const newPatient = new Patient({
 			...patientData,
 			password: hashedPassword,
+			
 		});
+
 		await newPatient.save();
 
 		const token = generateToken(newPatient, 'patient');

@@ -43,7 +43,7 @@ const Signup = () => {
       email,
       telephone: Number(telephone),
       password,
-      date_naissance: dateNaissance,
+      dateNaissance: new Date(dateNaissance).toISOString(),
       sexe,
       role: "patient"
     };
