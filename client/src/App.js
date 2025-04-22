@@ -30,6 +30,9 @@ function App() {
         <Route path='/login/doctor' element={<Login userType="doctor" />} />
         <Route path='/login/patient' element={<Login userType="patient" />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/hospital' element={<Hopital />} />
+        <Route path='/hospital/admin' element={<Admin />} />
+        <Route path='/hospital/add-doctor' element={<AddDoctor />} />
         <Route path='/doctor-dashboard' element={<DoctorDashboard />} />
         <Route path='/update-profile' element={<UpdateProfile />} />
         <Route path='/patient-dashboard/*' element={<PatientDashBoard />} />
