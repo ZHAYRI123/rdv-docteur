@@ -61,7 +61,7 @@ export default function DoctorCard(props) {
 		const symptoms = inputValue;
 		let dupFlag = false;
 		try {
-			const patientResponse = await authFetch('http://localhost:6969/patient/getByEmail', {
+			const patientResponse = await authFetch('http://localhost:5000/patient/getByEmail', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ export default function DoctorCard(props) {
 					},
 				};
 
-				const response = await authFetch('http://localhost:6969/patient/updatePatient', {
+				const response = await authFetch('http://localhost:5000/patient/updatePatient', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ export default function DoctorCard(props) {
 		let dupFlag2 = false;
 		if (!dupFlag) {
 			try {
-				const doctorResponse = await authFetch('http://localhost:6969/doctor/getByEmail', {
+				const doctorResponse = await authFetch('http://localhost:5000/doctor/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
