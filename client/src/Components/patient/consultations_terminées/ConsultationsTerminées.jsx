@@ -28,9 +28,10 @@ function CompletedConsultations() {
 			window.location.href = '/patient-login';
 			return;
 		}
+
 		const fetchCompleted = async () => {
 			try {
-				const patientResponse = await fetch('http://localhost:6969/patient/getByEmail', {
+				const patientResponse = await fetch('http://localhost:5000/patient/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -38,55 +39,74 @@ function CompletedConsultations() {
 					},
 					body: JSON.stringify({ email: patientEmail }),
 				});
-				if (patientResponse.status === 500) {
-					toast.error('Erreur interne du serveur');
+
+				if (!patientResponse.ok) {
+					throw new Error(`HTTP error! status: ${patientResponse.status}`);
+				}
+
+				const patient = await patientResponse.json();
+
+				// Check if patient and patient.doctor exist
+				if (!patient || !patient.doctor) {
+					setIsData(false);
+					setLoading(false);
 					return;
 				}
-				const patient = await patientResponse.json();
+
 				const completedDoctors = patient.doctor.filter((doc) => doc.status === 'completed');
 
-				for (const doc of completedDoctors) {
-					try {
-						const doctorResponse = await fetch('http://localhost:5000/doctor/getByEmail', {
-							method: 'POST',
-							headers: {
-								'Content-Type': 'application/json',
-								Authorization: `Bearer ${jwtToken}`,
-							},
-							body: JSON.stringify({ email: doc.email }),
-						});
-						if (doctorResponse.status === 500) {
-							toast.error('Erreur interne du serveur');
-							continue;
-						}
-						const doctorData = await doctorResponse.json();
-						setData((prevData) => [
-							...prevData,
-							{
-								sr: prevData.length + 1,
+				if (completedDoctors.length === 0) {
+					setIsData(false);
+					setLoading(false);
+					return;
+				}
+
+				const doctorsData = await Promise.all(
+					completedDoctors.map(async (doc) => {
+						try {
+							const doctorResponse = await fetch('http://localhost:5000/doctor/getByEmail', {
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/json',
+									Authorization: `Bearer ${jwtToken}`,
+								},
+								body: JSON.stringify({ email: doc.email }),
+							});
+
+							if (!doctorResponse.ok) {
+								throw new Error(`HTTP error! status: ${doctorResponse.status}`);
+							}
+
+							const doctorData = await doctorResponse.json();
+							return {
+								sr: Data.length + 1,
 								name: doctorData.name,
 								email: doc.email,
 								id: doc.id,
 								specialisation: doctorData.specialisation,
 								symptoms: doc.symptoms,
 								feedback: doc.feedback,
-							},
-						]);
-						setIsData(true);
-					} catch (error) {
-						console.error(error);
-						toast.error('Erreur interne du serveur');
-					}
-				}
+							};
+						} catch (error) {
+							console.error('Error fetching doctor:', error);
+							return null;
+						}
+					})
+				);
+
+				const validDoctorsData = doctorsData.filter(Boolean);
+				setData(validDoctorsData);
+				setIsData(validDoctorsData.length > 0);
 			} catch (error) {
-				console.error(error);
-				toast.error('Erreur interne du serveur');
+				console.error('Error:', error);
+				toast.error('Erreur lors du chargement des consultations terminées');
+			} finally {
+				setLoading(false);
 			}
 		};
+
 		fetchCompleted();
-		setLoading(false);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [jwtToken]);
+	}, [jwtToken, patientEmail]);
 
 	return (
 		<>

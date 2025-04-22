@@ -47,12 +47,29 @@ rdvRouter.post('/addRdv', authenticateToken, async (req, res) => {
 });
 
 // 2. Récupérer tous les rendez-vous
-rdvRouter.get('/getAllRdv', authenticateToken, async (req, res) => {
+rdvRouter.post('/getAllRdv', authenticateToken, async (req, res) => {
   try {
-    const rdvs = await Rdv.find();
+    const { email } = req.body;
+    
+    if (!email) {
+      return res.status(400).json({ message: "Email requis" });
+    }
+
+    const rdvs = await Rdv.find({
+      'patient.email': email
+    }).sort({ date: 1, heure: 1 }); // Sort by date and time
+
+    if (!rdvs || rdvs.length === 0) {
+      return res.status(404).json({ message: "Aucun rendez-vous trouvé" });
+    }
+
     res.status(200).json(rdvs);
   } catch (error) {
-    res.status(500).json({ message: "Erreur lors de la récupération des rendez-vous" });
+    console.error('Error fetching appointments:', error);
+    res.status(500).json({ 
+      message: "Erreur lors de la récupération des rendez-vous",
+      error: error.message 
+    });
   }
 });
 

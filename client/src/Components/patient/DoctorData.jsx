@@ -28,7 +28,7 @@ function DoctorData() {
 		const fetchData = async () => {
 			try {
 				
-				const doctorResponse = await fetch('http://localhost:5000/doctor/getAll', {
+				const doctorResponse = await fetch('http://localhost:5000/doctor/all', {
 					method: 'GET',
 					headers: {
 						'Authorization': `Bearer ${getJwtToken()}`,

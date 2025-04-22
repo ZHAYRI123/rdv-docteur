@@ -23,15 +23,14 @@ function RdvReservé() {
 	const jwtToken = getJwtToken();
 
 	useEffect(() => {
-		if (!jwtToken) {
-			toast.error('Session expirée. Veuillez vous reconnecter.');
-			window.location.href = '/patient-login';
-			return;
-		}
-
 		const fetchAppointments = async () => {
 			try {
-				const appointments = await fetch('http://localhost:5000/rdv/getAllRdv', {
+				if (!jwtToken) {
+					toast.error('Session expirée');
+					return;
+				}
+
+				const response = await fetch('http://localhost:5000/rdv/getAllRdv', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -40,52 +39,29 @@ function RdvReservé() {
 					body: JSON.stringify({ email }),
 				});
 
-				if (appointments.status === 404) return;
-				if (appointments.status === 500) {
-					toast.error('Erreur interne du serveur');
+				if (response.status === 404) {
+					setData([]);
 					return;
 				}
 
-				const appData = await appointments.json();
-
-				for (const [index, app] of appData.entries()) {
-					try {
-						const doctorData = await fetch('http://localhost:5000/doctor/getByEmail', {
-							method: 'POST',
-							headers: {
-								'Content-Type': 'application/json',
-								Authorization: `Bearer ${jwtToken}`,
-							},
-							body: JSON.stringify({ email: app.doctor.email }),
-						});
-
-						if (doctorData.status === 500) {
-							toast.error('Erreur interne du serveur');
-							continue;
-						}
-
-						const doctor = await doctorData.json();
-
-						setData((prevData) => [
-							...prevData,
-							{
-								sr: index + 1,
-								name: doctor.name,
-								specialisation: doctor.specialisation,
-								date: app.date.split('T')[0],
-								time: app.time,
-							},
-						]);
-					} catch (error) {
-						console.error(error);
-						toast.error('Erreur interne du serveur');
-					}
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
 				}
 
+				const rdvs = await response.json();
+				setData(
+					rdvs.map((rdv, index) => ({
+						sr: index + 1,
+						name: rdv.docteur.nom,
+						specialisation: rdv.docteur.specialisation,
+						date: new Date(rdv.date).toLocaleDateString(),
+						time: rdv.heure,
+					}))
+				);
 				setIsData(true);
 			} catch (error) {
-				console.error(error);
-				toast.error('Erreur interne du serveur');
+				console.error('Error:', error);
+				toast.error('Erreur lors du chargement des rendez-vous');
 			} finally {
 				setLoading(false);
 			}
