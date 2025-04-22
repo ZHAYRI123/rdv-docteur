@@ -21,8 +21,6 @@ function generateToken(user, role) {
   );
 }
 
-
-
 // Connexion d'un docteur
 doctorRouter.post('/loginDoctor', async (req, res) => {
   try {
@@ -167,7 +165,7 @@ doctorRouter.put('/updateDoctor/:id', authenticateToken, async (req, res) => {
 doctorRouter.post('/getByEmail', authenticateToken, async (req, res) => {
   try {
     const { email } = req.body;
-    const doctor = await Docteur.findOne({ email }); // Changer Doctor en Docteur
+    const doctor = await Docteur.findOne({ email }); 
     if (!doctor) return res.status(404).json({ message: 'Docteur non trouvé' });
     res.json(doctor);
   } catch (error) {
@@ -194,46 +192,6 @@ function authenticateToken(req, res, next) {
   }
 }
 
-// Add these routes after your existing routes
-doctorRouter.get('/me', authenticateToken, async (req, res) => {
-  try {
-    const docteur = await Docteur.findById(req.user.userId);
-    if (!docteur) {
-      return res.status(404).json({ message: "Docteur non trouvé" });
-    }
-    res.json({
-      nom: docteur.nom,
-      prenom: docteur.prenom,
-      id: docteur._id
-    });
-  } catch (error) {
-    console.error('Error in /me:', error);
-    res.status(500).json({ message: error.message });
-  }
-});
 
-doctorRouter.get('/appointments', authenticateToken, async (req, res) => {
-  try {
-    const appointments = await RDV.find({ docteur: req.user.userId })
-      .populate('patient', 'nom prenom')
-      .sort({ date: 1 });
-    res.json(appointments);
-  } catch (error) {
-    console.error('Error in /appointments:', error);
-    res.status(500).json({ message: error.message });
-  }
-});
-
-doctorRouter.get('/patients', authenticateToken, async (req, res) => {
-  try {
-    const rdvs = await RDV.find({ docteur: req.user.userId })
-      .distinct('patient');
-    const patients = await Patient.find({ _id: { $in: rdvs } });
-    res.json(patients);
-  } catch (error) {
-    console.error('Error in /patients:', error);
-    res.status(500).json({ message: error.message });
-  }
-});
 
 export default doctorRouter;

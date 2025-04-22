@@ -18,7 +18,7 @@ const DoctorDashboard = () => {
   const fetchPatients = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/doctor/patients', {
+      const response = await fetch('http://localhost:5000/patient//getAllPatients', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -38,7 +38,7 @@ const DoctorDashboard = () => {
   const fetchAppointments = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/doctor/appointments', {
+      const response = await fetch('http://localhost:5000/rdv/getAllRdv', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -251,36 +251,44 @@ const Header = () => {
     const fetchDoctorInfo = async () => {
       try {
         const token = localStorage.getItem('token');
-        if (!token) {
-          console.error('No token found');
+        const email = localStorage.getItem('userEmail'); // Get email from localStorage
+
+        if (!token || !email) {
+          console.error('No token or email found');
+          navigate('/login/doctor');
           return;
         }
     
-        const response = await fetch('http://localhost:5000/doctor/me', {
+        const response = await fetch('http://localhost:5000/doctor/getByEmail', {
+          method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'
-          }
+          },
+          body: JSON.stringify({ email }) // Send email in request body
         });
         
         if (response.ok) {
           const data = await response.json();
           setDoctorName(`Dr. ${data.nom} ${data.prenom}`);
+          // Store doctor info for later use if needed
+          localStorage.setItem('doctorId', data._id);
+          localStorage.setItem('doctorName', `${data.nom} ${data.prenom}`);
         } else {
           const error = await response.json();
           console.error('Error response:', error);
           if (response.status === 401 || response.status === 403) {
-            // Handle unauthorized access
             navigate('/login/doctor');
           }
         }
       } catch (error) {
         console.error('Error fetching doctor info:', error);
+        navigate('/login/doctor');
       }
     };
 
     fetchDoctorInfo();
-  }, []);
+  }, [navigate]);
 
   return (
     <header className="fixed top-0 w-full bg-white shadow-lg z-50">
