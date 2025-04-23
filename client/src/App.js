@@ -12,6 +12,7 @@ import AddDoctor from './Pages/Hopital/AddDoctor';
 import DoctorDashboard from './Pages/Doctor/Doctor';
 import PatientDashBoard from './Pages/PatientDashboard';
 import UpdateProfile from './Pages/UpdateProfile';
+import UpdateDoctor from './Pages/Doctor/UpdateDoctor';
 
 const NavbarWrapper = () => {
   const showNavbar = ['/login/hospital', '/login/doctor', '/login/patient', '/signup'];
@@ -36,6 +37,7 @@ function App() {
         <Route path='/doctor-dashboard' element={<DoctorDashboard />} />
         <Route path='/update-profile' element={<UpdateProfile />} />
         <Route path='/patient-dashboard/*' element={<PatientDashBoard />} />
+        <Route path='/hospital/admin/edit-doctor/:id' element={<UpdateDoctor />} />
       </Routes>
     </BrowserRouter>
   );

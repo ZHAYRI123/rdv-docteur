@@ -5,7 +5,6 @@ import SpecialityManagement from "./specialite";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-
 const Admin = () => {
   return (
     <div className="bg-gray-50">
@@ -14,6 +13,7 @@ const Admin = () => {
         <div className="container mx-auto">
           <StatisticsSection />
           <SpecialityManagement />
+          <br />
           <DoctorManagement />
           <Calendar />
         </div>
@@ -60,16 +60,106 @@ const StatisticCard = ({ title, value, percentage }) => {
 };
 
 const StatisticsSection = () => {
-  const stats = [
-    { title: "Total Rendez-vous", value: 152, percentage: 12 },
-    { title: "Rendez-vous Aujourd'hui", value: 24 },
-    { title: "Médecins Actifs", value: 8 },
+  const [stats, setStats] = useState({
+    totalAppointments: 0,
+    todayAppointments: 0,
+    activeDoctors: 0,
+    loading: true
+  });
+
+  useEffect(() => {
+    fetchStats();
+  }, []);
+
+  const fetchStats = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      
+      // Fetch all appointments
+      const rdvResponse = await fetch('http://localhost:5000/rdv/getAllRdv', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      // Fetch all doctors
+      const doctorsResponse = await fetch('http://localhost:5000/doctor/all', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!rdvResponse.ok || !doctorsResponse.ok) {
+        throw new Error('Failed to fetch statistics');
+      }
+
+      const appointments = await rdvResponse.json();
+      const doctors = await doctorsResponse.json();
+
+      // Get today's date in YYYY-MM-DD format
+      const today = new Date().toISOString().split('T')[0];
+
+      // Calculate statistics
+      const todayAppointments = appointments.filter(rdv => 
+        rdv.date.startsWith(today)
+      ).length;
+
+      const lastMonthDate = new Date();
+      lastMonthDate.setMonth(lastMonthDate.getMonth() - 1);
+      const lastMonthAppointments = appointments.filter(rdv => 
+        new Date(rdv.date) >= lastMonthDate
+      ).length;
+
+      const percentageChange = lastMonthAppointments > 0 
+        ? Math.round((todayAppointments / lastMonthAppointments) * 100) 
+        : 0;
+
+      setStats({
+        totalAppointments: appointments.length,
+        todayAppointments,
+        activeDoctors: doctors.length,
+        percentageChange,
+        loading: false
+      });
+
+    } catch (error) {
+      console.error('Error fetching statistics:', error);
+      toast.error('Erreur lors du chargement des statistiques');
+      setStats(prev => ({ ...prev, loading: false }));
+    }
+  };
+
+  if (stats.loading) {
+    return <div>Chargement des statistiques...</div>;
+  }
+
+  const statisticsData = [
+    { 
+      title: "Total Rendez-vous", 
+      value: stats.totalAppointments, 
+      percentage: stats.percentageChange 
+    },
+    { 
+      title: "Rendez-vous Aujourd'hui", 
+      value: stats.todayAppointments 
+    },
+    { 
+      title: "Médecins Actifs", 
+      value: stats.activeDoctors 
+    },
   ];
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      {stats.map((stat, index) => (
-        <StatisticCard key={index} {...stat} />
+      {statisticsData.map((stat, index) => (
+        <StatisticCard 
+          key={index}
+          title={stat.title}
+          value={stat.value}
+          percentage={stat.percentage}
+        />
       ))}
     </section>
   );
@@ -198,12 +288,20 @@ const DoctorManagement = () => {
                 <td className="px-6 py-4 whitespace-nowrap">{doctor.email}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{doctor.telephone}</td>
                 <td className="px-6 py-4 whitespace-nowrap">
+                <div className="flex space-x-4">
+                  <Link
+                    to={`/hospital/admin/edit-doctor/${doctor._id}`}
+                    className="text-blue-500 hover:text-blue-700 transition-colors"
+                  >
+                    Modifier
+                  </Link>
                   <button
                     onClick={() => handleDelete(doctor._id)}
                     className="text-red-500 hover:text-red-700 transition-colors"
                   >
                     Supprimer
                   </button>
+                </div>
                 </td>
               </tr>
             ))}
