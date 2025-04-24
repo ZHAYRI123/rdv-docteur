@@ -12,7 +12,22 @@ const PatientSchema = new Schema({
   password: { type: String, required: true },
   dateNaissance: { type: Date, required: true },
   sexe: { type: String, required: true },
-  role: { type: String, default: "patient" }
+  role: { type: String, default: "patient" },
+  doctor: [
+    {
+      email: { type: String, required: true },
+      status: { type: String, default: 'Pending' },
+      symptoms: { type: String, default: '' },
+      id: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+      },
+      completionDate: { type: Date },
+      feedback: { type: String, default: '' },
+    },
+  ],
+  symptoms: { type: String, default: '' }
+
 });
 
 const Patient = mongoose.model('Patient', PatientSchema);

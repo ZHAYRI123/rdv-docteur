@@ -97,7 +97,7 @@ patientRouter.post('/getByEmail', authenticateToken, async (req, res) => {
 			prenom: patient.prenom,
 			email: patient.email,
 			telephone: patient.telephone,
-			dateNaissance: patient.dateNaissance, // 👈 BIEN inclure ça
+			dateNaissance: patient.dateNaissance,
 			sexe: patient.sexe
 		  });
 	} catch (error) {
