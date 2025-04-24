@@ -49,55 +49,61 @@ function PendingData() {
 				}
 
 				const patient = await response.json();
-				let srno = 0;
+				console.log("Patient récupéré :", patient);
+				
+				// Check if patient.doctor exists
+				if (!patient.doctor || !Array.isArray(patient.doctor)) {
+					setIsData(false);
+					setLoading(false);
+					return;
+				}
 
-				patient.doctor.map(async (doctor) => {
-					if (doctor.status !== 'consultation') return;
+				// Use Promise.all to handle multiple async operations
+				const doctorPromises = patient.doctor
+					.filter(doctor => doctor.status === 'consultation')
+					.map(async (doctor, index) => {
+						try {
+							const response = await fetch('http://localhost:5000/doctor/getByEmail', {
+								method: 'POST',
+								headers: {
+									'Content-Type': 'application/json',
+									Authorization: `Bearer ${jwtToken}`,
+								},
+								body: JSON.stringify({ email: doctor.email }),
+							});
 
-					try {
-						const response = await fetch('http://localhost:5000/doctor/getByEmail', {
-							method: 'POST',
-							headers: {
-								'Content-Type': 'application/json',
-								Authorization: `Bearer ${jwtToken}`,
-							},
-							body: JSON.stringify({ email: doctor.email }),
-						});
+							if (!response.ok) {
+								throw new Error(`HTTP error! status: ${response.status}`);
+							}
 
-						if (response.status === 404) {
-							toast.error('Médecin introuvable.');
-							return;
-						}
-						if (response.status === 500) {
-							toast.error('Erreur interne du serveur.');
-							return;
-						}
-
-						const doctorData = await response.json();
-						srno++;
-						setData((prevData) => [
-							...prevData,
-							{
-								sr: srno,
+							const doctorData = await response.json();
+							return {
+								sr: index + 1,
 								name: doctorData.name,
 								specialisation: doctorData.specialisation,
 								symptoms: doctor.symptoms,
-							},
-						]);
-						setIsData(true);
-					} catch (error) {
-						console.error(error);
-						toast.error('Erreur interne du serveur.');
-					}
-				});
+							};
+						} catch (error) {
+							console.error(error);
+							return null;
+						}
+					});
+
+				const results = await Promise.all(doctorPromises);
+				const validResults = results.filter(Boolean);
+				
+				setData(validResults);
+				setIsData(validResults.length > 0);
+				setLoading(false);
+
 			} catch (error) {
 				console.error(error);
 				toast.error('Erreur interne du serveur.');
+				setLoading(false);
 			}
 		};
 
 		fetchPatient();
-		setLoading(false);
 	}, [jwtToken]);
 
 	return (
