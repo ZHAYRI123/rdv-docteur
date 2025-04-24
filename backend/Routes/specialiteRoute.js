@@ -53,12 +53,13 @@ specialiteRouter.post('/createSpecialite', authenticateToken, authorizeHopital, 
 });
 
 // Récupérer toutes les spécialités
-specialiteRouter.get('/getAllSpecialites', authenticateToken, authorizeHopital, async (req, res) => {
+specialiteRouter.get('/getAllSpecialites', async (req, res) => {
   try {
     const specialites = await Specialite.find();
-    res.status(200).json(specialites);
+    res.json(specialites);
   } catch (error) {
-    res.status(500).json({ message: "Error da l'affichage" });
+    console.error('Error fetching specialities:', error);
+    res.status(500).json({ message: error.message });
   }
 });
 

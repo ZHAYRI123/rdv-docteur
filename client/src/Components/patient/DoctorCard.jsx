@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function DoctorCard(props) {
-	const renderableWorkingHours = props.workingHours.filter((workingHour) => workingHour.from !== '' && workingHour.to !== '');
+	// const renderableWorkingHours = props.workingHours.filter((workingHour) => workingHour.from !== '' && workingHour.to !== '');
 
 	const [showModal, setShowModal] = useState(false);
 	const [inputValue, setInputValue] = useState('');
@@ -228,7 +228,7 @@ export default function DoctorCard(props) {
 						</div>
 					</div>
 				</div>
-				<div className='mx-2'>
+				{/* <div className='mx-2'>
 					<div className='font-bold text-left'>
 						Horaires : <span className='text-gray-600 font-normal'>
 							{renderableWorkingHours.map((workingHour, index) => (
@@ -239,7 +239,7 @@ export default function DoctorCard(props) {
 							))}
 						</span>
 					</div>
-				</div>
+				</div> */}
 				<button className='m-2 px-4 py-2 rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500' onClick={handleOpenModal}>
 					Réserver
 				</button>

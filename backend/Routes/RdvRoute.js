@@ -47,22 +47,16 @@ rdvRouter.post('/addRdv', authenticateToken, async (req, res) => {
 });
 
 // 2. Récupérer tous les rendez-vous
-rdvRouter.post('/getAllRdv', authenticateToken, async (req, res) => {
+rdvRouter.get('/getAllRdv', authenticateToken, async (req, res) => {
   try {
-    const { email } = req.body;
-    
-    if (!email) {
-      return res.status(400).json({ message: "Email requis" });
-    }
+    const rdvs = await Rdv.find()
+      .populate('patient', 'nom prenom email')
+      .populate('docteur', 'nom prenom specialite')
+      .sort({ date: 1, heure: 1 });
 
-    const rdvs = await Rdv.find({
-      'patient.email': email,
-      status: { $ne: 'cancelled' } // Exclure les RDV annulés
-    }).sort({ date: 1, heure: 1 }); // Trier par date et heure
-
-    // Si aucun RDV trouvé, renvoyer un tableau vide
+    // Return empty array if no appointments found
     if (!rdvs || rdvs.length === 0) {
-      return res.status(200).json([]); // Changed from 404 to 200 with empty array
+      return res.status(200).json([]);
     }
 
     res.status(200).json(rdvs);
