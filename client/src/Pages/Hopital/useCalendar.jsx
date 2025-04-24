@@ -1,17 +1,46 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 export const useCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
-  const [appointments, setAppointments] = useState([
-    { time: '09:00', patient: 'Ahmed abdine', doctor: 'Dr. Mohamed Cheick', type: 'Consultation' },
-    { time: '14:30', patient: 'Baraka elmane', doctor: 'Dr. Mohamed Cheick', type: 'Suivi' }
-  ]);
+  const [appointments, setAppointments] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const monthNames = [
     'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
     'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
   ];
+
+  // Fetch appointments from the database
+  const fetchAppointments = useCallback(async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:5000/rdv/getAllRdv', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch appointments');
+      }
+
+      const data = await response.json();
+      setAppointments(data);
+    } catch (error) {
+      console.error('Error fetching appointments:', error);
+      toast.error('Erreur lors du chargement des rendez-vous');
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  // Fetch appointments when the component mounts
+  useEffect(() => {
+    fetchAppointments();
+  }, [fetchAppointments]);
 
   const changeMonth = useCallback((delta) => {
     setCurrentDate(prevDate => {
@@ -27,6 +56,17 @@ export const useCalendar = () => {
       currentDate.getMonth() === today.getMonth() &&
       currentDate.getFullYear() === today.getFullYear();
   }, [currentDate]);
+
+  const getAppointmentsForDay = useCallback((day) => {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    const date = new Date(year, month, day);
+    const dateString = date.toISOString().split('T')[0];
+
+    return appointments.filter(appointment => 
+      appointment.date.startsWith(dateString)
+    ).length;
+  }, [appointments, currentDate]);
 
   const getCalendarDays = useCallback(() => {
     const year = currentDate.getFullYear();
@@ -47,12 +87,12 @@ export const useCalendar = () => {
         day,
         isEmpty: false,
         isToday: isToday(day),
-        appointments: 2 // Replace with actual count from your data
+        appointments: getAppointmentsForDay(day)
       });
     }
     
     return days;
-  }, [currentDate, isToday]);
+  }, [currentDate, isToday, getAppointmentsForDay]);
 
   return {
     currentDate,
@@ -61,6 +101,8 @@ export const useCalendar = () => {
     appointments,
     monthNames,
     changeMonth,
-    getCalendarDays
+    getCalendarDays,
+    loading,
+    fetchAppointments
   };
 };
