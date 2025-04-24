@@ -87,10 +87,10 @@ function RdvReservé() {
 											<thead className='border-b text-white text-base font-medium dark:border-neutral-500 bg-green-600'>
 												<tr>
 													<th scope='col' className='px-6 py-4'>#</th>
-													<th scope='col' className='px-6 py-4'>Name</th>
-													<th scope='col' className='px-6 py-4'>Specialisation</th>
+													<th scope='col' className='px-6 py-4'>Nom</th>
+													<th scope='col' className='px-6 py-4'>Specialité</th>
 													<th scope='col' className='px-6 py-4'>Date</th>
-													<th scope='col' className='px-6 py-4'>Time</th>
+													<th scope='col' className='px-6 py-4'>Heure</th>
 												</tr>
 											</thead>
 											<tbody>
