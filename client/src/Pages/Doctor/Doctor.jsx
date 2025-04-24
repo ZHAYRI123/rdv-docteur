@@ -18,7 +18,7 @@ const DoctorDashboard = () => {
   const fetchPatients = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/patient//getAllPatients', {
+      const response = await fetch('http://localhost:5000/patient/getAllPatients', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

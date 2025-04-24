@@ -31,12 +31,11 @@ function RdvReservé() {
 				}
 
 				const response = await fetch('http://localhost:5000/rdv/getAllRdv', {
-					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
 						Authorization: `Bearer ${jwtToken}`,
 					},
-					body: JSON.stringify({ email }),
+					
 				});
 
 				if (response.status === 404) {
@@ -53,7 +52,7 @@ function RdvReservé() {
 					rdvs.map((rdv, index) => ({
 						sr: index + 1,
 						name: rdv.docteur.nom,
-						specialisation: rdv.docteur.specialisation,
+						 specialisation: rdv.docteur.specialisation,
 						date: new Date(rdv.date).toLocaleDateString(),
 						time: rdv.heure,
 					}))

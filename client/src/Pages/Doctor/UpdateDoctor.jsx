@@ -11,19 +11,24 @@ const UpdateDoctor = () => {
     email: '',
     telephone: '',
     specialite: '',
+    photo: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    disponibilites: []
   });
-  const [passwordError, setPasswordError] = useState('');
+
   const [loading, setLoading] = useState(true);
   const [specialties, setSpecialties] = useState([]);
+  const [passwordError, setPasswordError] = useState('');
+  const [imagePreview, setImagePreview] = useState(null);
+  const [availabilities, setAvailabilities] = useState([{ date: '', heure: '' }]);
 
   useEffect(() => {
     fetchDoctorInfo();
     fetchSpecialties();
   }, [id]);
 
-  const fetchDoctorInfo = React.useCallback(async () => {
+  const fetchDoctorInfo = async () => {
     try {
       const token = localStorage.getItem('token');
       const response = await fetch(`http://localhost:5000/doctor/${id}`, {
@@ -39,8 +44,12 @@ const UpdateDoctor = () => {
           prenom: data.prenom,
           email: data.email,
           telephone: data.telephone,
-          specialite: data.specialite
+          specialite: data.specialite,
+          photo: data.photo || '',
+          disponibilites: data.disponibilites || []
         });
+        setAvailabilities(data.disponibilites.length > 0 ? data.disponibilites : [{ date: '', heure: '' }]);
+        setImagePreview(data.photo);
       } else {
         toast.error('Erreur lors du chargement des informations');
       }
@@ -50,9 +59,7 @@ const UpdateDoctor = () => {
     } finally {
       setLoading(false);
     }
-  });
-
-
+  };
 
   const fetchSpecialties = async () => {
     try {
@@ -73,44 +80,77 @@ const UpdateDoctor = () => {
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImagePreview(reader.result);
+        setFormData(prev => ({
+          ...prev,
+          photo: reader.result
+        }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleAvailabilityChange = (index, field, value) => {
+    const newAvailabilities = [...availabilities];
+    newAvailabilities[index] = {
+      ...newAvailabilities[index],
+      [field]: value
+    };
+    setAvailabilities(newAvailabilities);
+    setFormData(prev => ({
+      ...prev,
+      disponibilites: newAvailabilities
+    }));
+  };
+
+  const addAvailability = () => {
+    setAvailabilities([...availabilities, { date: '', heure: '' }]);
+  };
+
+  const removeAvailability = (index) => {
+    const newAvailabilities = availabilities.filter((_, i) => i !== index);
+    setAvailabilities(newAvailabilities);
+    setFormData(prev => ({
+      ...prev,
+      disponibilites: newAvailabilities
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (formData.password || formData.confirmPassword) {
-      if (formData.password !== formData.confirmPassword) {
-        setPasswordError('Les mots de passe ne correspondent pas');
-        return;
-      }
-      if (formData.password.length < 6) {
-        setPasswordError('Le mot de passe doit contenir au moins 6 caractères');
-        return;
-      }
-    }
-
-    // Remove confirmPassword from data sent to server
-    const updateData = { ...formData };
-    delete updateData.confirmPassword;
-    
-    // If password is empty, remove it from update data
-    if (!updateData.password) {
-      delete updateData.password;
+    if (formData.password && formData.password !== formData.confirmPassword) {
+      setPasswordError('Les mots de passe ne correspondent pas');
+      return;
     }
 
     try {
       const token = localStorage.getItem('token');
+      const updateData = { ...formData };
+      delete updateData.confirmPassword;
+      
+      if (!updateData.password) {
+        delete updateData.password;
+      }
+
       const response = await fetch(`http://localhost:5000/doctor/updateDoctor/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(updateData)
       });
 
       if (response.ok) {
@@ -132,127 +172,179 @@ const UpdateDoctor = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
+      <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">
           Modifier les informations du médecin
         </h2>
         
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="nom" className="block text-sm font-medium text-gray-700">
-              Nom
-            </label>
-            <input
-              type="text"
-              id="nom"
-              name="nom"
-              value={formData.nom}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="prenom" className="block text-sm font-medium text-gray-700">
-              Prénom
-            </label>
-            <input
-              type="text"
-              id="prenom"
-              name="prenom"
-              value={formData.prenom}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="specialite" className="block text-sm font-medium text-gray-700">
-              Spécialité
-            </label>
-            <select
-              id="specialite"
-              name="specialite"
-              value={formData.specialite}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            >
-              <option value="">Sélectionnez une spécialité</option>
-              {specialties.map(specialty => (
-                <option key={specialty._id} value={specialty._id}>
-                  {specialty.nom}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="telephone" className="block text-sm font-medium text-gray-700">
-              Téléphone
-            </label>
-            <input
-              type="tel"
-              id="telephone"
-              name="telephone"
-              value={formData.telephone}
-              onChange={handleChange}
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-              Nouveau mot de passe (optionnel)
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              placeholder="Laissez vide pour ne pas modifier"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-              Confirmer le nouveau mot de passe
-            </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
-            />
-          </div>
-
-          {passwordError && (
-            <div className="text-red-500 text-sm mt-1">
-              {passwordError}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Photo</label>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="mt-1 block w-full"
+              />
+              {imagePreview && (
+                <img
+                  src={imagePreview}
+                  alt="Preview"
+                  className="mt-2 h-32 w-32 object-cover rounded-full"
+                />
+              )}
             </div>
-          )}
+
+            <div>
+              <label htmlFor="nom" className="block text-sm font-medium text-gray-700">
+                Nom
+              </label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                value={formData.nom}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="prenom" className="block text-sm font-medium text-gray-700">
+                Prénom
+              </label>
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                value={formData.prenom}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="specialite" className="block text-sm font-medium text-gray-700">
+                Spécialité
+              </label>
+              <select
+                id="specialite"
+                name="specialite"
+                value={formData.specialite}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              >
+                <option value="">Sélectionnez une spécialité</option>
+                {specialties.map(specialty => (
+                  <option key={specialty._id} value={specialty._id}>
+                    {specialty.nom}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="telephone" className="block text-sm font-medium text-gray-700">
+                Téléphone
+              </label>
+              <input
+                type="tel"
+                id="telephone"
+                name="telephone"
+                value={formData.telephone}
+                onChange={handleChange}
+                required
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                Nouveau mot de passe (optionnel)
+              </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+                Confirmer le mot de passe
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              />
+              {passwordError && (
+                <p className="text-red-500 text-sm mt-1">{passwordError}</p>
+              )}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-medium text-gray-900">Disponibilités</h3>
+              <button
+                type="button"
+                onClick={addAvailability}
+                className="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700"
+              >
+                Ajouter une disponibilité
+              </button>
+            </div>
+            
+            {availabilities.map((availability, index) => (
+              <div key={index} className="flex items-center space-x-4">
+                <input
+                  type="date"
+                  value={availability.date}
+                  onChange={(e) => handleAvailabilityChange(index, 'date', e.target.value)}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+                <input
+                  type="time"
+                  value={availability.heure}
+                  onChange={(e) => handleAvailabilityChange(index, 'heure', e.target.value)}
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                />
+                <button
+                  type="button"
+                  onClick={() => removeAvailability(index)}
+                  className="px-2 py-1 text-sm font-medium text-red-600 hover:text-red-700"
+                >
+                  Supprimer
+                </button>
+              </div>
+            ))}
+          </div>
 
           <div className="flex justify-end space-x-4">
             <button

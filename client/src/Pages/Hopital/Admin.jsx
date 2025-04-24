@@ -75,7 +75,7 @@ const StatisticsSection = () => {
     try {
       const token = localStorage.getItem('token');
       
-      // Fetch all appointments
+      
       const rdvResponse = await fetch('http://localhost:5000/rdv/getAllRdv', {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -83,7 +83,7 @@ const StatisticsSection = () => {
         }
       });
 
-      // Fetch all doctors
+    
       const doctorsResponse = await fetch('http://localhost:5000/doctor/all', {
         headers: {
           'Authorization': `Bearer ${token}`,
