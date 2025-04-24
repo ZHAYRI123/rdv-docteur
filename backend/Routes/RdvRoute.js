@@ -56,11 +56,13 @@ rdvRouter.post('/getAllRdv', authenticateToken, async (req, res) => {
     }
 
     const rdvs = await Rdv.find({
-      'patient.email': email
-    }).sort({ date: 1, heure: 1 }); // Sort by date and time
+      'patient.email': email,
+      status: { $ne: 'cancelled' } // Exclure les RDV annulés
+    }).sort({ date: 1, heure: 1 }); // Trier par date et heure
 
+    // Si aucun RDV trouvé, renvoyer un tableau vide
     if (!rdvs || rdvs.length === 0) {
-      return res.status(404).json({ message: "Aucun rendez-vous trouvé" });
+      return res.status(200).json([]); // Changed from 404 to 200 with empty array
     }
 
     res.status(200).json(rdvs);
