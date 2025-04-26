@@ -16,7 +16,11 @@ const PatientSchema = new Schema({
   doctor: [
     {
       email: { type: String, required: true },
-      status: { type: String, default: 'Pending' },
+      status: {
+        type: String,
+        enum: ['consultation', 'pending', 'completed', 'cancelled'],
+        default: 'consultation'
+      },
       symptoms: { type: String, default: '' },
       id: {
         type: mongoose.Schema.Types.ObjectId,

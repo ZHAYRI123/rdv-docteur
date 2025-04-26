@@ -141,31 +141,17 @@ patientRouter.delete('/deletePatient/:id', async (req, res) => {
 });
 
 // Modifier un patient
-patientRouter.put('/updatePatient/:id', async (req, res) => {
-	try {
-		if (req.body.password) {
-			req.body.password = await bcrypt.hash(req.body.password, 10);
-		}
-		const patient = await Patient.findByIdAndUpdate(req.params.id, req.body, { new: true });
-		if (!patient) {
-			return res.status(404).json({ message: "Patient non trouvé" });
-		}
-		res.status(200).json(patient);
-	} catch (error) {
-		res.status(500).json({ message: error.message });
-	}
-});
-
-// Ajouter cette route
-patientRouter.put('/updateProfile', authenticateToken, async (req, res) => {
+patientRouter.put('/updatePatient', authenticateToken, async (req, res) => {
   try {
-    const { email } = req.user; // Email from JWT token
-    const updateData = req.body;
-    
-    // Trouver et mettre à jour le patient
+    const { email, $push } = req.body;
+
+    if (!email) {
+      return res.status(400).json({ message: 'Email requis' });
+    }
+
     const patient = await Patient.findOneAndUpdate(
       { email },
-      updateData,
+      { $push },
       { new: true }
     );
 
@@ -175,8 +161,11 @@ patientRouter.put('/updateProfile', authenticateToken, async (req, res) => {
 
     res.status(200).json(patient);
   } catch (error) {
-    console.error('Erreur mise à jour profil:', error);
-    res.status(500).json({ message: 'Erreur serveur lors de la mise à jour' });
+    console.error('Error updating patient:', error);
+    res.status(500).json({ 
+      message: 'Erreur lors de la mise à jour du patient',
+      error: error.message 
+    });
   }
 });
 
