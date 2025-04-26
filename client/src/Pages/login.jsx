@@ -4,7 +4,6 @@ import toast, { Toaster } from 'react-hot-toast';
 import loginImg from "../image/login.png";
 
 const Login = ({ userType = 'patient' }) => {
-	const [setIsLogin] = useState(true);
 	const [showPassword, setShowPassword] = useState(false);
 	const navigate = useNavigate();
 
@@ -40,7 +39,9 @@ const Login = ({ userType = 'patient' }) => {
 			if (response.status === 404) {
 				if (userType === 'patient') {
 					toast.error("Aucun compte patient trouvé. Redirection vers l'inscription...");
-					setTimeout(() => setIsLogin(false), 2000);
+					setTimeout(() => {
+						navigate('/signup');
+					}, 2000);
 				} else {
 					toast.error(`Aucun compte ${userType} trouvé.`);
 				}
