@@ -136,6 +136,29 @@ doctorRouter.delete('/:id', authenticateToken, async (req, res) => {
   }
 });
 
+// Ajouter ou mettre à jour les patients dans un docteur par email
+doctorRouter.post('/updateDoctor', authenticateToken, async (req, res) => {
+  try {
+    const { email, $push } = req.body;
+
+    const updatedDoctor = await Docteur.findOneAndUpdate(
+      { email: email },
+      { $push: { patients: $push.patients } }, 
+      { new: true }
+    );
+
+    if (!updatedDoctor) {
+      return res.status(404).json({ message: 'Docteur non trouvé' });
+    }
+
+    res.status(200).json(updatedDoctor);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Erreur lors de la mise à jour du docteur' });
+  }
+});
+
+
 // Mettre à jour les informations d'un docteur
 doctorRouter.put('/updateDoctor/:id', authenticateToken, async (req, res) => {
   try {
