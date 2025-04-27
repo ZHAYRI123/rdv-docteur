@@ -188,7 +188,7 @@ doctorRouter.put('/updateDoctor/:id', authenticateToken, async (req, res) => {
 doctorRouter.post('/getByEmail', authenticateToken, async (req, res) => {
   try {
     const { email } = req.body;
-    const doctor = await Docteur.findOne({ email }); 
+    const doctor = await Docteur.findOne({ email }).populate('specialite');
     if (!doctor) return res.status(404).json({ message: 'Docteur non trouvé' });
     res.json(doctor);
   } catch (error) {

@@ -88,22 +88,28 @@ patientRouter.post('/addPatient', async (req, res) => {
 });
 
 patientRouter.post('/getByEmail', authenticateToken, async (req, res) => {
-	try {
-		const { email } = req.body;
-		const patient = await Patient.findOne({ email });
-		if (!patient) return res.status(404).json({ message: 'Patient not found' });
-		return res.json({
-			nom: patient.nom,
-			prenom: patient.prenom,
-			email: patient.email,
-			telephone: patient.telephone,
-			dateNaissance: patient.dateNaissance,
-			sexe: patient.sexe
-		  });
-	} catch (error) {
-		console.error(error);
-		return res.status(500).json({ message: 'Internal server error' });
-	}
+  try {
+    const { email } = req.body;
+    const patient = await Patient.findOne({ email });
+    
+    if (!patient) {
+      return res.status(404).json({ message: 'Patient not found' });
+    }
+    
+    return res.json({
+      nom: patient.nom,
+      prenom: patient.prenom,
+      email: patient.email,
+      telephone: patient.telephone,
+      dateNaissance: patient.dateNaissance,
+      sexe: patient.sexe,
+      doctor: patient.doctor || [] // Added fallback to empty array
+    });
+    
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
 });
 
 // Récupérer tous les patients

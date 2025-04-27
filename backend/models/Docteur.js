@@ -18,7 +18,20 @@ const docteurSchema = new Schema({
 		date: String, 
 		heure: String 
 	}],
-	role: { type: String, default: 'docteur' }
+	role: { type: String, default: 'docteur' },
+	patients: [
+		{
+			email: { type: String, required: true },
+			status: { type: String, required: true },
+			symptoms: { type: String, default: '' },
+			id: {
+				type: mongoose.Schema.Types.ObjectId,
+				required: true,
+			},
+			completionDate: { type: Date },
+			feedback: { type: String, default: '' },
+		},
+	],
 	});
 
 
