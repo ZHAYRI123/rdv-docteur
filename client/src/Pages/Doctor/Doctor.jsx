@@ -18,14 +18,20 @@ const DoctorDashboard = () => {
   const fetchPatients = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/patient/getAllPatients', {
+      const doctorId = localStorage.getItem('doctorId');
+  
+      const response = await fetch(`http://localhost:5000/doctor/${doctorId}/patients`, {
         headers: {
-          'Authorization': `Bearer ${token}`
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
         }
       });
-      const data = await response.json();
+  
       if (response.ok) {
-        setPatients(data);
+        const doctorData = await response.json();
+        // Get patients array from doctor's data
+        const patientsList = doctorData.patients || [];
+        setPatients(patientsList);
       } else {
         toast.error('Erreur lors du chargement des patients');
       }
@@ -64,23 +70,29 @@ const DoctorDashboard = () => {
   const handleAppointmentAction = async (appointmentId, status) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/doctor/appointments/${appointmentId}`, {
+      const doctorId = localStorage.getItem('doctorId');
+  
+      const response = await fetch(`http://localhost:5000/rdv/updateStatus/${appointmentId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ status })
+        body: JSON.stringify({ 
+          status,
+          doctorId 
+        })
       });
-
+  
       if (response.ok) {
         toast.success(`Rendez-vous ${status === 'approved' ? 'approuvé' : 'rejeté'}`);
-        fetchAppointments();
+        fetchAppointments(); // Refresh the list
       } else {
-        toast.error("Erreur lors de la mise à jour du rendez-vous");
+        const errorData = await response.json();
+        toast.error(errorData.message || "Erreur lors de la mise à jour du rendez-vous");
       }
     } catch (error) {
-      console.error('Error updating appointment:', error);
+      console.error('Error:', error);
       toast.error('Erreur de connexion au serveur');
     }
   };
@@ -165,27 +177,39 @@ const DoctorDashboard = () => {
           />
         </div>
       </div>
-
+  
       <div className="overflow-x-auto">
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nom</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Prénom</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Téléphone</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Symptômes</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {patients.map((patient) => (
-              <tr key={patient._id}>
-                <td className="px-6 py-4 whitespace-nowrap">{patient.nom}</td>
-                <td className="px-6 py-4 whitespace-nowrap">{patient.prenom}</td>
+              <tr key={patient.id}>
                 <td className="px-6 py-4 whitespace-nowrap">{patient.email}</td>
-                <td className="px-6 py-4 whitespace-nowrap">{patient.telephone}</td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
+                    ${patient.status === 'consultation' ? 'bg-yellow-100 text-yellow-800' : 
+                      patient.status === 'completed' ? 'bg-green-100 text-green-800' : 
+                      'bg-gray-100 text-gray-800'}`}>
+                    {patient.status}
+                  </span>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.symptoms}</td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {patient.completionDate ? new Date(patient.completionDate).toLocaleDateString() : '-'}
+                </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  <button className="text-blue-600 hover:text-blue-900 mr-4">
+                  <button 
+                    className="text-blue-600 hover:text-blue-900 mr-4"
+                    onClick={() => handleViewPatientDetails(patient.id)}
+                  >
                     Voir Dossier
                   </button>
                 </td>
@@ -196,6 +220,30 @@ const DoctorDashboard = () => {
       </div>
     </div>
   );
+
+  const handleViewPatientDetails = async (patientId) => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch(`http://localhost:5000/patient/${patientId}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      if (response.ok) {
+        const patientDetails = await response.json();
+        // Here you can implement the logic to show patient details
+        // For example, open a modal or navigate to a details page
+        console.log('Patient details:', patientDetails);
+      } else {
+        toast.error('Erreur lors du chargement des détails du patient');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      toast.error('Erreur de connexion au serveur');
+    }
+  };
 
   if (loading) {
     return <div>Chargement...</div>;

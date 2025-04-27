@@ -12,18 +12,22 @@ const RdvSchema = new Schema({
     required: true
   },
   docteur: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Docteur',
-      required: true
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Docteur',
+    required: true
   },
   patient: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Patient',
-      required: true
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Patient',
+    required: true
+  },
+  symptoms: {
+    type: String,
+    required: true
   },
   status: {
     type: String,
-    enum: ['pending', 'confirmed', 'cancelled', 'completed'],
+    enum: ['pending', 'approved', 'rejected', 'cancelled'],
     default: 'pending'
   }
 }, {
