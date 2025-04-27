@@ -34,15 +34,49 @@ function authenticateToken(req, res, next) {
 // 1. Ajouter un rendez-vous
 rdvRouter.post('/addRdv', authenticateToken, async (req, res) => {
   try {
-    const newRdv = await Rdv.create({
-      date: req.body.date,
-      heure: req.body.heure,
-      docteur: req.body.docteur,
-      patient: req.body.patient,
+    const { docteurId, patientEmail, date, heure, symptoms } = req.body;
+
+    // Find patient by email
+    const patient = await Patient.findOne({ email: patientEmail });
+    if (!patient) {
+      return res.status(404).json({ message: "Patient non trouvé" });
+    }
+
+    // Check for existing appointment
+    const existingAppointment = await Rdv.findOne({
+      docteur: docteurId,
+      patient: patient._id,
+      status: 'pending'
     });
-    res.status(201).json(newRdv);
+
+    if (existingAppointment) {
+      return res.status(400).json({ 
+        message: "Vous avez déjà un rendez-vous en attente avec ce médecin" 
+      });
+    }
+
+    const newRdv = new Rdv({
+      date: new Date(date),
+      heure,
+      docteur: docteurId,
+      patient: patient._id,
+      symptoms,
+      status: 'pending'
+    });
+
+    await newRdv.save();
+
+    const populatedRdv = await Rdv.findById(newRdv._id)
+      .populate('patient', 'nom prenom email')
+      .populate('docteur', 'nom prenom specialite');
+
+    res.status(201).json(populatedRdv);
   } catch (error) {
-    res.status(500).json({ message: "Erreur lors de la création du rendez-vous" });
+    console.error('Error creating appointment:', error);
+    res.status(500).json({ 
+      message: "Erreur lors de la création du rendez-vous",
+      error: error.message 
+    });
   }
 });
 
@@ -114,6 +148,40 @@ rdvRouter.put('/updateRdv/:id', authenticateToken, async (req, res) => {
     res.status(200).json(rdv);
   } catch (error) {
     res.status(500).json({ message: error.message });
+  }
+});
+
+// Add this route after your existing routes
+rdvRouter.put('/updateStatus/:id', authenticateToken, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status, doctorId } = req.body;
+
+    const appointment = await Rdv.findOne({ 
+      _id: id,
+      docteur: doctorId 
+    });
+
+    if (!appointment) {
+      return res.status(404).json({ 
+        message: "Rendez-vous non trouvé ou vous n'êtes pas autorisé à le modifier" 
+      });
+    }
+
+    appointment.status = status;
+    await appointment.save();
+
+    const updatedAppointment = await Rdv.findById(id)
+      .populate('patient', 'nom prenom email')
+      .populate('docteur', 'nom prenom specialite');
+
+    res.json(updatedAppointment);
+  } catch (error) {
+    console.error('Error updating appointment status:', error);
+    res.status(500).json({ 
+      message: "Erreur lors de la mise à jour du rendez-vous",
+      error: error.message 
+    });
   }
 });
 

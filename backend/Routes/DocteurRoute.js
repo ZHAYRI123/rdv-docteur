@@ -215,6 +215,19 @@ function authenticateToken(req, res, next) {
   }
 }
 
+doctorRouter.get('/:doctorId/patients', authenticateToken, async (req, res) => {
+  try {
+    const doctor = await Docteur.findById(req.params.doctorId);
+    if (!doctor) {
+      return res.status(404).json({ message: "Médecin non trouvé" });
+    }
+
+    res.json({ patients: doctor.patients });
+  } catch (error) {
+    console.error('Error fetching doctor patients:', error);
+    res.status(500).json({ message: error.message });
+  }
+});
 
 
 export default doctorRouter;

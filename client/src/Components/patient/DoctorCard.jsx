@@ -59,7 +59,8 @@ export default function DoctorCard(props) {
 		const doctorEmail = props.email;
 		const patientEmail = localStorage.getItem('userEmail');
 		const symptoms = inputValue;
-		let dupFlag = false;
+		const token = localStorage.getItem('token');
+		// let dupFlag = false;
 
 		if (!symptoms.trim()) {
 			toast.error('Veuillez décrire vos symptômes');
@@ -67,6 +68,49 @@ export default function DoctorCard(props) {
 		}
 
 		try {
+			// creer rdv dans la base de données
+			const doctor = await fetch('http://localhost:5000/doctor/getByEmail', {
+				method: 'POST',
+				headers: {
+					'Authorization': `Bearer ${token}`,
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ email: doctorEmail })
+			});
+	
+			if (!doctor.ok) {
+				throw new Error('Erreur lors de la récupération des données du médecin');
+			}
+	
+			const doctorData = await doctor.json();
+			const doctorId = doctorData._id;
+	
+			// Create appointment
+			const rdvResponse = await fetch('http://localhost:5000/rdv/addRdv', {
+				method: 'POST',
+				headers: {
+					'Authorization': `Bearer ${token}`,
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					docteurId: doctorId,
+					patientEmail: patientEmail,
+					date: new Date().toISOString().split('T')[0],
+					heure: new Date().toLocaleTimeString('fr-FR', { 
+						hour: '2-digit', 
+						minute: '2-digit' 
+					}),
+					symptoms: symptoms
+				}),
+			});
+	
+			if (!rdvResponse.ok) {
+				const errorData = await rdvResponse.json();
+				throw new Error(errorData.message || 'Erreur lors de la création du rendez-vous');
+			}
+	
+			// const appointment = await rdvResponse.json();
+
 			const patientResponse = await authFetch('http://localhost:5000/patient/getByEmail', {
 				method: 'POST',
 				headers: {
