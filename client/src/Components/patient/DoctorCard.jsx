@@ -60,6 +60,12 @@ export default function DoctorCard(props) {
 		const patientEmail = localStorage.getItem('userEmail');
 		const symptoms = inputValue;
 		let dupFlag = false;
+
+		if (!symptoms.trim()) {
+			toast.error('Veuillez décrire vos symptômes');
+			return;
+		}
+
 		try {
 			const patientResponse = await authFetch('http://localhost:5000/patient/getByEmail', {
 				method: 'POST',
@@ -70,116 +76,89 @@ export default function DoctorCard(props) {
 					email: patientEmail,
 				}),
 			});
-			if (patientResponse.status === 500) {
-				return toast.error('Erreur interne du serveur');
+
+			if (!patientResponse.ok) {
+				throw new Error(`HTTP error! status: ${patientResponse.status}`);
 			}
+
 			const patient = await patientResponse.json();
-			patient.doctor.map((doctor) => {
-				if (!dupFlag) {
-					if (doctor.email === doctorEmail) {
-						if (doctor.status === 'consultation') {
-							dupFlag = true;
-							return toast.error('Une demande de consultation est déjà en attente. Veuillez patienter.');
-						}
-					}
+			
+			// Check if patient.doctor exists and is an array
+			if (patient.doctor && Array.isArray(patient.doctor)) {
+				// Check for existing consultation
+				const existingConsultation = patient.doctor.find(
+					doctor => doctor.email === doctorEmail && doctor.status === 'consultation'
+				);
+
+				if (existingConsultation) {
+					toast.error('Une demande de consultation est déjà en attente. Veuillez patienter.');
+					return;
 				}
-				return null;
+			}
+
+			// Update patient data
+			const patientDataToUpdate = {
+				email: patientEmail,
+				$push: {
+					doctor: {
+						email: doctorEmail,
+						status: 'consultation',
+						symptoms: symptoms,
+					},
+				},
+			};
+
+			const response = await authFetch('http://localhost:5000/patient/updatePatient', {
+				method: 'PUT', // Changed from POST to PUT
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(patientDataToUpdate),
 			});
 
-			if (!dupFlag) {
-				const patientDataToUpdate = {
-					email: patientEmail,
+			if (!response.ok) {
+				const errorMessage = await response.text();
+				throw new Error(errorMessage);
+			}
+
+			const updatedPatient = await response.json();
+			console.log('Patient mis à jour avec succès:', updatedPatient);
+
+			// Update doctor data
+			const doctorResponse = await authFetch('http://localhost:5000/doctor/updateDoctor', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					email: doctorEmail,
 					$push: {
-						doctor: {
-							email: doctorEmail,
+						patients: {
+							email: patientEmail,
 							status: 'consultation',
 							symptoms: symptoms,
 						},
 					},
-				};
+				}),
+			});
 
-				const response = await authFetch('http://localhost:5000/patient/updatePatient', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify(patientDataToUpdate),
-				});
-				if (response.ok) {
-					const updatedPatient = await response.json();
-					console.log('Patient mis à jour avec succès:', updatedPatient);
-					toast.success('Demande de consultation envoyée avec succès');
-					setTimeout(() => {
-						handleCloseModal();
-					}, 2000);
-				} else {
-					const errorMessage = await response.text();
-					console.error('Erreur lors de la mise à jour du patient:', errorMessage);
-					toast.error('Erreur interne du serveur');
-				}
+			if (!doctorResponse.ok) {
+				throw new Error(`HTTP error! status: ${doctorResponse.status}`);
 			}
+
+			const updatedDoctor = await doctorResponse.json();
+			console.log('Médecin mis à jour avec succès:', updatedDoctor);
+			
+			toast.success('Demande de consultation envoyée avec succès');
+			setTimeout(() => {
+				handleCloseModal();
+				setInputValue('');
+			}, 2000);
+
 		} catch (error) {
-			console.error(error);
-			toast.error('Erreur interne du serveur');
-			return;
+			console.error('Error:', error);
+			toast.error('Erreur lors de l\'envoi de la demande');
 		}
-
-		let dupFlag2 = false;
-		if (!dupFlag) {
-			try {
-				const doctorResponse = await authFetch('http://localhost:5000/doctor/getByEmail', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						email: doctorEmail,
-					}),
-				});
-				if (doctorResponse.status === 500) {
-					return toast.error('Erreur interne du serveur');
-				}
-				const doctor = await doctorResponse.json();
-				doctor.patients.map((patient) => {
-					if (!dupFlag2) {
-						if (patient.email === patientEmail && patient.status === 'consultation') {
-							dupFlag2 = true;
-							return toast.error('Une demande de consultation est déjà en attente. Veuillez patienter.');
-						}
-					}
-					return null;
-				});
-
-				if (!dupFlag2) {
-					const doctorResponse2 = await authFetch('http://localhost:5000/doctor/updateDoctor', {
-						method: 'POST',
-						headers: {
-							'Content-Type': 'application/json',
-						},
-						body: JSON.stringify({
-							email: doctorEmail,
-							$push: {
-								patients: {
-									email: patientEmail,
-									status: 'consultation',
-									symptoms: symptoms,
-								},
-							},
-						}),
-					});
-
-					if (doctorResponse2.ok) {
-						const updatedDoctor = await doctorResponse2.json();
-						console.log('Médecin mis à jour avec succès:', updatedDoctor);
-					} else if (doctorResponse2.status === 500) {
-						return toast.error('Erreur interne du serveur');
-					}
-				}
-			} catch (e) {
-				console.error(e);
-			}
-		}
-		setInputValue('');
 	};
 
 	return (
@@ -201,7 +180,7 @@ export default function DoctorCard(props) {
 									</div>
 									<div className='mt-10 text-left'>
 										<div className='font-bold'>Médecin : <span className='text-gray-600 font-normal'>{props.name}</span></div>
-										<div className='font-bold'>Spécialisation : <span className='text-gray-600 font-normal'>{props.specialisation}</span></div>
+										<div className='font-bold'>Spécialité : <span className='text-gray-600 font-normal'>{props.specialisation}</span></div>
 										<div className='mt-4'>
 											<div className='font-bold mb-2'>Veuillez décrire vos symptômes :</div>
 											<textarea value={inputValue} onChange={handleInputChange} className='min-h-20 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm' placeholder='Listez vos symptômes séparés par des virgules' />
@@ -224,7 +203,7 @@ export default function DoctorCard(props) {
 					<div>
 						<h4 className='text-lg font-bold text-left mx-2'>Dr. {props.name}</h4>
 						<div className='mx-2'>
-							<div className='font-bold text-left'>Spécialisation : <span className='text-gray-600 font-normal'>{props.specialisation}</span></div>
+							<div className='font-bold text-left'>Spécialité : <span className='text-gray-600 font-normal'>{props.specialisation}</span></div>
 						</div>
 					</div>
 				</div>

@@ -79,9 +79,9 @@ function PendingData() {
 							const doctorData = await response.json();
 							return {
 								sr: index + 1,
-								name: doctorData.name,
-								specialisation: doctorData.specialisation,
-								symptoms: doctor.symptoms,
+    							name: doctorData.nom + ' ' + doctorData.prenom,
+    							specialisation: doctorData.specialite.nom, 
+    							symptoms: doctor.symptoms,
 							};
 						} catch (error) {
 							console.error(error);
@@ -114,35 +114,31 @@ function PendingData() {
 			) : (
 				<>
 					{isData ? (
-						<div class='flex flex-col overflow-x-auto'>
-							<div class='sm:-mx-6 lg:-mx-8'>
-								<div class='inline-block min-w-full py-2 sm:px-6 lg:px-8 '>
-									<div class='overflow-x-auto'>
-										<table class='min-w-full text-left text-sm font-light'>
-											<thead class='border-b text-white text-base font-medium dark:border-neutral-500 bg-green-600'>
-												<tr>
-													<th scope='col' class='px-6 py-4'>#</th>
-													<th scope='col' class='px-6 py-4'>Nom</th>
-													<th scope='col' class='px-6 py-4'>Spécialisation</th>
-													<th scope='col' class='px-6 py-4'>Symptômes</th>
-												</tr>
-											</thead>
-											<tbody>
-												{Data.map((data, index) => (
-													<TableCard
-														key={index}
-														sr={data.sr}
-														name={data.name}
-														specialisation={data.specialisation}
-														symptoms={data.symptoms}
-													/>
-												))}
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
+						<div className='container mx-auto px-4 sm:px-6 lg:px-8 py-8'>
+  <div className='overflow-hidden rounded-lg shadow-md'>
+    <table className='min-w-full table-fixed divide-y divide-gray-200'>
+      <thead className='bg-purple-900'> {/* Changed from bg-green-600 to bg-purple-600 */}
+        <tr>
+          <th scope='col' className='w-[10%] px-6 py-4 text-left text-sm font-semibold text-white'>#</th>
+          <th scope='col' className='w-[30%] px-6 py-4 text-left text-sm font-semibold text-white'>Docteur</th>
+          <th scope='col' className='w-[30%] px-6 py-4 text-left text-sm font-semibold text-white'>Spécialité</th>
+          <th scope='col' className='w-[30%] px-6 py-4 text-left text-sm font-semibold text-white'>Symptômes</th>
+        </tr>
+      </thead>
+      <tbody className='bg-white divide-y divide-gray-200'>
+        {Data.map((data, index) => (
+          <TableCard
+            key={index}
+            sr={data.sr}
+            name={data.name}
+            specialisation={data.specialisation}
+            symptoms={data.symptoms}
+          />
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
 					) : (
 						<div className='p-5 m-2 border-solid border-2 border-red-600 rounded-lg shadow-md bg-stone-100 hover:scale-105 transition-all m-auto'>
 							<div className='flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row'>
