@@ -46,10 +46,12 @@ function RdvReservé() {
         }
 
         const rdvs = await response.json();
+        const approvedRdvs = rdvs.filter(rdv => rdv.status === 'approved');
+
         setData(
-          rdvs.map((rdv, index) => ({
+          approvedRdvs.map((rdv, index) => ({
             sr: index + 1,
-            name: rdv.docteur.nom,
+            name: rdv.docteur.nom + ' ' + rdv.docteur.prenom,
             specialisation: rdv.docteur.specialisation,
             date: new Date(rdv.date).toLocaleDateString(),
             time: rdv.heure,

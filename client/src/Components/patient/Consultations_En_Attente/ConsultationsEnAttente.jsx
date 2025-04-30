@@ -22,88 +22,50 @@ function PendingData() {
 	const jwtToken = getJwtToken();
 
 	useEffect(() => {
-		if (!jwtToken) {
-			toast.error('Session expirée. Veuillez vous reconnecter.');
-			window.location.href = '/patient-login';
-			return;
-		}
-
-		const fetchPatient = async () => {
+		const fetchPendingConsultations = async () => {
 			try {
-				const response = await fetch('http://localhost:5000/patient/getByEmail', {
-					method: 'POST',
+				if (!jwtToken) {
+					toast.error('Session expirée');
+					return;
+				}
+
+				const response = await fetch('http://localhost:5000/rdv/getAllRdv', {
 					headers: {
 						'Content-Type': 'application/json',
 						Authorization: `Bearer ${jwtToken}`,
 					},
-					body: JSON.stringify({ email }),
 				});
 
 				if (response.status === 404) {
-					toast.error('Patient introuvable.');
-					return;
-				}
-				if (response.status === 500) {
-					toast.error('Erreur interne du serveur.');
+					setData([]);
 					return;
 				}
 
-				const patient = await response.json();
-				console.log("Patient récupéré :", patient);
-				
-				// Check if patient.doctor exists
-				if (!patient.doctor || !Array.isArray(patient.doctor)) {
-					setIsData(false);
-					setLoading(false);
-					return;
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
 				}
 
-				// Use Promise.all to handle multiple async operations
-				const doctorPromises = patient.doctor
-					.filter(doctor => doctor.status === 'consultation')
-					.map(async (doctor, index) => {
-						try {
-							const response = await fetch('http://localhost:5000/doctor/getByEmail', {
-								method: 'POST',
-								headers: {
-									'Content-Type': 'application/json',
-									Authorization: `Bearer ${jwtToken}`,
-								},
-								body: JSON.stringify({ email: doctor.email }),
-							});
+				const rdvs = await response.json();
+				const pendingRdvs = rdvs.filter(rdv => rdv.status === 'pending');
 
-							if (!response.ok) {
-								throw new Error(`HTTP error! status: ${response.status}`);
-							}
-
-							const doctorData = await response.json();
-							return {
-								sr: index + 1,
-    							name: doctorData.nom + ' ' + doctorData.prenom,
-    							specialisation: doctorData.specialite.nom, 
-    							symptoms: doctor.symptoms,
-							};
-						} catch (error) {
-							console.error(error);
-							return null;
-						}
-					});
-
-				const results = await Promise.all(doctorPromises);
-				const validResults = results.filter(Boolean);
-				
-				setData(validResults);
-				setIsData(validResults.length > 0);
-				setLoading(false);
-
+				setData(
+					pendingRdvs.map((rdv, index) => ({
+						sr: index + 1,
+						name: rdv.docteur.nom + ' ' + rdv.docteur.prenom,
+						specialisation: rdv.docteur.specialite.nom,
+						symptoms: rdv.symptoms
+					}))
+				);
+				setIsData(pendingRdvs.length > 0);
 			} catch (error) {
-				console.error(error);
-				toast.error('Erreur interne du serveur.');
+				console.error('Error:', error);
+				toast.error('Erreur lors du chargement des consultations');
+			} finally {
 				setLoading(false);
 			}
 		};
 
-		fetchPatient();
+		fetchPendingConsultations();
 	}, [jwtToken]);
 
 	return (
