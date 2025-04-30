@@ -27,7 +27,7 @@ const RdvSchema = new Schema({
   },
   status: {
     type: String,
-    enum: ['pending', 'approved', 'rejected', 'cancelled'],
+    enum: ['pending', 'approved', 'rejected', 'completed'],
     default: 'pending'
   }
 }, {
