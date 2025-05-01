@@ -29,6 +29,15 @@ const RdvSchema = new Schema({
     type: String,
     enum: ['pending', 'approved', 'rejected', 'completed'],
     default: 'pending'
+  },
+  completionDate: {
+    type: Date,
+    default: null
+  },
+  status: {
+    type: String,
+    enum: ['pending', 'approved', 'rejected', 'completed'],
+    default: 'pending'
   }
 }, {
   timestamps: true

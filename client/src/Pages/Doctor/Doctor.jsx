@@ -80,12 +80,17 @@ const DoctorDashboard = () => {
         },
         body: JSON.stringify({ 
           status,
-          doctorId 
+          doctorId,
+          completionDate: status === 'completed' ? new Date() : null
         })
       });
   
       if (response.ok) {
-        toast.success(`Rendez-vous ${status === 'approved' ? 'approuvé' : 'rejeté'}`);
+        toast.success(
+          status === 'approved' ? 'Rendez-vous approuvé' :
+          status === 'completed' ? 'Consultation terminée' :
+          'Rendez-vous rejeté'
+        );
         fetchAppointments(); // Refresh the list
       } else {
         const errorData = await response.json();
@@ -131,34 +136,47 @@ const DoctorDashboard = () => {
                   <div className="text-sm text-gray-500">{appointment.heure}</div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
-                    ${appointment.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 
-                      appointment.status === 'approved' ? 'bg-green-100 text-green-800' : 
-                      'bg-red-100 text-red-800'}`}>
-                    {appointment.status === 'pending' ? 'En attente' :
-                     appointment.status === 'approved' ? 'Approuvé' : 'Rejeté'}
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap">
-                  {appointment.status === 'pending' && (
-                    <div className="flex space-x-2">
-                      <button
-                        onClick={() => handleAppointmentAction(appointment._id, 'approved')}
-                        className="text-green-600 hover:text-green-900"
-                      >
-                        Approuver
-                      </button>
-                      <button
-                        onClick={() => handleAppointmentAction(appointment._id, 'rejected')}
-                        className="text-red-600 hover:text-red-900"
-                      >
-                        Rejeter
-                      </button>
-                    </div>
-                  )}
-                </td>
-              </tr>
-            ))}
+                <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
+                  ${appointment.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 
+                    appointment.status === 'approved' ? 'bg-green-100 text-green-800' : 
+                    appointment.status === 'completed' ? 'bg-blue-100 text-blue-800' :
+                    'bg-red-100 text-red-800'}`}>
+                  {appointment.status === 'pending' ? 'En attente' :
+                   appointment.status === 'approved' ? 'Approuvé' :
+                   appointment.status === 'completed' ? 'Terminé' : 
+                   'Rejeté'}
+                </span>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                {appointment.status === 'pending' && (
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={() => handleAppointmentAction(appointment._id, 'approved')}
+                      className="text-green-600 hover:text-green-900"
+                    >
+                      Approuver
+                    </button>
+                    <button
+                      onClick={() => handleAppointmentAction(appointment._id, 'rejected')}
+                      className="text-red-600 hover:text-red-900"
+                    >
+                      Rejeter
+                    </button>
+                  </div>
+                )}
+                {appointment.status === 'approved' && (
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={() => handleAppointmentAction(appointment._id, 'completed')}
+                      className="text-blue-600 hover:text-blue-900 flex items-center"
+                    >
+                      <span>Terminer la consultation</span>
+                    </button>
+                  </div>
+                )}
+              </td>
+            </tr>
+          ))}
           </tbody>
         </table>
       </div>
