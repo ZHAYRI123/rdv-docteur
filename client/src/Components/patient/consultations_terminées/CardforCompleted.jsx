@@ -264,12 +264,6 @@ export default function TableCard(data) {
 											<div className='text-md font-bold text-left'>
 												Symptoms - <span className='text-gray-600 font-semibold text-sm '>{data.symptoms}</span>
 											</div>
-											<div className='text-md font-bold md:text-left'>
-												Clinic - <span className='text-gray-600 font-semibold text-sm'>{data.clinic}</span>
-											</div>
-											<div className='text-md font-bold md:text-left'>
-												Location - <span className='text-gray-600 font-semibold text-sm'>{data.location}</span>
-											</div>
 											{data.feedback === '' || !data.feedback ? null : (
 												<div className='text-md font-bold md:text-left mt-2'>
 													Reply from Doctor - <span className='text-gray-600 font-semibold text-sm'>{data.feedback}</span>
