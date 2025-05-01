@@ -34,10 +34,9 @@ const RdvSchema = new Schema({
     type: Date,
     default: null
   },
-  status: {
+  feedback: {
     type: String,
-    enum: ['pending', 'approved', 'rejected', 'completed'],
-    default: 'pending'
+    default: ''
   }
 }, {
   timestamps: true
