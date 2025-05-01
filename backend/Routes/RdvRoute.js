@@ -155,7 +155,7 @@ rdvRouter.put('/updateRdv/:id', authenticateToken, async (req, res) => {
 rdvRouter.put('/updateStatus/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;
-    const { status, doctorId } = req.body;
+    const { status, doctorId, completionDate } = req.body;
 
     const appointment = await Rdv.findOne({ 
       _id: id,
@@ -169,6 +169,9 @@ rdvRouter.put('/updateStatus/:id', authenticateToken, async (req, res) => {
     }
 
     appointment.status = status;
+    if (status === 'completed') {
+      appointment.completionDate = completionDate;
+    }
     await appointment.save();
 
     const updatedAppointment = await Rdv.findById(id)
