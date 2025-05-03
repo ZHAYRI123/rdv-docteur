@@ -52,7 +52,7 @@ function RdvReservé() {
           approvedRdvs.map((rdv, index) => ({
             sr: index + 1,
             name: rdv.docteur.nom + ' ' + rdv.docteur.prenom,
-            specialisation: rdv.docteur.specialisation,
+            specialisation: rdv.docteur.specialite.nom, // Changed from specialisation to specialite.nom
             date: new Date(rdv.date).toLocaleDateString(),
             time: rdv.heure,
           }))
