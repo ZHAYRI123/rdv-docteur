@@ -85,13 +85,14 @@ rdvRouter.get('/getAllRdv', authenticateToken, async (req, res) => {
   try {
     const rdvs = await Rdv.find()
       .populate('patient', 'nom prenom email')
-      .populate('docteur', 'nom prenom specialite')
+      .populate({
+        path: 'docteur',
+        populate: {
+          path: 'specialite',
+          select: 'nom'
+        }
+      })
       .sort({ date: 1, heure: 1 });
-
-    // Return empty array if no appointments found
-    if (!rdvs || rdvs.length === 0) {
-      return res.status(200).json([]);
-    }
 
     res.status(200).json(rdvs);
   } catch (error) {
