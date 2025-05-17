@@ -9,7 +9,7 @@ import joblib
 import os
 
 # Load dataset
-df = pd.read_csv("./dataset_with_specialty.csv")
+df = pd.read_csv("./maladies_2000_col_maladie_unique.csv")
 df['symptoms'] = df.iloc[:, 1:18].apply(lambda x: ' '.join(x.dropna().astype(str)), axis=1)
 
 # Encode labels
