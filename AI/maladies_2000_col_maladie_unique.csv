@@ -1,0 +1,2001 @@
+maladie,symptomes,specialite_medicale
+Paludisme,"vomissements, perte de poids, douleurs articulaires, fatigue, douleur abdominale",Pneumologie
+Parkinson,"vomissements, vertiges, perte de poids, maux de tête, essoufflement",ORL
+Pneumonie,"fatigue, vertiges, essoufflement, palpitations",Hématologie
+Paludisme,"douleurs articulaires, essoufflement, jaunisse",Rhumatologie
+Sinusite,"essoufflement, fièvre, toux",Hématologie
+Colite,"jaunisse, vomissements, essoufflement, vertiges",ORL
+Paludisme,"fièvre, palpitations, douleur abdominale, éruptions cutanées",Chirurgie générale
+Alzheimer,"fièvre, toux, palpitations, perte de poids",Cardiologie
+Hypertension,"nausées, jaunisse, maux de tête",Chirurgie générale
+Arthrose,"vertiges, perte de poids, nausées, douleurs articulaires, diarrhée",Cardiologie
+Hernie,"vomissements, vertiges, douleur abdominale, essoufflement, diarrhée",Oncologie
+Appendicite,"douleur abdominale, maux de tête, essoufflement",Pédiatrie
+Arthrose,"nausées, vomissements, toux, douleurs articulaires",Rhumatologie
+Pneumonie,"nausées, essoufflement, douleur abdominale, vomissements, maux de tête",Rhumatologie
+Insuffisance rénale,"fièvre, vomissements, vertiges, palpitations, toux",Hématologie
+Asthme,"toux, vomissements, palpitations, vertiges",Pneumologie
+VIH,"douleur abdominale, éruptions cutanées, vertiges",Oncologie
+Paludisme,"toux, essoufflement, douleurs articulaires, fièvre, douleur abdominale",Chirurgie générale
+Arthrose,"fatigue, essoufflement, douleurs articulaires, jaunisse",Rhumatologie
+Epilepsie,"diarrhée, jaunisse, fatigue",Rhumatologie
+Pneumonie,"fatigue, jaunisse, vomissements, maux de tête",Médecine générale
+Pneumonie,"douleurs articulaires, toux, maux de tête",Ophtalmologie
+Crohn,"diarrhée, douleur abdominale, palpitations",Endocrinologie
+Cancer du sein,"éruptions cutanées, douleur abdominale, palpitations, jaunisse",Médecine générale
+Alzheimer,"nausées, palpitations, toux, vertiges, vomissements",Neurologie
+Diabète,"maux de tête, fatigue, toux, éruptions cutanées, essoufflement",Ophtalmologie
+Diabète,"vomissements, essoufflement, fatigue, maux de tête",Pédiatrie
+Pneumonie,"essoufflement, nausées, vomissements",Neurologie
+Cirrhose,"vomissements, fatigue, douleur abdominale, fièvre",Pneumologie
+Diabète,"nausées, toux, douleur abdominale, perte de poids",Pneumologie
+Conjonctivite,"diarrhée, douleur abdominale, vertiges, maux de tête, fièvre",Dermatologie
+Diabète,"nausées, maux de tête, éruptions cutanées, toux",Cardiologie
+Epilepsie,"maux de tête, vertiges, fatigue, jaunisse, toux",Médecine générale
+Dermatite,"vertiges, palpitations, fatigue, fièvre, éruptions cutanées",Gastroentérologie
+Cancer du foie,"vertiges, éruptions cutanées, jaunisse, maux de tête, douleurs articulaires",Rhumatologie
+Pneumonie,"fièvre, essoufflement, vertiges",Cardiologie
+Appendicite,"maux de tête, palpitations, toux, perte de poids, vertiges",Endocrinologie
+Sinusite,"jaunisse, perte de poids, douleurs articulaires",Cardiologie
+Grippe,"vertiges, nausées, maux de tête",Pédiatrie
+Glaucome,"jaunisse, éruptions cutanées, douleur abdominale, essoufflement",Chirurgie générale
+VIH,"douleur abdominale, palpitations, jaunisse",Endocrinologie
+Sclérose,"jaunisse, diarrhée, toux, nausées",ORL
+Thyroïdite,"palpitations, fièvre, éruptions cutanées, jaunisse",Hématologie
+Grippe,"maux de tête, éruptions cutanées, palpitations, essoufflement",ORL
+Bronchite,"douleurs articulaires, maux de tête, jaunisse",Gastroentérologie
+Epilepsie,"nausées, palpitations, vomissements",Dermatologie
+Arthrose,"nausées, éruptions cutanées, vomissements, essoufflement, maux de tête",Hématologie
+Cancer de la peau,"douleur abdominale, vomissements, perte de poids, maux de tête, toux",Médecine générale
+Migraine,"éruptions cutanées, douleur abdominale, diarrhée",Neurologie
+Conjonctivite,"éruptions cutanées, douleur abdominale, diarrhée, fatigue",Chirurgie générale
+Dermatite,"maux de tête, palpitations, douleurs articulaires, fatigue, diarrhée",Endocrinologie
+Obésité,"douleur abdominale, nausées, éruptions cutanées",Médecine générale
+Insuffisance rénale,"palpitations, douleur abdominale, vertiges, vomissements, toux",Oncologie
+Sinusite,"diarrhée, nausées, palpitations, perte de poids",Gastroentérologie
+Appendicite,"vertiges, jaunisse, perte de poids, vomissements, diarrhée",Oncologie
+VIH,"essoufflement, diarrhée, douleurs articulaires",Gastroentérologie
+Gastrite,"perte de poids, palpitations, douleurs articulaires",Endocrinologie
+Dermatite,"douleurs articulaires, jaunisse, éruptions cutanées, fatigue",Pédiatrie
+Hépatite,"palpitations, douleur abdominale, diarrhée, jaunisse",Chirurgie générale
+Insuffisance rénale,"perte de poids, douleurs articulaires, maux de tête, toux, éruptions cutanées",Gastroentérologie
+Goutte,"palpitations, éruptions cutanées, diarrhée, douleur abdominale",Ophtalmologie
+Hépatite,"palpitations, toux, fièvre, diarrhée",Oncologie
+Alzheimer,"maux de tête, fatigue, éruptions cutanées, jaunisse, perte de poids",Pédiatrie
+Glaucome,"maux de tête, fièvre, toux",Rhumatologie
+Sinusite,"vertiges, douleurs articulaires, fatigue",Endocrinologie
+Psoriasis,"douleurs articulaires, vertiges, maux de tête, palpitations",Gastroentérologie
+Thyroïdite,"fatigue, essoufflement, fièvre, jaunisse",Hématologie
+Arthrose,"jaunisse, vertiges, palpitations",Chirurgie générale
+Conjonctivite,"jaunisse, maux de tête, vomissements, nausées",Cardiologie
+Pneumonie,"nausées, vomissements, vertiges, essoufflement",Neurologie
+Hypertension,"douleurs articulaires, perte de poids, essoufflement, jaunisse, diarrhée",Oncologie
+Paludisme,"palpitations, douleurs articulaires, vertiges, nausées",Rhumatologie
+Insuffisance rénale,"éruptions cutanées, perte de poids, vomissements, douleur abdominale, jaunisse",ORL
+Arthrite,"éruptions cutanées, jaunisse, fatigue, perte de poids, fièvre",Oncologie
+Alzheimer,"essoufflement, jaunisse, vertiges, éruptions cutanées, maux de tête",Dermatologie
+Cancer du foie,"vertiges, toux, jaunisse, douleur abdominale, éruptions cutanées",Ophtalmologie
+Colite,"fièvre, nausées, vertiges, maux de tête",Infectiologie
+Arthrose,"douleurs articulaires, nausées, éruptions cutanées, toux, jaunisse",ORL
+Gastrite,"palpitations, jaunisse, fièvre",ORL
+Arthrose,"nausées, perte de poids, jaunisse, fatigue, maux de tête",Endocrinologie
+Lupus,"fièvre, fatigue, essoufflement, perte de poids, éruptions cutanées",Hématologie
+Appendicite,"fatigue, vomissements, jaunisse, fièvre, douleurs articulaires",ORL
+Lupus,"nausées, douleurs articulaires, diarrhée, vomissements, palpitations",Médecine générale
+Arthrose,"nausées, essoufflement, vomissements, maux de tête, douleurs articulaires",Pneumologie
+Hépatite,"maux de tête, diarrhée, nausées",Oncologie
+Asthme,"nausées, douleurs articulaires, palpitations, essoufflement",Cardiologie
+Bronchite,"vomissements, douleurs articulaires, perte de poids, nausées, essoufflement",Neurologie
+Migraine,"vomissements, douleurs articulaires, diarrhée",ORL
+Otite,"toux, douleur abdominale, diarrhée, douleurs articulaires",Neurologie
+Arthrite,"fatigue, maux de tête, jaunisse",ORL
+Hypertension,"douleur abdominale, fièvre, fatigue, nausées, vomissements",Ophtalmologie
+Hernie,"vomissements, jaunisse, fièvre, palpitations",ORL
+Sclérose,"nausées, éruptions cutanées, palpitations",Infectiologie
+Ulcère,"éruptions cutanées, palpitations, vomissements, jaunisse",Oncologie
+Lupus,"vertiges, jaunisse, palpitations",Gastroentérologie
+Arthrite,"diarrhée, essoufflement, jaunisse",Oncologie
+Cirrhose,"jaunisse, vertiges, palpitations",Oncologie
+Thyroïdite,"toux, diarrhée, douleurs articulaires",Chirurgie générale
+Gastrite,"palpitations, douleur abdominale, essoufflement, perte de poids, diarrhée",Pneumologie
+Zona,"fatigue, maux de tête, éruptions cutanées",Neurologie
+Thyroïdite,"vertiges, jaunisse, essoufflement, fièvre",Rhumatologie
+Asthme,"fièvre, vertiges, fatigue, éruptions cutanées",Neurologie
+Méningite,"diarrhée, vomissements, douleurs articulaires, jaunisse",Endocrinologie
+Crohn,"fatigue, douleurs articulaires, palpitations, essoufflement, vomissements",Gastroentérologie
+Obésité,"essoufflement, fatigue, vertiges, toux",Pédiatrie
+Cancer du foie,"toux, jaunisse, maux de tête, vertiges, douleurs articulaires",Neurologie
+Cancer de la peau,"maux de tête, éruptions cutanées, douleurs articulaires",Rhumatologie
+Glaucome,"douleurs articulaires, fatigue, maux de tête, fièvre, vertiges",Rhumatologie
+Hernie,"toux, éruptions cutanées, maux de tête, diarrhée, perte de poids",Chirurgie générale
+Hernie,"perte de poids, vertiges, palpitations",Dermatologie
+Conjonctivite,"douleur abdominale, palpitations, éruptions cutanées, vertiges, maux de tête",ORL
+COVID-19,"fièvre, jaunisse, vomissements, vertiges",ORL
+Cancer de la peau,"vomissements, fatigue, douleur abdominale, palpitations",Endocrinologie
+Anémie,"fatigue, perte de poids, douleur abdominale",Hématologie
+Parkinson,"vertiges, maux de tête, jaunisse, nausées",Gastroentérologie
+Otite,"palpitations, douleurs articulaires, essoufflement, diarrhée",Ophtalmologie
+Grippe,"palpitations, fièvre, éruptions cutanées, douleur abdominale",Endocrinologie
+Cirrhose,"palpitations, diarrhée, douleur abdominale",Pédiatrie
+Hypertension,"éruptions cutanées, vertiges, palpitations, douleurs articulaires, toux",Neurologie
+Dermatite,"perte de poids, vomissements, fatigue, nausées",Ophtalmologie
+Grippe,"douleur abdominale, maux de tête, fatigue",Gastroentérologie
+Epilepsie,"douleurs articulaires, éruptions cutanées, nausées, diarrhée",Hématologie
+Insuffisance rénale,"éruptions cutanées, diarrhée, toux",Cardiologie
+Parkinson,"fièvre, maux de tête, jaunisse, éruptions cutanées, diarrhée",Dermatologie
+VIH,"palpitations, vomissements, éruptions cutanées",Endocrinologie
+Hépatite,"diarrhée, palpitations, douleur abdominale, essoufflement",Hématologie
+Conjonctivite,"perte de poids, diarrhée, toux",Médecine générale
+Hypertension,"fatigue, vomissements, vertiges, éruptions cutanées, diarrhée",Endocrinologie
+Cataracte,"nausées, fièvre, vertiges, palpitations, douleur abdominale",Hématologie
+Arthrose,"toux, douleur abdominale, perte de poids",Dermatologie
+Asthme,"perte de poids, diarrhée, vomissements",Cardiologie
+Arthrose,"diarrhée, palpitations, éruptions cutanées",Pneumologie
+Sclérose,"toux, diarrhée, maux de tête, essoufflement, nausées",Endocrinologie
+Appendicite,"fatigue, nausées, palpitations, toux",Ophtalmologie
+Cataracte,"essoufflement, nausées, douleur abdominale",Chirurgie générale
+Hypertension,"vomissements, toux, nausées, fatigue, palpitations",Rhumatologie
+Glaucome,"jaunisse, vertiges, vomissements, perte de poids, maux de tête",Médecine générale
+Epilepsie,"vomissements, essoufflement, perte de poids",Gastroentérologie
+Zona,"jaunisse, douleur abdominale, perte de poids",Infectiologie
+Appendicite,"jaunisse, fièvre, éruptions cutanées",Endocrinologie
+Ulcère,"douleur abdominale, fatigue, douleurs articulaires",Infectiologie
+Pneumonie,"palpitations, vertiges, fatigue",Cardiologie
+Hypertension,"nausées, douleur abdominale, palpitations",Pneumologie
+Bronchite,"nausées, jaunisse, douleurs articulaires",Neurologie
+Pneumonie,"toux, vertiges, nausées, vomissements, fatigue",Ophtalmologie
+Cirrhose,"palpitations, douleurs articulaires, diarrhée, maux de tête, nausées",ORL
+Grippe,"maux de tête, nausées, douleur abdominale, fièvre, fatigue",Dermatologie
+Migraine,"diarrhée, fièvre, nausées",Infectiologie
+Hypertension,"fièvre, perte de poids, maux de tête, fatigue",Infectiologie
+Asthme,"douleurs articulaires, maux de tête, essoufflement",Pneumologie
+Ulcère,"fatigue, vertiges, perte de poids, diarrhée",Dermatologie
+Migraine,"fatigue, vertiges, essoufflement, palpitations, douleurs articulaires",Gastroentérologie
+Obésité,"vomissements, fièvre, maux de tête",Hématologie
+Asthme,"toux, jaunisse, palpitations, diarrhée, vertiges",Rhumatologie
+Migraine,"jaunisse, nausées, éruptions cutanées, diarrhée",Médecine générale
+Sclérose,"fièvre, palpitations, vertiges",Gastroentérologie
+Anémie,"palpitations, douleur abdominale, douleurs articulaires, fatigue",Oncologie
+Epilepsie,"fatigue, maux de tête, nausées",Chirurgie générale
+Alzheimer,"palpitations, toux, jaunisse, maux de tête",Gastroentérologie
+Obésité,"perte de poids, douleur abdominale, essoufflement",Gastroentérologie
+Cataracte,"essoufflement, nausées, fièvre, douleur abdominale",Ophtalmologie
+Appendicite,"maux de tête, éruptions cutanées, fatigue, fièvre",Ophtalmologie
+Sclérose,"diarrhée, perte de poids, vomissements, jaunisse",Chirurgie générale
+Dermatite,"jaunisse, vomissements, diarrhée",Dermatologie
+Glaucome,"palpitations, fièvre, essoufflement, nausées, fatigue",Infectiologie
+Anémie,"éruptions cutanées, perte de poids, palpitations, vertiges",Rhumatologie
+Arthrose,"maux de tête, perte de poids, jaunisse, fièvre, essoufflement",Médecine générale
+Insuffisance rénale,"vertiges, fatigue, perte de poids, douleurs articulaires",Ophtalmologie
+Cirrhose,"palpitations, fatigue, jaunisse, douleur abdominale",Ophtalmologie
+Arthrose,"palpitations, douleurs articulaires, maux de tête, essoufflement",Médecine générale
+Arthrose,"nausées, palpitations, vertiges, vomissements, douleur abdominale",Pédiatrie
+Arthrose,"fatigue, palpitations, nausées",Ophtalmologie
+Paludisme,"fièvre, jaunisse, essoufflement",Médecine générale
+Conjonctivite,"fièvre, nausées, diarrhée, douleurs articulaires, douleur abdominale",Pédiatrie
+Paludisme,"fièvre, douleur abdominale, jaunisse, palpitations",ORL
+Crohn,"diarrhée, maux de tête, palpitations",Rhumatologie
+Cancer de la peau,"vertiges, toux, fièvre, vomissements, perte de poids",Dermatologie
+COVID-19,"diarrhée, jaunisse, maux de tête, fatigue, toux",Gastroentérologie
+Pneumonie,"nausées, vomissements, éruptions cutanées",Neurologie
+Insuffisance rénale,"vertiges, fatigue, jaunisse, toux",Médecine générale
+VIH,"perte de poids, vomissements, éruptions cutanées, fièvre",Chirurgie générale
+Sinusite,"fatigue, douleurs articulaires, essoufflement, nausées, vomissements",Ophtalmologie
+Otite,"fatigue, diarrhée, éruptions cutanées, vomissements",Médecine générale
+VIH,"douleur abdominale, nausées, vertiges, fatigue",Infectiologie
+Thyroïdite,"vertiges, nausées, éruptions cutanées, palpitations",Rhumatologie
+Dermatite,"diarrhée, douleur abdominale, toux, perte de poids",Chirurgie générale
+Epilepsie,"éruptions cutanées, palpitations, toux",Gastroentérologie
+Cancer de la peau,"fièvre, nausées, vomissements",Médecine générale
+Cirrhose,"douleurs articulaires, éruptions cutanées, douleur abdominale",Infectiologie
+Obésité,"douleurs articulaires, essoufflement, perte de poids",Cardiologie
+Grippe,"toux, perte de poids, palpitations, nausées, fièvre",Infectiologie
+Hernie,"jaunisse, douleurs articulaires, palpitations, perte de poids, fièvre",ORL
+Appendicite,"jaunisse, essoufflement, douleur abdominale, nausées",Gastroentérologie
+Cataracte,"essoufflement, toux, vertiges",Dermatologie
+Tuberculose,"douleurs articulaires, éruptions cutanées, douleur abdominale, vomissements, jaunisse",Endocrinologie
+Goutte,"maux de tête, palpitations, fatigue, douleurs articulaires, toux",Chirurgie générale
+Epilepsie,"diarrhée, vertiges, éruptions cutanées, vomissements",Cardiologie
+Epilepsie,"maux de tête, vomissements, toux, fatigue, diarrhée",Cardiologie
+Diabète,"diarrhée, vomissements, essoufflement, toux, perte de poids",Gastroentérologie
+Alzheimer,"fièvre, maux de tête, perte de poids",ORL
+Cancer du sein,"éruptions cutanées, vertiges, toux, douleur abdominale",Infectiologie
+Hépatite,"nausées, perte de poids, jaunisse, toux",Infectiologie
+COVID-19,"vertiges, éruptions cutanées, perte de poids, douleur abdominale",Dermatologie
+Hypertension,"diarrhée, vomissements, palpitations, éruptions cutanées, douleur abdominale",Médecine générale
+Arthrose,"éruptions cutanées, douleur abdominale, douleurs articulaires",Médecine générale
+Ulcère,"toux, nausées, vomissements, palpitations, jaunisse",Dermatologie
+Conjonctivite,"douleur abdominale, perte de poids, fièvre",Neurologie
+Grippe,"fatigue, essoufflement, fièvre, diarrhée",Neurologie
+Dermatite,"perte de poids, maux de tête, vomissements, jaunisse, fièvre",Cardiologie
+Sclérose,"éruptions cutanées, nausées, toux, perte de poids, palpitations",Rhumatologie
+Parkinson,"éruptions cutanées, jaunisse, nausées, vomissements, douleurs articulaires",Hématologie
+Conjonctivite,"perte de poids, maux de tête, fatigue",Dermatologie
+Arthrose,"perte de poids, vertiges, douleurs articulaires",ORL
+Cancer du foie,"douleur abdominale, nausées, éruptions cutanées, douleurs articulaires, diarrhée",Cardiologie
+Diabète,"nausées, douleur abdominale, toux, éruptions cutanées, vomissements",Pédiatrie
+Sclérose,"fatigue, perte de poids, vomissements",Oncologie
+Migraine,"essoufflement, perte de poids, nausées",Rhumatologie
+Glaucome,"douleur abdominale, perte de poids, fièvre, vertiges, palpitations",Ophtalmologie
+Pneumonie,"palpitations, vomissements, fatigue",Pneumologie
+Conjonctivite,"vomissements, jaunisse, perte de poids, vertiges",Pneumologie
+Dermatite,"fatigue, toux, vomissements, essoufflement",Médecine générale
+Grippe,"maux de tête, diarrhée, palpitations",Oncologie
+Asthme,"fatigue, fièvre, essoufflement, perte de poids",Ophtalmologie
+Conjonctivite,"éruptions cutanées, perte de poids, maux de tête, fièvre, nausées",Pédiatrie
+Sclérose,"vertiges, toux, éruptions cutanées, vomissements",Ophtalmologie
+Pneumonie,"vertiges, fatigue, jaunisse, douleur abdominale",ORL
+Sinusite,"fièvre, palpitations, essoufflement",Pédiatrie
+Asthme,"essoufflement, éruptions cutanées, fatigue, jaunisse, fièvre",Pneumologie
+Psoriasis,"toux, essoufflement, diarrhée",ORL
+Sinusite,"douleurs articulaires, palpitations, essoufflement, nausées",Rhumatologie
+Asthme,"vomissements, douleurs articulaires, toux",ORL
+Cancer du foie,"perte de poids, douleur abdominale, douleurs articulaires, fièvre, vomissements",Cardiologie
+Migraine,"essoufflement, fièvre, douleurs articulaires, perte de poids",Médecine générale
+Alzheimer,"douleurs articulaires, diarrhée, douleur abdominale",Médecine générale
+Cancer du sein,"fatigue, douleur abdominale, vomissements, éruptions cutanées",Rhumatologie
+Arthrite,"perte de poids, jaunisse, fatigue, maux de tête",ORL
+Arthrose,"vomissements, douleurs articulaires, douleur abdominale, vertiges",Neurologie
+Colite,"diarrhée, vertiges, essoufflement",Neurologie
+VIH,"nausées, douleurs articulaires, palpitations, diarrhée, fatigue",Endocrinologie
+Appendicite,"nausées, douleurs articulaires, perte de poids",Pneumologie
+Lupus,"éruptions cutanées, fatigue, toux, nausées, jaunisse",Pédiatrie
+Méningite,"nausées, essoufflement, diarrhée, vertiges, éruptions cutanées",Rhumatologie
+Glaucome,"essoufflement, douleurs articulaires, éruptions cutanées",Pédiatrie
+Diabète,"diarrhée, vertiges, essoufflement, maux de tête",Neurologie
+Sinusite,"diarrhée, vertiges, douleur abdominale, nausées, fatigue",Neurologie
+COVID-19,"éruptions cutanées, palpitations, fièvre, fatigue",Pédiatrie
+Arthrite,"essoufflement, perte de poids, fatigue, vertiges, nausées",Cardiologie
+Cancer du sein,"perte de poids, douleurs articulaires, essoufflement",Pneumologie
+Bronchite,"éruptions cutanées, douleur abdominale, diarrhée",Ophtalmologie
+Sclérose,"toux, maux de tête, palpitations, fatigue",Pédiatrie
+Méningite,"fièvre, maux de tête, diarrhée, perte de poids, jaunisse",Dermatologie
+Diabète,"fièvre, nausées, douleur abdominale, diarrhée, fatigue",Ophtalmologie
+Lupus,"essoufflement, toux, vertiges, maux de tête",Gastroentérologie
+Bronchite,"diarrhée, palpitations, douleur abdominale, nausées",Gastroentérologie
+Glaucome,"éruptions cutanées, maux de tête, essoufflement, jaunisse, vomissements",ORL
+Thyroïdite,"maux de tête, vomissements, palpitations",Chirurgie générale
+VIH,"douleur abdominale, fièvre, vomissements, jaunisse, fatigue",Dermatologie
+Otite,"vomissements, maux de tête, perte de poids",Hématologie
+Cancer du foie,"nausées, diarrhée, maux de tête, douleur abdominale",Rhumatologie
+Insuffisance rénale,"vomissements, jaunisse, diarrhée, fatigue",Pneumologie
+Appendicite,"douleurs articulaires, douleur abdominale, toux, fièvre, jaunisse",Rhumatologie
+Cirrhose,"douleurs articulaires, jaunisse, diarrhée",ORL
+VIH,"éruptions cutanées, fièvre, douleurs articulaires",Pneumologie
+Obésité,"éruptions cutanées, maux de tête, jaunisse",Pédiatrie
+Grippe,"diarrhée, nausées, éruptions cutanées, perte de poids, fièvre",Ophtalmologie
+Tuberculose,"douleurs articulaires, toux, palpitations, vertiges, éruptions cutanées",Dermatologie
+Dermatite,"fatigue, douleur abdominale, fièvre, vomissements, jaunisse",Endocrinologie
+Paludisme,"éruptions cutanées, douleurs articulaires, toux, jaunisse, diarrhée",Gastroentérologie
+Cancer du sein,"fatigue, vertiges, fièvre, jaunisse, diarrhée",Ophtalmologie
+Pneumonie,"toux, nausées, diarrhée",Médecine générale
+Lupus,"douleur abdominale, toux, maux de tête",Dermatologie
+Hépatite,"fatigue, palpitations, vomissements",Neurologie
+Otite,"jaunisse, palpitations, maux de tête, éruptions cutanées, vertiges",Chirurgie générale
+Thyroïdite,"essoufflement, douleur abdominale, vomissements",Cardiologie
+Obésité,"douleur abdominale, nausées, douleurs articulaires, fièvre, toux",Endocrinologie
+Cirrhose,"maux de tête, fatigue, toux, fièvre",Neurologie
+Psoriasis,"douleur abdominale, maux de tête, fièvre",Ophtalmologie
+Hernie,"vertiges, jaunisse, perte de poids",Médecine générale
+Arthrite,"perte de poids, diarrhée, jaunisse, essoufflement",Endocrinologie
+Hépatite,"perte de poids, fièvre, jaunisse, vertiges",Cardiologie
+Ulcère,"essoufflement, maux de tête, jaunisse, vomissements, toux",Gastroentérologie
+Colite,"palpitations, vomissements, essoufflement, diarrhée, fatigue",Pédiatrie
+Thyroïdite,"vomissements, diarrhée, éruptions cutanées",Médecine générale
+Bronchite,"jaunisse, diarrhée, vomissements",Cardiologie
+Gastrite,"perte de poids, vomissements, douleur abdominale, éruptions cutanées",Rhumatologie
+Sclérose,"maux de tête, essoufflement, douleurs articulaires",Médecine générale
+Cirrhose,"vomissements, toux, nausées, maux de tête, fatigue",Infectiologie
+Thyroïdite,"éruptions cutanées, douleurs articulaires, fièvre, nausées, perte de poids",Neurologie
+Cirrhose,"perte de poids, nausées, fièvre, fatigue",Rhumatologie
+Sclérose,"essoufflement, fièvre, palpitations, fatigue",Endocrinologie
+Psoriasis,"fatigue, vertiges, palpitations, fièvre",Endocrinologie
+Paludisme,"perte de poids, nausées, toux, maux de tête",Oncologie
+Goutte,"éruptions cutanées, maux de tête, perte de poids, vertiges",Médecine générale
+Cancer du foie,"essoufflement, fatigue, toux, éruptions cutanées, nausées",Dermatologie
+Epilepsie,"douleurs articulaires, diarrhée, douleur abdominale",Oncologie
+Epilepsie,"perte de poids, essoufflement, palpitations, fatigue",Hématologie
+Asthme,"douleur abdominale, fatigue, toux, douleurs articulaires, vertiges",Rhumatologie
+Goutte,"essoufflement, jaunisse, douleur abdominale, nausées",Oncologie
+Parkinson,"diarrhée, palpitations, douleur abdominale, fièvre",Pédiatrie
+Arthrite,"douleurs articulaires, toux, jaunisse",Médecine générale
+Insuffisance rénale,"essoufflement, perte de poids, vertiges, vomissements",Rhumatologie
+Goutte,"palpitations, douleurs articulaires, fatigue, douleur abdominale, vomissements",Gastroentérologie
+Otite,"douleur abdominale, maux de tête, fatigue",Gastroentérologie
+Zona,"vertiges, éruptions cutanées, douleurs articulaires",Infectiologie
+Migraine,"douleurs articulaires, nausées, fièvre",Cardiologie
+Otite,"vomissements, douleur abdominale, essoufflement, toux, nausées",Chirurgie générale
+Glaucome,"essoufflement, perte de poids, fièvre, palpitations, fatigue",Infectiologie
+Tuberculose,"diarrhée, douleur abdominale, maux de tête, jaunisse, essoufflement",Neurologie
+Colite,"éruptions cutanées, douleurs articulaires, vomissements",Cardiologie
+Sinusite,"douleur abdominale, fatigue, fièvre, douleurs articulaires, diarrhée",Gastroentérologie
+Bronchite,"fatigue, diarrhée, vomissements",Endocrinologie
+Ulcère,"éruptions cutanées, essoufflement, toux, douleur abdominale, douleurs articulaires",Ophtalmologie
+Hernie,"douleurs articulaires, vomissements, nausées",Hématologie
+Cancer de la peau,"vomissements, jaunisse, éruptions cutanées",Endocrinologie
+Gastrite,"nausées, maux de tête, éruptions cutanées, fièvre, douleur abdominale",Ophtalmologie
+Thyroïdite,"diarrhée, nausées, vertiges",Hématologie
+Otite,"douleur abdominale, jaunisse, douleurs articulaires, éruptions cutanées, fatigue",ORL
+Conjonctivite,"jaunisse, douleurs articulaires, vomissements, diarrhée, fièvre",Dermatologie
+Otite,"maux de tête, fièvre, perte de poids, vertiges, essoufflement",Oncologie
+Paludisme,"vomissements, maux de tête, essoufflement, nausées",Pédiatrie
+Psoriasis,"éruptions cutanées, palpitations, vomissements, essoufflement, jaunisse",Ophtalmologie
+Parkinson,"douleur abdominale, essoufflement, vomissements",Pédiatrie
+Cataracte,"vertiges, douleurs articulaires, vomissements, toux",Rhumatologie
+Crohn,"fièvre, fatigue, éruptions cutanées, palpitations",ORL
+Colite,"douleur abdominale, vomissements, toux",Gastroentérologie
+VIH,"palpitations, fièvre, nausées",Infectiologie
+Cancer de la peau,"fièvre, vomissements, vertiges, fatigue",Médecine générale
+Paludisme,"essoufflement, maux de tête, fatigue, palpitations, douleurs articulaires",Médecine générale
+Dermatite,"palpitations, nausées, fièvre",Rhumatologie
+Cirrhose,"fièvre, toux, vertiges, maux de tête, perte de poids",Dermatologie
+COVID-19,"éruptions cutanées, perte de poids, fièvre",ORL
+Crohn,"essoufflement, nausées, vomissements",Hématologie
+Bronchite,"éruptions cutanées, fatigue, douleurs articulaires, diarrhée, maux de tête",Chirurgie générale
+Psoriasis,"maux de tête, jaunisse, éruptions cutanées, essoufflement",Cardiologie
+Bronchite,"diarrhée, jaunisse, fatigue, palpitations, toux",ORL
+Diabète,"vomissements, essoufflement, douleurs articulaires, éruptions cutanées",Rhumatologie
+Gastrite,"vomissements, essoufflement, éruptions cutanées, fatigue, maux de tête",Neurologie
+Goutte,"vomissements, douleur abdominale, palpitations, maux de tête",Endocrinologie
+Cancer du foie,"fatigue, maux de tête, nausées, vertiges",Dermatologie
+COVID-19,"vertiges, éruptions cutanées, toux, douleurs articulaires, maux de tête",Chirurgie générale
+Insuffisance rénale,"palpitations, fièvre, douleur abdominale, fatigue, toux",Dermatologie
+Appendicite,"jaunisse, diarrhée, vertiges",Chirurgie générale
+VIH,"nausées, vertiges, perte de poids, maux de tête",Infectiologie
+Grippe,"jaunisse, fatigue, diarrhée, fièvre, maux de tête",Endocrinologie
+Appendicite,"douleurs articulaires, toux, fatigue, fièvre, éruptions cutanées",ORL
+Cancer de la peau,"vertiges, toux, douleur abdominale, éruptions cutanées, palpitations",ORL
+Glaucome,"palpitations, diarrhée, éruptions cutanées, vomissements, jaunisse",Chirurgie générale
+VIH,"éruptions cutanées, diarrhée, douleurs articulaires, vertiges",Ophtalmologie
+Cancer du foie,"fatigue, essoufflement, perte de poids, toux, fièvre",Endocrinologie
+Zona,"maux de tête, fatigue, nausées, perte de poids, toux",Gastroentérologie
+Conjonctivite,"perte de poids, maux de tête, éruptions cutanées, vomissements, essoufflement",Dermatologie
+Bronchite,"douleur abdominale, fatigue, perte de poids",Infectiologie
+Anémie,"fatigue, toux, nausées, vertiges, perte de poids",Pneumologie
+Otite,"maux de tête, vertiges, éruptions cutanées, fatigue",Oncologie
+Epilepsie,"jaunisse, palpitations, éruptions cutanées, vertiges, vomissements",Oncologie
+Asthme,"fatigue, douleurs articulaires, jaunisse, perte de poids, éruptions cutanées",Infectiologie
+Sinusite,"essoufflement, nausées, douleurs articulaires",Médecine générale
+Otite,"nausées, douleurs articulaires, fatigue",Oncologie
+Psoriasis,"vertiges, éruptions cutanées, palpitations",Rhumatologie
+Paludisme,"perte de poids, palpitations, diarrhée, douleurs articulaires",Chirurgie générale
+Obésité,"perte de poids, vertiges, fatigue",Dermatologie
+Conjonctivite,"palpitations, essoufflement, nausées",ORL
+Goutte,"vertiges, essoufflement, nausées, maux de tête, éruptions cutanées",Hématologie
+Ulcère,"douleurs articulaires, fièvre, éruptions cutanées, maux de tête, fatigue",Neurologie
+Sinusite,"douleur abdominale, palpitations, nausées",Médecine générale
+Cirrhose,"douleur abdominale, fatigue, jaunisse, fièvre, vomissements",Ophtalmologie
+Ulcère,"perte de poids, douleurs articulaires, douleur abdominale, diarrhée",Médecine générale
+Sinusite,"douleur abdominale, éruptions cutanées, vomissements",Ophtalmologie
+Goutte,"diarrhée, douleur abdominale, jaunisse, éruptions cutanées",Pneumologie
+Otite,"perte de poids, diarrhée, essoufflement, vomissements",Infectiologie
+Méningite,"douleurs articulaires, essoufflement, vertiges, fièvre, éruptions cutanées",Oncologie
+Cancer du foie,"essoufflement, toux, perte de poids, nausées, maux de tête",Cardiologie
+Sinusite,"fièvre, fatigue, jaunisse",Neurologie
+Arthrose,"douleurs articulaires, éruptions cutanées, maux de tête, douleur abdominale",Rhumatologie
+Appendicite,"perte de poids, essoufflement, fatigue, fièvre, nausées",Pneumologie
+Cancer du foie,"vomissements, fatigue, essoufflement, douleur abdominale",Hématologie
+Alzheimer,"diarrhée, vomissements, nausées",Pneumologie
+Cataracte,"douleur abdominale, perte de poids, jaunisse, vomissements",Pédiatrie
+Sinusite,"nausées, essoufflement, vertiges, éruptions cutanées",Médecine générale
+Insuffisance rénale,"fatigue, palpitations, jaunisse",Ophtalmologie
+Alzheimer,"douleurs articulaires, palpitations, vertiges, perte de poids, essoufflement",Dermatologie
+Méningite,"vomissements, maux de tête, perte de poids, toux, essoufflement",Hématologie
+Lupus,"douleurs articulaires, essoufflement, toux",ORL
+Pneumonie,"jaunisse, éruptions cutanées, palpitations, douleur abdominale, diarrhée",Médecine générale
+Migraine,"douleur abdominale, maux de tête, diarrhée, toux",Endocrinologie
+Dermatite,"douleurs articulaires, fatigue, nausées, diarrhée, essoufflement",Hématologie
+Lupus,"diarrhée, douleurs articulaires, douleur abdominale, fièvre",Cardiologie
+Cancer du sein,"fatigue, éruptions cutanées, perte de poids, douleurs articulaires",Gastroentérologie
+Dermatite,"toux, diarrhée, nausées, vertiges, éruptions cutanées",Pédiatrie
+Hernie,"éruptions cutanées, fatigue, diarrhée, vomissements",Neurologie
+Crohn,"douleur abdominale, fatigue, maux de tête",Ophtalmologie
+Grippe,"diarrhée, douleurs articulaires, douleur abdominale",Cardiologie
+Dermatite,"vomissements, éruptions cutanées, perte de poids, palpitations, douleurs articulaires",Pneumologie
+Conjonctivite,"douleur abdominale, douleurs articulaires, jaunisse",Rhumatologie
+Appendicite,"fièvre, maux de tête, essoufflement, fatigue",Neurologie
+Cataracte,"palpitations, éruptions cutanées, vertiges",Oncologie
+Glaucome,"jaunisse, nausées, fatigue",Hématologie
+Cancer de la peau,"toux, maux de tête, fatigue, vertiges",Endocrinologie
+Sinusite,"nausées, douleur abdominale, maux de tête, douleurs articulaires",Médecine générale
+Grippe,"maux de tête, fièvre, douleur abdominale, toux",Pneumologie
+Cancer du foie,"douleurs articulaires, palpitations, douleur abdominale, perte de poids, nausées",Rhumatologie
+Sclérose,"essoufflement, douleurs articulaires, vertiges",Pneumologie
+Pneumonie,"vertiges, perte de poids, douleur abdominale, fatigue, jaunisse",Pneumologie
+Anémie,"jaunisse, fièvre, essoufflement, toux",Pneumologie
+Glaucome,"vomissements, perte de poids, nausées, éruptions cutanées",Dermatologie
+Sclérose,"nausées, vertiges, jaunisse",Dermatologie
+Pneumonie,"fièvre, douleurs articulaires, éruptions cutanées, jaunisse, vertiges",Médecine générale
+COVID-19,"douleur abdominale, vertiges, nausées, vomissements",Cardiologie
+Thyroïdite,"fatigue, perte de poids, éruptions cutanées, palpitations",Chirurgie générale
+Appendicite,"jaunisse, palpitations, fièvre, vomissements",Rhumatologie
+Zona,"essoufflement, vertiges, perte de poids",ORL
+Thyroïdite,"perte de poids, nausées, essoufflement",Médecine générale
+Hépatite,"nausées, perte de poids, fatigue, palpitations",Gastroentérologie
+Grippe,"maux de tête, vertiges, toux, fièvre, douleurs articulaires",Pédiatrie
+Arthrite,"fatigue, diarrhée, jaunisse, vomissements",Gastroentérologie
+Insuffisance rénale,"éruptions cutanées, maux de tête, vomissements, douleurs articulaires",Neurologie
+Parkinson,"palpitations, fièvre, fatigue, douleur abdominale, diarrhée",Infectiologie
+Conjonctivite,"fièvre, nausées, toux, vomissements, maux de tête",Neurologie
+Appendicite,"douleurs articulaires, essoufflement, nausées, palpitations",Neurologie
+Cancer du foie,"toux, palpitations, maux de tête, douleurs articulaires, nausées",Ophtalmologie
+COVID-19,"douleurs articulaires, éruptions cutanées, maux de tête, toux, perte de poids",Hématologie
+Diabète,"diarrhée, essoufflement, douleur abdominale",Gastroentérologie
+Arthrose,"vertiges, palpitations, fatigue, douleurs articulaires",Hématologie
+Sclérose,"vertiges, essoufflement, fatigue",Neurologie
+Arthrose,"éruptions cutanées, douleur abdominale, essoufflement, vomissements, douleurs articulaires",Oncologie
+Epilepsie,"perte de poids, diarrhée, maux de tête, essoufflement, douleur abdominale",Rhumatologie
+Colite,"palpitations, vomissements, douleur abdominale, perte de poids, fatigue",Endocrinologie
+Thyroïdite,"toux, fièvre, maux de tête",Pneumologie
+Parkinson,"éruptions cutanées, maux de tête, diarrhée, toux, essoufflement",Médecine générale
+Ulcère,"diarrhée, jaunisse, maux de tête, toux",Pneumologie
+Paludisme,"fatigue, nausées, vertiges, diarrhée",Neurologie
+Arthrose,"nausées, douleurs articulaires, vertiges",Hématologie
+Lupus,"nausées, diarrhée, douleur abdominale, vertiges, essoufflement",Dermatologie
+Pneumonie,"vertiges, toux, éruptions cutanées, maux de tête, vomissements",Dermatologie
+VIH,"douleurs articulaires, fatigue, fièvre, nausées, palpitations",Chirurgie générale
+Insuffisance rénale,"fatigue, jaunisse, éruptions cutanées, perte de poids, diarrhée",Infectiologie
+Grippe,"jaunisse, palpitations, douleur abdominale",Infectiologie
+Otite,"diarrhée, vomissements, vertiges, nausées, jaunisse",Ophtalmologie
+Migraine,"palpitations, toux, diarrhée, éruptions cutanées",Cardiologie
+Appendicite,"perte de poids, maux de tête, éruptions cutanées",Rhumatologie
+COVID-19,"perte de poids, essoufflement, vomissements, diarrhée",ORL
+Appendicite,"perte de poids, diarrhée, éruptions cutanées",ORL
+Paludisme,"toux, fièvre, nausées, essoufflement",Gastroentérologie
+Dermatite,"vomissements, essoufflement, nausées, jaunisse, éruptions cutanées",Gastroentérologie
+Tuberculose,"fièvre, perte de poids, maux de tête",Pédiatrie
+Zona,"palpitations, douleurs articulaires, fatigue, douleur abdominale",Hématologie
+VIH,"jaunisse, vomissements, fièvre, fatigue",Ophtalmologie
+Hypertension,"maux de tête, vertiges, essoufflement, douleurs articulaires, palpitations",Pédiatrie
+Ulcère,"perte de poids, jaunisse, diarrhée",Endocrinologie
+Dermatite,"toux, fatigue, douleurs articulaires, vomissements, essoufflement",Pneumologie
+Otite,"palpitations, vertiges, fatigue, vomissements, maux de tête",Cardiologie
+Migraine,"vertiges, douleurs articulaires, douleur abdominale, maux de tête, nausées",Médecine générale
+Méningite,"diarrhée, éruptions cutanées, jaunisse, douleur abdominale, essoufflement",Neurologie
+Cancer du sein,"éruptions cutanées, douleur abdominale, douleurs articulaires, fatigue",Chirurgie générale
+Migraine,"éruptions cutanées, douleurs articulaires, diarrhée, essoufflement, maux de tête",Chirurgie générale
+Epilepsie,"toux, fatigue, nausées, éruptions cutanées, jaunisse",Hématologie
+Diabète,"jaunisse, maux de tête, douleurs articulaires, vomissements, diarrhée",Rhumatologie
+Anémie,"jaunisse, fièvre, fatigue, diarrhée",Rhumatologie
+VIH,"douleurs articulaires, palpitations, diarrhée, éruptions cutanées",Pédiatrie
+Colite,"maux de tête, toux, fatigue, jaunisse",Chirurgie générale
+Crohn,"fatigue, vertiges, essoufflement",Cardiologie
+Glaucome,"perte de poids, maux de tête, douleur abdominale, fatigue, palpitations",Pneumologie
+Migraine,"toux, essoufflement, diarrhée",Ophtalmologie
+Tuberculose,"vomissements, éruptions cutanées, perte de poids",Dermatologie
+Grippe,"fièvre, toux, jaunisse, nausées, maux de tête",Infectiologie
+Asthme,"diarrhée, vertiges, jaunisse, toux",Endocrinologie
+Arthrose,"palpitations, toux, vomissements, fatigue, fièvre",Infectiologie
+VIH,"maux de tête, diarrhée, douleurs articulaires",Chirurgie générale
+Ulcère,"jaunisse, maux de tête, fièvre",ORL
+Hypertension,"douleurs articulaires, toux, jaunisse, essoufflement",Médecine générale
+Dermatite,"diarrhée, nausées, douleur abdominale",Chirurgie générale
+VIH,"jaunisse, vertiges, palpitations, fièvre",Dermatologie
+Goutte,"fatigue, diarrhée, essoufflement, nausées",Oncologie
+Diabète,"diarrhée, fatigue, essoufflement, vomissements, maux de tête",Endocrinologie
+COVID-19,"diarrhée, nausées, vomissements",Cardiologie
+Gastrite,"vertiges, palpitations, éruptions cutanées, toux, essoufflement",Dermatologie
+Hypertension,"jaunisse, fièvre, vomissements",Médecine générale
+Arthrose,"toux, maux de tête, douleur abdominale",Dermatologie
+Cancer du sein,"diarrhée, essoufflement, nausées, fièvre, palpitations",Neurologie
+Arthrite,"douleurs articulaires, fatigue, douleur abdominale, toux, jaunisse",Dermatologie
+Asthme,"nausées, douleur abdominale, maux de tête, essoufflement, palpitations",Cardiologie
+Conjonctivite,"essoufflement, nausées, fatigue",Infectiologie
+Ulcère,"fièvre, vertiges, perte de poids",Dermatologie
+Dermatite,"douleur abdominale, fatigue, vertiges, vomissements",Endocrinologie
+Arthrite,"nausées, diarrhée, toux, vertiges",Oncologie
+Insuffisance rénale,"toux, vomissements, nausées, jaunisse",Oncologie
+Cancer du sein,"perte de poids, fièvre, diarrhée",Pédiatrie
+Cancer de la peau,"nausées, fièvre, diarrhée, fatigue",Cardiologie
+Paludisme,"toux, essoufflement, nausées",Médecine générale
+Diabète,"nausées, vertiges, maux de tête, fièvre, douleur abdominale",Infectiologie
+Cancer du foie,"essoufflement, perte de poids, jaunisse, diarrhée",Endocrinologie
+Lupus,"toux, nausées, vertiges, palpitations",Pédiatrie
+Diabète,"palpitations, toux, nausées",Endocrinologie
+Asthme,"palpitations, douleurs articulaires, vertiges",Pédiatrie
+Glaucome,"toux, perte de poids, douleurs articulaires, palpitations",Oncologie
+Bronchite,"vomissements, fièvre, palpitations, vertiges",Dermatologie
+Cancer du sein,"vomissements, éruptions cutanées, palpitations",Neurologie
+Arthrose,"douleur abdominale, perte de poids, maux de tête, éruptions cutanées",Endocrinologie
+Epilepsie,"jaunisse, perte de poids, palpitations, douleur abdominale, diarrhée",Chirurgie générale
+Ulcère,"toux, maux de tête, fièvre, fatigue",Médecine générale
+Bronchite,"fièvre, maux de tête, palpitations, fatigue, éruptions cutanées",Infectiologie
+Cirrhose,"fièvre, maux de tête, vertiges, essoufflement",Cardiologie
+Hernie,"essoufflement, douleurs articulaires, fatigue, éruptions cutanées, diarrhée",Chirurgie générale
+Hypertension,"maux de tête, douleurs articulaires, perte de poids, toux",Cardiologie
+Cataracte,"douleurs articulaires, vomissements, jaunisse",Oncologie
+Méningite,"éruptions cutanées, fièvre, douleur abdominale, toux, vertiges",Médecine générale
+Sclérose,"diarrhée, maux de tête, jaunisse",Rhumatologie
+Alzheimer,"jaunisse, douleur abdominale, perte de poids, essoufflement",Endocrinologie
+Appendicite,"fièvre, douleur abdominale, vomissements, diarrhée, jaunisse",Dermatologie
+Colite,"fatigue, jaunisse, douleurs articulaires",Hématologie
+Arthrose,"toux, jaunisse, vomissements",Pédiatrie
+Epilepsie,"perte de poids, douleurs articulaires, vertiges",Neurologie
+Glaucome,"douleurs articulaires, vertiges, maux de tête, perte de poids",Endocrinologie
+Migraine,"douleurs articulaires, éruptions cutanées, diarrhée, perte de poids, toux",Pneumologie
+Glaucome,"douleur abdominale, vomissements, éruptions cutanées, vertiges",Dermatologie
+Cirrhose,"douleurs articulaires, fatigue, maux de tête, éruptions cutanées, diarrhée",Gastroentérologie
+Méningite,"douleurs articulaires, perte de poids, essoufflement",Infectiologie
+Asthme,"jaunisse, fatigue, vomissements, maux de tête, perte de poids",Ophtalmologie
+Grippe,"toux, douleurs articulaires, palpitations, essoufflement, éruptions cutanées",ORL
+Goutte,"jaunisse, perte de poids, vomissements, toux, fièvre",Pneumologie
+Dermatite,"palpitations, éruptions cutanées, jaunisse",ORL
+VIH,"maux de tête, diarrhée, douleurs articulaires, essoufflement",Pédiatrie
+Psoriasis,"jaunisse, palpitations, perte de poids, essoufflement",ORL
+Tuberculose,"diarrhée, jaunisse, éruptions cutanées, douleur abdominale, palpitations",Cardiologie
+Conjonctivite,"maux de tête, vomissements, perte de poids, palpitations",Pneumologie
+Hernie,"toux, jaunisse, palpitations, fièvre, nausées",Pneumologie
+Colite,"essoufflement, vomissements, fatigue",Pneumologie
+Méningite,"essoufflement, éruptions cutanées, douleurs articulaires",Chirurgie générale
+Otite,"perte de poids, vertiges, palpitations",Gastroentérologie
+Sinusite,"éruptions cutanées, vertiges, jaunisse, douleurs articulaires, vomissements",Médecine générale
+Diabète,"vertiges, fatigue, fièvre",Infectiologie
+Anémie,"perte de poids, éruptions cutanées, douleurs articulaires, vertiges",Hématologie
+Asthme,"fièvre, nausées, palpitations",Chirurgie générale
+Lupus,"jaunisse, éruptions cutanées, palpitations",Endocrinologie
+Arthrite,"toux, maux de tête, palpitations, essoufflement",Hématologie
+Insuffisance rénale,"nausées, fatigue, vertiges, essoufflement",Dermatologie
+Grippe,"douleur abdominale, éruptions cutanées, jaunisse, diarrhée, palpitations",Endocrinologie
+Cancer du sein,"vertiges, douleur abdominale, diarrhée",Cardiologie
+Méningite,"douleurs articulaires, fièvre, jaunisse, vomissements, fatigue",Médecine générale
+Sinusite,"diarrhée, vomissements, palpitations",Oncologie
+Cancer du sein,"éruptions cutanées, diarrhée, jaunisse",Hématologie
+Goutte,"diarrhée, palpitations, fièvre, jaunisse, vomissements",Endocrinologie
+Parkinson,"vomissements, palpitations, diarrhée, essoufflement, nausées",Hématologie
+Psoriasis,"perte de poids, nausées, fatigue",Cardiologie
+Otite,"palpitations, essoufflement, maux de tête, nausées, fièvre",Dermatologie
+Hernie,"diarrhée, vertiges, nausées",Ophtalmologie
+Arthrite,"toux, essoufflement, éruptions cutanées, maux de tête",Hématologie
+Epilepsie,"éruptions cutanées, jaunisse, palpitations, nausées",Rhumatologie
+Hypertension,"vomissements, douleur abdominale, maux de tête",Chirurgie générale
+Méningite,"douleurs articulaires, perte de poids, éruptions cutanées",Pneumologie
+VIH,"perte de poids, essoufflement, éruptions cutanées, vertiges, toux",Oncologie
+Thyroïdite,"maux de tête, toux, perte de poids, palpitations",Dermatologie
+Cancer du foie,"douleurs articulaires, nausées, maux de tête",Hématologie
+Otite,"éruptions cutanées, palpitations, jaunisse",Ophtalmologie
+Ulcère,"toux, perte de poids, diarrhée, essoufflement",Cardiologie
+VIH,"diarrhée, douleurs articulaires, perte de poids, nausées",Cardiologie
+Cirrhose,"jaunisse, essoufflement, diarrhée",Médecine générale
+Colite,"palpitations, vertiges, perte de poids",Infectiologie
+Lupus,"palpitations, vertiges, perte de poids",Neurologie
+Glaucome,"diarrhée, palpitations, jaunisse, nausées, vertiges",Gastroentérologie
+Hépatite,"toux, douleurs articulaires, fatigue",Dermatologie
+Cancer du foie,"éruptions cutanées, vertiges, perte de poids, nausées",Oncologie
+Appendicite,"diarrhée, fièvre, toux, nausées, essoufflement",Neurologie
+Pneumonie,"diarrhée, maux de tête, essoufflement, fièvre",Chirurgie générale
+Parkinson,"essoufflement, palpitations, fièvre, maux de tête, nausées",Infectiologie
+Hernie,"maux de tête, fatigue, vomissements, jaunisse",Endocrinologie
+Conjonctivite,"toux, fatigue, palpitations, maux de tête",ORL
+Appendicite,"fatigue, essoufflement, maux de tête",Pédiatrie
+Glaucome,"maux de tête, éruptions cutanées, douleur abdominale",Pédiatrie
+Migraine,"maux de tête, éruptions cutanées, fatigue",Dermatologie
+Glaucome,"perte de poids, fièvre, essoufflement",Pédiatrie
+Dermatite,"fatigue, diarrhée, fièvre, palpitations, essoufflement",Pneumologie
+Colite,"éruptions cutanées, fièvre, vomissements, jaunisse",Hématologie
+Asthme,"jaunisse, vertiges, vomissements, fatigue",Médecine générale
+Parkinson,"fièvre, éruptions cutanées, palpitations",Chirurgie générale
+Cancer du foie,"vomissements, essoufflement, jaunisse",Oncologie
+Insuffisance rénale,"fièvre, fatigue, nausées, essoufflement, maux de tête",Pédiatrie
+Goutte,"toux, fatigue, palpitations, diarrhée, fièvre",Cardiologie
+Cancer du sein,"fièvre, maux de tête, vomissements, perte de poids, jaunisse",Endocrinologie
+Pneumonie,"éruptions cutanées, toux, nausées, maux de tête",Infectiologie
+Diabète,"nausées, fatigue, douleurs articulaires",Cardiologie
+Pneumonie,"fatigue, palpitations, nausées, toux",Neurologie
+Crohn,"fièvre, douleurs articulaires, fatigue, éruptions cutanées, perte de poids",Infectiologie
+Zona,"maux de tête, diarrhée, nausées, douleurs articulaires",Hématologie
+Gastrite,"fièvre, douleurs articulaires, fatigue, diarrhée",Médecine générale
+Otite,"vomissements, perte de poids, diarrhée, essoufflement, fatigue",Gastroentérologie
+Tuberculose,"palpitations, jaunisse, douleur abdominale, douleurs articulaires",Oncologie
+Appendicite,"éruptions cutanées, palpitations, douleur abdominale",Chirurgie générale
+Cancer de la peau,"diarrhée, nausées, éruptions cutanées, perte de poids, essoufflement",Gastroentérologie
+Appendicite,"essoufflement, fièvre, perte de poids, jaunisse",Rhumatologie
+VIH,"toux, palpitations, vertiges",ORL
+Anémie,"perte de poids, diarrhée, toux, fièvre, essoufflement",Hématologie
+Cancer du foie,"vomissements, toux, nausées",Neurologie
+Tuberculose,"éruptions cutanées, perte de poids, essoufflement",Pneumologie
+Gastrite,"essoufflement, nausées, fièvre, vomissements",Neurologie
+Cancer du sein,"perte de poids, nausées, essoufflement, vertiges",Hématologie
+Migraine,"douleur abdominale, vertiges, jaunisse, nausées, diarrhée",Pédiatrie
+Tuberculose,"jaunisse, éruptions cutanées, essoufflement",Endocrinologie
+Sclérose,"douleurs articulaires, diarrhée, vertiges, fatigue, fièvre",ORL
+Alzheimer,"fatigue, fièvre, vomissements, douleurs articulaires, nausées",Cardiologie
+Méningite,"essoufflement, fatigue, diarrhée, maux de tête",Pédiatrie
+Migraine,"éruptions cutanées, toux, essoufflement, fièvre",Gastroentérologie
+Glaucome,"douleur abdominale, essoufflement, fièvre, éruptions cutanées",Gastroentérologie
+Alzheimer,"vomissements, toux, vertiges, maux de tête, douleurs articulaires",Rhumatologie
+Obésité,"perte de poids, essoufflement, vertiges, douleurs articulaires",Pneumologie
+Appendicite,"maux de tête, palpitations, jaunisse, éruptions cutanées, vomissements",Oncologie
+Appendicite,"jaunisse, fatigue, fièvre",Cardiologie
+Hernie,"perte de poids, vertiges, nausées, toux",Rhumatologie
+Cancer du foie,"essoufflement, vomissements, fatigue, éruptions cutanées, palpitations",Médecine générale
+Hernie,"éruptions cutanées, vertiges, fatigue, douleurs articulaires, essoufflement",Infectiologie
+Hernie,"douleur abdominale, douleurs articulaires, jaunisse, palpitations",Hématologie
+Crohn,"essoufflement, éruptions cutanées, vertiges, fièvre",Rhumatologie
+Arthrite,"fatigue, vertiges, vomissements, fièvre",Endocrinologie
+Hernie,"jaunisse, éruptions cutanées, toux, fièvre, perte de poids",Infectiologie
+Ulcère,"éruptions cutanées, fièvre, palpitations, diarrhée",Médecine générale
+Migraine,"nausées, douleurs articulaires, fatigue, perte de poids, douleur abdominale",Médecine générale
+Diabète,"diarrhée, jaunisse, nausées",Neurologie
+Appendicite,"palpitations, essoufflement, douleur abdominale",Chirurgie générale
+Sinusite,"douleurs articulaires, maux de tête, jaunisse",Dermatologie
+Arthrite,"vertiges, diarrhée, douleur abdominale",Chirurgie générale
+Hernie,"perte de poids, diarrhée, vertiges",Pneumologie
+Cancer de la peau,"douleurs articulaires, nausées, vertiges",Pneumologie
+Arthrose,"vomissements, maux de tête, jaunisse, fatigue",Cardiologie
+Tuberculose,"éruptions cutanées, essoufflement, nausées, douleur abdominale",Hématologie
+Cataracte,"nausées, douleurs articulaires, vomissements, éruptions cutanées",Neurologie
+Crohn,"toux, jaunisse, nausées, douleurs articulaires",Hématologie
+Parkinson,"maux de tête, vertiges, douleur abdominale, douleurs articulaires, toux",ORL
+Diabète,"palpitations, éruptions cutanées, vomissements",Chirurgie générale
+Conjonctivite,"toux, vertiges, jaunisse, nausées",Pneumologie
+Cancer du foie,"perte de poids, diarrhée, jaunisse, nausées, essoufflement",Endocrinologie
+Appendicite,"essoufflement, éruptions cutanées, fièvre, vomissements",Cardiologie
+COVID-19,"vertiges, jaunisse, vomissements, nausées, palpitations",Pédiatrie
+Pneumonie,"vertiges, diarrhée, douleurs articulaires, essoufflement, fatigue",Pédiatrie
+Otite,"éruptions cutanées, vertiges, maux de tête, fièvre",Ophtalmologie
+Arthrite,"palpitations, douleur abdominale, jaunisse, nausées, fatigue",Endocrinologie
+Psoriasis,"perte de poids, maux de tête, essoufflement, diarrhée, vomissements",Cardiologie
+Otite,"douleur abdominale, perte de poids, vomissements",Rhumatologie
+Cancer de la peau,"vomissements, essoufflement, diarrhée",Pneumologie
+Migraine,"douleur abdominale, palpitations, diarrhée, essoufflement",Endocrinologie
+Bronchite,"fièvre, maux de tête, perte de poids",Médecine générale
+Diabète,"perte de poids, diarrhée, fièvre, vertiges",Médecine générale
+Goutte,"fièvre, maux de tête, diarrhée, vomissements, nausées",Chirurgie générale
+Insuffisance rénale,"perte de poids, essoufflement, nausées, vomissements, maux de tête",Oncologie
+Méningite,"éruptions cutanées, douleurs articulaires, jaunisse, diarrhée, toux",Pneumologie
+Sclérose,"fatigue, fièvre, essoufflement",Gastroentérologie
+VIH,"fièvre, toux, perte de poids, nausées",Rhumatologie
+Paludisme,"fièvre, éruptions cutanées, vertiges",Neurologie
+Paludisme,"éruptions cutanées, diarrhée, perte de poids, douleurs articulaires, vomissements",Rhumatologie
+Goutte,"douleurs articulaires, jaunisse, maux de tête",Médecine générale
+Asthme,"diarrhée, vertiges, fatigue, maux de tête",Gastroentérologie
+Tuberculose,"palpitations, douleurs articulaires, douleur abdominale, vertiges, diarrhée",Ophtalmologie
+Arthrose,"éruptions cutanées, jaunisse, palpitations",Dermatologie
+Lupus,"fièvre, perte de poids, diarrhée",Gastroentérologie
+Cataracte,"éruptions cutanées, palpitations, vomissements, fatigue",ORL
+Tuberculose,"maux de tête, diarrhée, palpitations, nausées, douleurs articulaires",Rhumatologie
+Diabète,"perte de poids, nausées, douleur abdominale, palpitations",Chirurgie générale
+Colite,"jaunisse, toux, nausées, douleurs articulaires",Pédiatrie
+Arthrose,"jaunisse, vomissements, maux de tête, essoufflement",Neurologie
+Obésité,"palpitations, maux de tête, douleurs articulaires",Ophtalmologie
+Hépatite,"maux de tête, douleurs articulaires, diarrhée",Oncologie
+Hernie,"fatigue, nausées, vomissements, jaunisse",Neurologie
+Cataracte,"diarrhée, vomissements, palpitations, toux",Gastroentérologie
+Anémie,"essoufflement, éruptions cutanées, vomissements, perte de poids, douleurs articulaires",Infectiologie
+Cancer de la peau,"vomissements, diarrhée, nausées, éruptions cutanées, fièvre",Rhumatologie
+Anémie,"fatigue, perte de poids, toux, vertiges",Hématologie
+Cirrhose,"toux, jaunisse, vertiges, maux de tête, palpitations",Neurologie
+Hypertension,"fatigue, éruptions cutanées, douleurs articulaires",Endocrinologie
+Grippe,"fatigue, essoufflement, vomissements, vertiges, douleur abdominale",Hématologie
+Epilepsie,"fatigue, toux, vomissements, jaunisse",Médecine générale
+Zona,"maux de tête, douleurs articulaires, diarrhée, perte de poids, toux",Pneumologie
+COVID-19,"douleur abdominale, fièvre, éruptions cutanées, maux de tête, vomissements",Hématologie
+Epilepsie,"maux de tête, fièvre, perte de poids",Dermatologie
+Gastrite,"diarrhée, palpitations, jaunisse, douleur abdominale, fatigue",Neurologie
+Hernie,"toux, diarrhée, vertiges",Gastroentérologie
+Paludisme,"éruptions cutanées, palpitations, fièvre, perte de poids",ORL
+Thyroïdite,"nausées, toux, maux de tête, perte de poids, éruptions cutanées",Pédiatrie
+Grippe,"éruptions cutanées, douleurs articulaires, maux de tête, diarrhée, toux",Endocrinologie
+Conjonctivite,"nausées, palpitations, essoufflement",Endocrinologie
+Paludisme,"éruptions cutanées, vomissements, maux de tête, palpitations",Dermatologie
+VIH,"vertiges, palpitations, éruptions cutanées, jaunisse, douleur abdominale",Neurologie
+Colite,"jaunisse, perte de poids, fièvre, maux de tête",Pneumologie
+Cataracte,"maux de tête, palpitations, vertiges, fièvre",Ophtalmologie
+Zona,"vertiges, perte de poids, palpitations, maux de tête",Médecine générale
+Glaucome,"fièvre, maux de tête, douleurs articulaires, vomissements",Pédiatrie
+Méningite,"palpitations, fièvre, douleurs articulaires",Médecine générale
+Hypertension,"douleur abdominale, essoufflement, douleurs articulaires, jaunisse, fatigue",Oncologie
+Epilepsie,"nausées, essoufflement, jaunisse",Cardiologie
+Glaucome,"diarrhée, essoufflement, fièvre, palpitations",Chirurgie générale
+Obésité,"douleur abdominale, maux de tête, vomissements, diarrhée, douleurs articulaires",Ophtalmologie
+Pneumonie,"jaunisse, nausées, maux de tête, douleur abdominale",Médecine générale
+Paludisme,"douleurs articulaires, essoufflement, éruptions cutanées, vertiges, nausées",Cardiologie
+Arthrite,"jaunisse, vomissements, douleurs articulaires",Chirurgie générale
+Goutte,"diarrhée, douleur abdominale, maux de tête",Neurologie
+Appendicite,"éruptions cutanées, nausées, toux, douleur abdominale, fièvre",Endocrinologie
+Thyroïdite,"nausées, éruptions cutanées, palpitations, perte de poids",Endocrinologie
+Hypertension,"palpitations, toux, perte de poids, douleurs articulaires",Pneumologie
+Paludisme,"fièvre, maux de tête, essoufflement, diarrhée",Infectiologie
+Hépatite,"fièvre, vertiges, éruptions cutanées, douleur abdominale, perte de poids",Neurologie
+Pneumonie,"douleurs articulaires, éruptions cutanées, fatigue",Pneumologie
+Bronchite,"douleur abdominale, fièvre, vertiges, diarrhée",Gastroentérologie
+COVID-19,"vertiges, essoufflement, douleurs articulaires",Infectiologie
+Crohn,"fatigue, douleur abdominale, vomissements, nausées",Neurologie
+Cancer du foie,"toux, nausées, douleurs articulaires, fièvre, vomissements",Ophtalmologie
+Conjonctivite,"essoufflement, vomissements, maux de tête",Neurologie
+Bronchite,"maux de tête, essoufflement, toux, éruptions cutanées, fièvre",Neurologie
+Asthme,"vomissements, essoufflement, douleurs articulaires",Endocrinologie
+COVID-19,"essoufflement, jaunisse, vertiges",Cardiologie
+Hépatite,"palpitations, toux, éruptions cutanées, fatigue, douleurs articulaires",Oncologie
+Dermatite,"fièvre, maux de tête, perte de poids",Chirurgie générale
+Alzheimer,"fièvre, toux, douleurs articulaires",Cardiologie
+Glaucome,"diarrhée, nausées, fièvre",Gastroentérologie
+VIH,"fatigue, fièvre, éruptions cutanées, vertiges, vomissements",Oncologie
+Hépatite,"vomissements, fièvre, éruptions cutanées, vertiges, jaunisse",Hématologie
+Goutte,"vertiges, jaunisse, toux, vomissements, fièvre",Hématologie
+Dermatite,"perte de poids, vertiges, diarrhée, fatigue, douleur abdominale",Chirurgie générale
+Hépatite,"essoufflement, éruptions cutanées, maux de tête, fièvre",Endocrinologie
+Cancer du foie,"palpitations, vomissements, douleur abdominale, toux",Dermatologie
+Bronchite,"vertiges, vomissements, palpitations, essoufflement",Infectiologie
+Arthrose,"fièvre, diarrhée, éruptions cutanées, douleurs articulaires, jaunisse",Endocrinologie
+Psoriasis,"fièvre, jaunisse, douleur abdominale",Cardiologie
+Alzheimer,"diarrhée, douleurs articulaires, fatigue, vomissements, douleur abdominale",Chirurgie générale
+Cirrhose,"diarrhée, nausées, fièvre, vomissements, fatigue",Médecine générale
+COVID-19,"vomissements, nausées, palpitations",Neurologie
+Cataracte,"fièvre, palpitations, perte de poids, diarrhée",Oncologie
+Méningite,"essoufflement, fièvre, diarrhée",Pédiatrie
+Bronchite,"douleur abdominale, éruptions cutanées, douleurs articulaires, toux",ORL
+Gastrite,"toux, vertiges, diarrhée, vomissements, jaunisse",ORL
+Dermatite,"diarrhée, palpitations, douleurs articulaires",Pneumologie
+Pneumonie,"douleurs articulaires, toux, maux de tête, fièvre",Infectiologie
+Anémie,"toux, fatigue, douleurs articulaires, éruptions cutanées, nausées",Rhumatologie
+Hépatite,"éruptions cutanées, fatigue, douleur abdominale, essoufflement, nausées",Rhumatologie
+Asthme,"fièvre, douleurs articulaires, éruptions cutanées, vertiges, palpitations",Pneumologie
+Diabète,"éruptions cutanées, fièvre, toux",ORL
+Goutte,"palpitations, éruptions cutanées, vertiges, diarrhée",Endocrinologie
+Alzheimer,"diarrhée, vertiges, éruptions cutanées, nausées, douleur abdominale",Ophtalmologie
+Otite,"toux, maux de tête, fièvre",Pneumologie
+Pneumonie,"toux, jaunisse, fièvre",ORL
+Glaucome,"essoufflement, vertiges, nausées, douleur abdominale",ORL
+Psoriasis,"fatigue, fièvre, essoufflement",Neurologie
+Hépatite,"perte de poids, palpitations, vertiges",Rhumatologie
+Méningite,"fatigue, vertiges, essoufflement",Endocrinologie
+Colite,"jaunisse, éruptions cutanées, vertiges",Gastroentérologie
+Obésité,"vertiges, douleur abdominale, maux de tête",Ophtalmologie
+Sinusite,"douleurs articulaires, fatigue, palpitations",Ophtalmologie
+Goutte,"palpitations, fatigue, jaunisse, diarrhée",Oncologie
+Arthrite,"fièvre, fatigue, éruptions cutanées, diarrhée",Hématologie
+Psoriasis,"toux, nausées, maux de tête",Pneumologie
+Obésité,"diarrhée, toux, essoufflement, palpitations",Rhumatologie
+Alzheimer,"essoufflement, fièvre, perte de poids, palpitations",Oncologie
+Psoriasis,"nausées, diarrhée, douleur abdominale, vertiges, fatigue",Hématologie
+Hépatite,"essoufflement, diarrhée, vertiges, fièvre, vomissements",ORL
+Pneumonie,"essoufflement, toux, douleurs articulaires, diarrhée, douleur abdominale",Oncologie
+Parkinson,"douleur abdominale, nausées, diarrhée, douleurs articulaires, maux de tête",Infectiologie
+Conjonctivite,"jaunisse, palpitations, toux, nausées, diarrhée",Pneumologie
+Goutte,"fatigue, palpitations, jaunisse",Oncologie
+Diabète,"toux, douleur abdominale, nausées",ORL
+Psoriasis,"douleur abdominale, fatigue, perte de poids, vomissements, vertiges",Pédiatrie
+Colite,"éruptions cutanées, essoufflement, douleurs articulaires, jaunisse, douleur abdominale",Endocrinologie
+Otite,"perte de poids, douleurs articulaires, fièvre, palpitations",Infectiologie
+Cirrhose,"fièvre, nausées, toux, maux de tête",Neurologie
+Obésité,"vertiges, essoufflement, douleurs articulaires, jaunisse",Ophtalmologie
+Cancer du foie,"vertiges, essoufflement, diarrhée, maux de tête, perte de poids",Gastroentérologie
+Diabète,"nausées, éruptions cutanées, palpitations, toux, diarrhée",Endocrinologie
+Bronchite,"essoufflement, fièvre, nausées",Pneumologie
+Dermatite,"fièvre, toux, essoufflement, vomissements, éruptions cutanées",Ophtalmologie
+Alzheimer,"fièvre, maux de tête, perte de poids, fatigue",Médecine générale
+Colite,"fatigue, douleur abdominale, jaunisse, essoufflement, vomissements",Oncologie
+Colite,"fièvre, essoufflement, palpitations, nausées",Médecine générale
+Dermatite,"vomissements, fièvre, douleurs articulaires, éruptions cutanées, essoufflement",Oncologie
+Parkinson,"douleur abdominale, palpitations, nausées, jaunisse, fièvre",Ophtalmologie
+Sclérose,"jaunisse, toux, douleurs articulaires, palpitations",Pédiatrie
+Sclérose,"vertiges, toux, vomissements, douleur abdominale, douleurs articulaires",Infectiologie
+Tuberculose,"vertiges, douleur abdominale, palpitations, diarrhée",ORL
+Cancer de la peau,"éruptions cutanées, diarrhée, fièvre, nausées, douleur abdominale",Hématologie
+Migraine,"fièvre, maux de tête, éruptions cutanées, jaunisse",Dermatologie
+Conjonctivite,"perte de poids, vertiges, palpitations, toux, essoufflement",Hématologie
+Zona,"essoufflement, nausées, fatigue",Chirurgie générale
+Cancer de la peau,"vomissements, nausées, jaunisse",Chirurgie générale
+Hypertension,"jaunisse, fatigue, éruptions cutanées, maux de tête",Oncologie
+Colite,"vomissements, fatigue, fièvre, diarrhée",Gastroentérologie
+Epilepsie,"nausées, diarrhée, essoufflement",Rhumatologie
+VIH,"diarrhée, jaunisse, perte de poids",Neurologie
+COVID-19,"toux, maux de tête, jaunisse",Rhumatologie
+Asthme,"douleur abdominale, éruptions cutanées, vertiges, toux",Pneumologie
+Cancer de la peau,"éruptions cutanées, maux de tête, nausées, douleurs articulaires, fièvre",Médecine générale
+Asthme,"éruptions cutanées, vomissements, maux de tête",Médecine générale
+Alzheimer,"éruptions cutanées, diarrhée, fatigue, fièvre",ORL
+Parkinson,"fatigue, vertiges, toux, perte de poids, éruptions cutanées",Oncologie
+Hernie,"jaunisse, vertiges, nausées, fatigue, éruptions cutanées",Gastroentérologie
+Dermatite,"fièvre, toux, vertiges, jaunisse",Médecine générale
+Pneumonie,"fièvre, nausées, éruptions cutanées, maux de tête",Cardiologie
+VIH,"douleurs articulaires, fatigue, perte de poids, essoufflement",Oncologie
+Cancer du sein,"essoufflement, vomissements, fatigue, éruptions cutanées",Pneumologie
+Zona,"maux de tête, douleurs articulaires, palpitations",Oncologie
+Goutte,"essoufflement, fièvre, palpitations, perte de poids",Neurologie
+Lupus,"essoufflement, diarrhée, jaunisse, maux de tête, fièvre",Chirurgie générale
+Cirrhose,"essoufflement, vertiges, toux, palpitations, vomissements",Endocrinologie
+Méningite,"douleur abdominale, fièvre, vertiges, vomissements, palpitations",Médecine générale
+Cancer du foie,"vertiges, vomissements, nausées, jaunisse, fièvre",Oncologie
+Diabète,"diarrhée, jaunisse, éruptions cutanées, nausées, palpitations",Infectiologie
+Migraine,"vomissements, jaunisse, palpitations, douleurs articulaires, éruptions cutanées",Chirurgie générale
+Pneumonie,"palpitations, diarrhée, maux de tête",Pédiatrie
+Appendicite,"jaunisse, essoufflement, douleur abdominale",Endocrinologie
+Arthrose,"vomissements, douleur abdominale, maux de tête, vertiges, diarrhée",Pneumologie
+Paludisme,"éruptions cutanées, douleurs articulaires, vertiges, maux de tête",Oncologie
+Paludisme,"perte de poids, toux, douleur abdominale",Infectiologie
+Glaucome,"nausées, vertiges, fièvre, éruptions cutanées, palpitations",Endocrinologie
+Grippe,"maux de tête, vertiges, palpitations",Gastroentérologie
+Anémie,"fièvre, fatigue, perte de poids, éruptions cutanées, diarrhée",Cardiologie
+Anémie,"vomissements, perte de poids, douleur abdominale",Rhumatologie
+Cancer du foie,"toux, perte de poids, vomissements",Médecine générale
+Goutte,"palpitations, maux de tête, jaunisse",Endocrinologie
+VIH,"essoufflement, vomissements, perte de poids, douleurs articulaires",Cardiologie
+Psoriasis,"essoufflement, fièvre, vertiges, éruptions cutanées, diarrhée",Gastroentérologie
+Epilepsie,"vertiges, maux de tête, toux",Infectiologie
+Zona,"vertiges, fièvre, vomissements",Cardiologie
+Alzheimer,"palpitations, fièvre, douleur abdominale, éruptions cutanées",Neurologie
+Goutte,"toux, nausées, diarrhée",Pédiatrie
+Dermatite,"fièvre, palpitations, maux de tête, fatigue",Pneumologie
+Hernie,"fièvre, vertiges, douleurs articulaires, perte de poids",Hématologie
+Hypertension,"douleurs articulaires, toux, vertiges",Cardiologie
+Paludisme,"jaunisse, éruptions cutanées, diarrhée",Neurologie
+VIH,"vertiges, douleur abdominale, perte de poids, vomissements, toux",Hématologie
+Hernie,"fatigue, essoufflement, fièvre",Pneumologie
+Pneumonie,"éruptions cutanées, douleurs articulaires, jaunisse, palpitations, vertiges",Cardiologie
+Paludisme,"douleur abdominale, toux, palpitations, fatigue",ORL
+Cancer du sein,"douleurs articulaires, vomissements, perte de poids",Gastroentérologie
+Cirrhose,"nausées, vertiges, essoufflement",Oncologie
+Thyroïdite,"essoufflement, palpitations, diarrhée, vertiges, toux",Hématologie
+Lupus,"jaunisse, douleur abdominale, vertiges, diarrhée, perte de poids",Gastroentérologie
+Diabète,"douleurs articulaires, fièvre, maux de tête",Rhumatologie
+Arthrose,"éruptions cutanées, nausées, fièvre, vomissements, palpitations",Rhumatologie
+Goutte,"diarrhée, nausées, vomissements",Ophtalmologie
+Pneumonie,"toux, éruptions cutanées, perte de poids",Pédiatrie
+Ulcère,"perte de poids, éruptions cutanées, fatigue, jaunisse, palpitations",Cardiologie
+COVID-19,"éruptions cutanées, vomissements, essoufflement, diarrhée",Infectiologie
+Obésité,"perte de poids, essoufflement, diarrhée",Endocrinologie
+Epilepsie,"maux de tête, nausées, perte de poids, éruptions cutanées",Neurologie
+Psoriasis,"diarrhée, toux, douleur abdominale, essoufflement",Médecine générale
+Cancer du sein,"nausées, vomissements, perte de poids, maux de tête, palpitations",Neurologie
+Méningite,"perte de poids, vomissements, diarrhée",Pneumologie
+Dermatite,"palpitations, toux, diarrhée",Ophtalmologie
+Conjonctivite,"toux, essoufflement, perte de poids",Neurologie
+Cancer du foie,"vomissements, jaunisse, éruptions cutanées, maux de tête",Médecine générale
+Diabète,"fatigue, perte de poids, douleur abdominale",Gastroentérologie
+Thyroïdite,"jaunisse, fatigue, maux de tête, perte de poids",Hématologie
+Hernie,"toux, perte de poids, maux de tête, vomissements",Chirurgie générale
+Cirrhose,"maux de tête, perte de poids, vertiges",ORL
+Asthme,"douleur abdominale, maux de tête, vomissements",Hématologie
+Hernie,"vomissements, fièvre, maux de tête, douleur abdominale, vertiges",Oncologie
+Anémie,"toux, diarrhée, éruptions cutanées",Cardiologie
+Cirrhose,"nausées, diarrhée, vertiges",Infectiologie
+Dermatite,"douleur abdominale, perte de poids, essoufflement, fièvre",Dermatologie
+Grippe,"vomissements, nausées, douleur abdominale, toux, fièvre",Rhumatologie
+Cancer du foie,"diarrhée, palpitations, éruptions cutanées, perte de poids, jaunisse",Chirurgie générale
+Conjonctivite,"fièvre, toux, douleurs articulaires",Rhumatologie
+Bronchite,"douleurs articulaires, éruptions cutanées, vertiges, fatigue, maux de tête",Médecine générale
+Grippe,"toux, vomissements, jaunisse, éruptions cutanées, diarrhée",Neurologie
+Goutte,"jaunisse, vomissements, diarrhée, fatigue",Chirurgie générale
+Ulcère,"fièvre, douleurs articulaires, perte de poids, maux de tête",Ophtalmologie
+Méningite,"douleur abdominale, douleurs articulaires, diarrhée, jaunisse, essoufflement",Oncologie
+VIH,"toux, jaunisse, palpitations",Pneumologie
+Méningite,"perte de poids, éruptions cutanées, fièvre, maux de tête",ORL
+Cataracte,"diarrhée, perte de poids, douleur abdominale, vertiges",Pneumologie
+Lupus,"douleurs articulaires, douleur abdominale, essoufflement, vomissements, nausées",Pneumologie
+Gastrite,"éruptions cutanées, perte de poids, essoufflement, diarrhée",Chirurgie générale
+Arthrite,"éruptions cutanées, vomissements, fièvre, perte de poids",Ophtalmologie
+Parkinson,"nausées, fatigue, vomissements, douleurs articulaires, maux de tête",Infectiologie
+Appendicite,"palpitations, toux, douleur abdominale",Infectiologie
+Glaucome,"diarrhée, éruptions cutanées, essoufflement, douleur abdominale",Chirurgie générale
+Appendicite,"douleurs articulaires, douleur abdominale, éruptions cutanées, perte de poids",Hématologie
+Diabète,"vomissements, douleur abdominale, essoufflement, fatigue",Ophtalmologie
+Hépatite,"fatigue, nausées, diarrhée, fièvre",Neurologie
+Colite,"fièvre, jaunisse, vomissements, douleur abdominale, douleurs articulaires",Médecine générale
+Insuffisance rénale,"toux, nausées, fatigue, palpitations",Pédiatrie
+Hernie,"maux de tête, nausées, fatigue",Rhumatologie
+Sinusite,"fatigue, vertiges, vomissements",Dermatologie
+COVID-19,"douleur abdominale, vertiges, diarrhée, nausées, perte de poids",Chirurgie générale
+Cancer de la peau,"vertiges, vomissements, diarrhée, jaunisse, fatigue",Chirurgie générale
+Alzheimer,"éruptions cutanées, perte de poids, vomissements, douleurs articulaires, douleur abdominale",Médecine générale
+Hypertension,"maux de tête, toux, vertiges",Pneumologie
+Parkinson,"douleur abdominale, vomissements, maux de tête",Dermatologie
+Colite,"jaunisse, fièvre, essoufflement, toux",Infectiologie
+Conjonctivite,"maux de tête, éruptions cutanées, vertiges",Dermatologie
+Sclérose,"fatigue, perte de poids, éruptions cutanées, jaunisse",Gastroentérologie
+Arthrose,"éruptions cutanées, nausées, jaunisse, fièvre, toux",Pneumologie
+Paludisme,"nausées, essoufflement, toux, maux de tête, perte de poids",Neurologie
+Anémie,"vomissements, perte de poids, douleur abdominale, douleurs articulaires",Rhumatologie
+Arthrose,"douleurs articulaires, fièvre, fatigue, jaunisse",Endocrinologie
+Cancer de la peau,"palpitations, maux de tête, essoufflement, toux",ORL
+COVID-19,"toux, vomissements, douleurs articulaires, fièvre",Chirurgie générale
+Dermatite,"palpitations, diarrhée, fatigue",Rhumatologie
+Otite,"éruptions cutanées, diarrhée, fièvre, jaunisse",Pédiatrie
+Arthrose,"essoufflement, fièvre, maux de tête, vomissements",Dermatologie
+Migraine,"vomissements, éruptions cutanées, nausées, maux de tête",Pneumologie
+Anémie,"diarrhée, fatigue, perte de poids, éruptions cutanées, douleurs articulaires",Chirurgie générale
+Conjonctivite,"diarrhée, essoufflement, fatigue, douleur abdominale, éruptions cutanées",Cardiologie
+Hernie,"vomissements, jaunisse, maux de tête, diarrhée",Pédiatrie
+Bronchite,"vomissements, nausées, maux de tête, diarrhée, éruptions cutanées",Médecine générale
+Tuberculose,"perte de poids, vomissements, diarrhée, fièvre, palpitations",Gastroentérologie
+Migraine,"vertiges, diarrhée, douleur abdominale, douleurs articulaires",Gastroentérologie
+Hernie,"vomissements, vertiges, toux, essoufflement, nausées",Oncologie
+Hernie,"douleur abdominale, vomissements, fièvre",ORL
+Paludisme,"douleur abdominale, fatigue, perte de poids, vertiges, douleurs articulaires",Gastroentérologie
+Sclérose,"nausées, fatigue, douleurs articulaires, éruptions cutanées",Gastroentérologie
+Hypertension,"vomissements, vertiges, perte de poids",Oncologie
+Goutte,"douleurs articulaires, essoufflement, vertiges, palpitations",Gastroentérologie
+Sinusite,"vomissements, essoufflement, fatigue",Endocrinologie
+Cataracte,"douleur abdominale, vertiges, nausées",Endocrinologie
+Parkinson,"nausées, essoufflement, éruptions cutanées, diarrhée, palpitations",Pneumologie
+Arthrite,"vertiges, jaunisse, vomissements, fièvre, maux de tête",Chirurgie générale
+Otite,"maux de tête, diarrhée, essoufflement, vomissements",ORL
+Crohn,"maux de tête, douleurs articulaires, vomissements, diarrhée, éruptions cutanées",Gastroentérologie
+Paludisme,"toux, jaunisse, douleurs articulaires, nausées",Infectiologie
+Hypertension,"diarrhée, toux, palpitations, perte de poids, vertiges",Rhumatologie
+VIH,"fièvre, nausées, fatigue, vertiges, diarrhée",Cardiologie
+Zona,"fièvre, vertiges, jaunisse, fatigue",Pneumologie
+Cancer du sein,"éruptions cutanées, essoufflement, toux, vomissements",Neurologie
+Pneumonie,"toux, vomissements, éruptions cutanées, fatigue, perte de poids",ORL
+Hypertension,"perte de poids, fièvre, vertiges, nausées, vomissements",Hématologie
+Hypertension,"éruptions cutanées, maux de tête, essoufflement",Infectiologie
+Cataracte,"fièvre, maux de tête, toux, jaunisse",Endocrinologie
+Ulcère,"diarrhée, fièvre, palpitations, nausées, douleurs articulaires",Endocrinologie
+Diabète,"douleurs articulaires, vertiges, palpitations",Gastroentérologie
+Glaucome,"maux de tête, éruptions cutanées, fatigue, diarrhée",Pédiatrie
+Cataracte,"palpitations, nausées, fièvre, vomissements, toux",Médecine générale
+Alzheimer,"douleur abdominale, nausées, vertiges, diarrhée, douleurs articulaires",Cardiologie
+Grippe,"douleur abdominale, maux de tête, vomissements, toux, palpitations",Pédiatrie
+Insuffisance rénale,"fatigue, vertiges, diarrhée, nausées",Rhumatologie
+Hépatite,"douleurs articulaires, nausées, fatigue, diarrhée",Infectiologie
+Insuffisance rénale,"fatigue, éruptions cutanées, diarrhée, jaunisse",Médecine générale
+Hépatite,"fatigue, nausées, douleur abdominale",Pédiatrie
+Goutte,"éruptions cutanées, toux, maux de tête, douleurs articulaires, vertiges",Chirurgie générale
+Cancer de la peau,"fatigue, essoufflement, perte de poids, vertiges",Oncologie
+Appendicite,"diarrhée, essoufflement, douleur abdominale",ORL
+Obésité,"maux de tête, toux, palpitations, jaunisse",Neurologie
+Glaucome,"toux, douleur abdominale, vertiges, douleurs articulaires, diarrhée",Cardiologie
+Thyroïdite,"essoufflement, maux de tête, perte de poids, vertiges, nausées",Cardiologie
+Dermatite,"fièvre, essoufflement, perte de poids, éruptions cutanées",Oncologie
+Migraine,"vertiges, fatigue, palpitations",Hématologie
+Arthrite,"jaunisse, palpitations, douleur abdominale",Endocrinologie
+Cancer du foie,"éruptions cutanées, maux de tête, douleur abdominale, nausées, toux",Rhumatologie
+Grippe,"douleur abdominale, éruptions cutanées, vertiges, nausées, fatigue",Endocrinologie
+Cancer du foie,"toux, jaunisse, maux de tête, vertiges, nausées",ORL
+Colite,"perte de poids, essoufflement, douleur abdominale, vertiges, éruptions cutanées",Dermatologie
+Zona,"maux de tête, toux, essoufflement",Infectiologie
+Colite,"essoufflement, douleurs articulaires, nausées, toux",Dermatologie
+Méningite,"douleurs articulaires, éruptions cutanées, vertiges, jaunisse, palpitations",Hématologie
+Glaucome,"jaunisse, essoufflement, nausées, palpitations, perte de poids",Neurologie
+Glaucome,"essoufflement, maux de tête, éruptions cutanées, vertiges, toux",Chirurgie générale
+Asthme,"fatigue, douleur abdominale, vomissements",Oncologie
+Cataracte,"perte de poids, toux, nausées, vomissements, maux de tête",Infectiologie
+Otite,"douleur abdominale, maux de tête, toux, vomissements",Rhumatologie
+Hernie,"toux, nausées, perte de poids",Pneumologie
+Conjonctivite,"fièvre, vertiges, douleur abdominale, jaunisse",Chirurgie générale
+Appendicite,"douleurs articulaires, maux de tête, douleur abdominale",Ophtalmologie
+Cancer du foie,"nausées, vertiges, éruptions cutanées",Rhumatologie
+Paludisme,"éruptions cutanées, fièvre, vomissements, toux",Ophtalmologie
+Cirrhose,"palpitations, nausées, vertiges, toux, fièvre",Médecine générale
+Crohn,"toux, fatigue, diarrhée, maux de tête, palpitations",Infectiologie
+COVID-19,"éruptions cutanées, maux de tête, jaunisse",Infectiologie
+Grippe,"fièvre, jaunisse, douleur abdominale",ORL
+Appendicite,"essoufflement, vertiges, palpitations, perte de poids, toux",Médecine générale
+Grippe,"essoufflement, éruptions cutanées, palpitations",Dermatologie
+Pneumonie,"essoufflement, fatigue, perte de poids",Gastroentérologie
+Diabète,"fièvre, éruptions cutanées, vertiges, vomissements, maux de tête",Hématologie
+Cataracte,"perte de poids, fièvre, nausées",Pédiatrie
+Bronchite,"fatigue, fièvre, essoufflement, douleurs articulaires, vertiges",Rhumatologie
+Arthrite,"vomissements, fièvre, maux de tête",Neurologie
+COVID-19,"vomissements, essoufflement, fièvre, palpitations, éruptions cutanées",Cardiologie
+Cirrhose,"vomissements, nausées, éruptions cutanées, fatigue",Chirurgie générale
+Cancer de la peau,"douleurs articulaires, palpitations, douleur abdominale",Endocrinologie
+Goutte,"éruptions cutanées, maux de tête, douleur abdominale, fièvre",Pneumologie
+Alzheimer,"éruptions cutanées, diarrhée, nausées, palpitations, fatigue",Cardiologie
+Psoriasis,"vertiges, douleurs articulaires, vomissements, essoufflement, éruptions cutanées",Pédiatrie
+Dermatite,"éruptions cutanées, jaunisse, nausées",Pédiatrie
+Hépatite,"essoufflement, maux de tête, perte de poids",Infectiologie
+Parkinson,"toux, éruptions cutanées, essoufflement, nausées",Infectiologie
+Colite,"douleur abdominale, diarrhée, éruptions cutanées, perte de poids, toux",Chirurgie générale
+Alzheimer,"palpitations, fièvre, vomissements, maux de tête",Endocrinologie
+Hépatite,"vomissements, diarrhée, douleur abdominale",Rhumatologie
+Hypertension,"palpitations, jaunisse, fatigue",Pédiatrie
+Glaucome,"essoufflement, jaunisse, vertiges",Neurologie
+Psoriasis,"jaunisse, palpitations, fatigue, fièvre",Pédiatrie
+Cancer du foie,"diarrhée, jaunisse, nausées",Oncologie
+Cancer de la peau,"jaunisse, fatigue, douleur abdominale, palpitations, nausées",Neurologie
+Otite,"palpitations, maux de tête, toux, perte de poids",Rhumatologie
+Sclérose,"douleurs articulaires, vomissements, éruptions cutanées, nausées",Gastroentérologie
+Cancer du foie,"douleurs articulaires, diarrhée, vertiges, perte de poids",Chirurgie générale
+Ulcère,"diarrhée, vertiges, vomissements",Infectiologie
+Dermatite,"éruptions cutanées, vomissements, toux, nausées",Médecine générale
+Hépatite,"douleurs articulaires, vomissements, fatigue, éruptions cutanées",Ophtalmologie
+Sclérose,"fièvre, douleur abdominale, nausées, jaunisse, vertiges",Chirurgie générale
+Dermatite,"éruptions cutanées, fatigue, nausées, jaunisse, fièvre",Endocrinologie
+Bronchite,"fatigue, nausées, perte de poids, fièvre",Médecine générale
+Méningite,"diarrhée, fatigue, fièvre, vertiges, jaunisse",Cardiologie
+Dermatite,"éruptions cutanées, vertiges, maux de tête, douleurs articulaires, jaunisse",Dermatologie
+Crohn,"vertiges, éruptions cutanées, toux",Ophtalmologie
+Cancer du sein,"palpitations, fièvre, jaunisse",Rhumatologie
+Dermatite,"essoufflement, diarrhée, toux, douleur abdominale, palpitations",Pédiatrie
+Ulcère,"essoufflement, fatigue, vomissements",Ophtalmologie
+Hypertension,"perte de poids, vomissements, essoufflement",Rhumatologie
+Dermatite,"douleurs articulaires, maux de tête, diarrhée, fatigue, vomissements",Cardiologie
+Migraine,"douleur abdominale, diarrhée, jaunisse, essoufflement",Rhumatologie
+Conjonctivite,"éruptions cutanées, perte de poids, maux de tête, fatigue, vomissements",Pédiatrie
+Arthrose,"douleur abdominale, toux, vomissements",Hématologie
+Tuberculose,"douleurs articulaires, éruptions cutanées, vomissements",Hématologie
+Crohn,"jaunisse, maux de tête, fièvre, diarrhée, vertiges",Cardiologie
+Asthme,"nausées, fièvre, douleur abdominale",Neurologie
+Zona,"maux de tête, nausées, perte de poids, vertiges, fièvre",Cardiologie
+Conjonctivite,"perte de poids, éruptions cutanées, diarrhée",Gastroentérologie
+Goutte,"perte de poids, éruptions cutanées, douleurs articulaires",Pédiatrie
+Arthrose,"jaunisse, douleurs articulaires, essoufflement, nausées",Pneumologie
+VIH,"jaunisse, palpitations, diarrhée, vertiges",Hématologie
+Dermatite,"essoufflement, jaunisse, douleurs articulaires, nausées, perte de poids",Neurologie
+Otite,"diarrhée, perte de poids, vertiges",Cardiologie
+Méningite,"palpitations, fatigue, jaunisse, toux, douleur abdominale",ORL
+Grippe,"perte de poids, toux, vertiges",Endocrinologie
+Pneumonie,"fatigue, éruptions cutanées, jaunisse",Neurologie
+Hernie,"essoufflement, douleurs articulaires, palpitations, jaunisse, vomissements",Oncologie
+Sclérose,"nausées, jaunisse, douleur abdominale, éruptions cutanées, palpitations",Cardiologie
+Arthrose,"perte de poids, éruptions cutanées, maux de tête, nausées",Endocrinologie
+Sclérose,"fatigue, vertiges, palpitations, éruptions cutanées",Rhumatologie
+Cataracte,"éruptions cutanées, nausées, fatigue, perte de poids, vertiges",Hématologie
+Migraine,"vertiges, éruptions cutanées, perte de poids, douleurs articulaires, diarrhée",Infectiologie
+Conjonctivite,"toux, fatigue, nausées, vertiges, palpitations",Infectiologie
+Cataracte,"douleur abdominale, vertiges, jaunisse, palpitations",Gastroentérologie
+Arthrose,"fièvre, palpitations, vertiges, perte de poids, fatigue",Hématologie
+Asthme,"perte de poids, douleurs articulaires, palpitations, diarrhée, essoufflement",Infectiologie
+Lupus,"diarrhée, vertiges, toux, perte de poids",Gastroentérologie
+Ulcère,"éruptions cutanées, essoufflement, vomissements, perte de poids, maux de tête",Pneumologie
+Alzheimer,"nausées, éruptions cutanées, jaunisse",Cardiologie
+Anémie,"vomissements, jaunisse, toux, douleur abdominale",Rhumatologie
+Asthme,"douleur abdominale, fièvre, essoufflement, fatigue, maux de tête",Hématologie
+COVID-19,"palpitations, nausées, vertiges",Médecine générale
+Gastrite,"jaunisse, maux de tête, vomissements, toux",Cardiologie
+Arthrite,"diarrhée, fatigue, douleur abdominale, nausées",Endocrinologie
+Asthme,"jaunisse, toux, vertiges, fièvre, fatigue",Gastroentérologie
+Pneumonie,"essoufflement, fatigue, toux, nausées, maux de tête",ORL
+Anémie,"douleur abdominale, fièvre, vomissements, vertiges, fatigue",Cardiologie
+Cirrhose,"essoufflement, nausées, jaunisse, maux de tête, toux",Pédiatrie
+Arthrose,"essoufflement, vomissements, douleurs articulaires, jaunisse",Gastroentérologie
+Cancer du sein,"nausées, douleur abdominale, vomissements, toux, diarrhée",Gastroentérologie
+Parkinson,"essoufflement, diarrhée, éruptions cutanées",Gastroentérologie
+Hernie,"vertiges, éruptions cutanées, douleurs articulaires, fatigue",Médecine générale
+Asthme,"vomissements, jaunisse, nausées, fatigue",Rhumatologie
+Gastrite,"toux, vertiges, perte de poids",Gastroentérologie
+Conjonctivite,"douleur abdominale, toux, diarrhée, essoufflement, vomissements",Ophtalmologie
+Thyroïdite,"fatigue, éruptions cutanées, palpitations, douleur abdominale, essoufflement",Dermatologie
+Hépatite,"douleurs articulaires, diarrhée, nausées",Pédiatrie
+Zona,"maux de tête, essoufflement, douleurs articulaires, fatigue, toux",Ophtalmologie
+Goutte,"maux de tête, perte de poids, fièvre, fatigue",Dermatologie
+Hépatite,"essoufflement, fatigue, vertiges, palpitations",Chirurgie générale
+Asthme,"perte de poids, douleurs articulaires, vertiges",Chirurgie générale
+Otite,"douleur abdominale, fièvre, éruptions cutanées",Oncologie
+COVID-19,"douleurs articulaires, perte de poids, fatigue, jaunisse, vomissements",Oncologie
+Goutte,"perte de poids, palpitations, jaunisse, maux de tête, fatigue",Endocrinologie
+Tuberculose,"fatigue, nausées, essoufflement, maux de tête, fièvre",Pédiatrie
+Psoriasis,"douleur abdominale, maux de tête, jaunisse, palpitations, fatigue",Infectiologie
+Goutte,"essoufflement, fièvre, maux de tête, vomissements",Pneumologie
+Goutte,"nausées, perte de poids, fièvre, jaunisse, essoufflement",Pédiatrie
+COVID-19,"vertiges, essoufflement, maux de tête, douleur abdominale",Hématologie
+Anémie,"maux de tête, douleurs articulaires, nausées",Pédiatrie
+Insuffisance rénale,"toux, palpitations, jaunisse, perte de poids, vertiges",Pneumologie
+Alzheimer,"douleurs articulaires, toux, maux de tête, essoufflement, éruptions cutanées",Pneumologie
+Conjonctivite,"vomissements, fièvre, vertiges",Gastroentérologie
+Alzheimer,"perte de poids, douleur abdominale, vomissements, douleurs articulaires, nausées",Cardiologie
+Glaucome,"éruptions cutanées, jaunisse, palpitations",Pédiatrie
+Dermatite,"jaunisse, palpitations, diarrhée, fièvre",Chirurgie générale
+Anémie,"toux, diarrhée, fatigue, vertiges, fièvre",Dermatologie
+Arthrose,"fièvre, jaunisse, nausées",Rhumatologie
+Diabète,"douleur abdominale, toux, nausées, perte de poids",Hématologie
+VIH,"jaunisse, perte de poids, nausées",Pédiatrie
+Obésité,"douleur abdominale, diarrhée, fièvre",Ophtalmologie
+Arthrose,"essoufflement, nausées, éruptions cutanées, palpitations, toux",Pneumologie
+Méningite,"vomissements, jaunisse, maux de tête, fatigue, fièvre",Ophtalmologie
+Cancer de la peau,"toux, vomissements, maux de tête, douleurs articulaires, douleur abdominale",Hématologie
+Ulcère,"douleurs articulaires, éruptions cutanées, vertiges, maux de tête",ORL
+Arthrite,"toux, palpitations, essoufflement, maux de tête",Dermatologie
+Grippe,"palpitations, essoufflement, fièvre",Rhumatologie
+Goutte,"jaunisse, diarrhée, nausées, essoufflement",Chirurgie générale
+Epilepsie,"diarrhée, perte de poids, essoufflement, vomissements, douleurs articulaires",Rhumatologie
+Colite,"fatigue, douleurs articulaires, essoufflement, toux",Chirurgie générale
+Anémie,"maux de tête, essoufflement, nausées",Dermatologie
+Paludisme,"éruptions cutanées, douleurs articulaires, perte de poids, diarrhée, essoufflement",Pédiatrie
+Cirrhose,"vertiges, douleur abdominale, nausées",Gastroentérologie
+Crohn,"éruptions cutanées, toux, maux de tête",Médecine générale
+Otite,"essoufflement, maux de tête, douleurs articulaires, palpitations, jaunisse",Endocrinologie
+Hépatite,"toux, douleurs articulaires, vertiges",Cardiologie
+Otite,"vomissements, perte de poids, palpitations, fièvre",Pédiatrie
+Méningite,"fièvre, éruptions cutanées, vertiges",Ophtalmologie
+Colite,"diarrhée, vertiges, vomissements, fatigue",Chirurgie générale
+Goutte,"douleur abdominale, palpitations, toux, douleurs articulaires",Rhumatologie
+Conjonctivite,"fatigue, toux, jaunisse, nausées, douleurs articulaires",Rhumatologie
+Hépatite,"éruptions cutanées, fatigue, nausées",Gastroentérologie
+Cirrhose,"fièvre, douleurs articulaires, palpitations",ORL
+Anémie,"jaunisse, palpitations, toux, vomissements, essoufflement",Cardiologie
+Sclérose,"éruptions cutanées, fièvre, vomissements, palpitations",Médecine générale
+Anémie,"nausées, douleurs articulaires, vomissements, fièvre",Neurologie
+Migraine,"vomissements, essoufflement, jaunisse, fièvre, nausées",Ophtalmologie
+Méningite,"éruptions cutanées, maux de tête, perte de poids",Hématologie
+Crohn,"jaunisse, éruptions cutanées, douleurs articulaires",Chirurgie générale
+Anémie,"maux de tête, nausées, toux, douleurs articulaires",Pneumologie
+Colite,"jaunisse, fatigue, fièvre",Dermatologie
+Parkinson,"douleurs articulaires, fatigue, éruptions cutanées, jaunisse",ORL
+Lupus,"diarrhée, nausées, essoufflement, douleurs articulaires, fièvre",ORL
+Sclérose,"vomissements, douleurs articulaires, jaunisse, palpitations, nausées",Ophtalmologie
+Obésité,"vertiges, fièvre, éruptions cutanées, vomissements",Pédiatrie
+Thyroïdite,"éruptions cutanées, vertiges, vomissements, fièvre",Rhumatologie
+Bronchite,"essoufflement, fièvre, palpitations, vomissements",Neurologie
+Grippe,"toux, jaunisse, fatigue, maux de tête",Hématologie
+Cirrhose,"perte de poids, douleurs articulaires, vertiges, jaunisse, nausées",Dermatologie
+Migraine,"éruptions cutanées, vertiges, diarrhée, vomissements",Dermatologie
+Colite,"essoufflement, diarrhée, jaunisse, vertiges",ORL
+Pneumonie,"fièvre, fatigue, essoufflement",Pneumologie
+Dermatite,"palpitations, vomissements, douleur abdominale",Oncologie
+Cancer du foie,"essoufflement, fièvre, douleur abdominale",Oncologie
+Méningite,"éruptions cutanées, palpitations, douleurs articulaires, nausées",Dermatologie
+Cataracte,"vertiges, vomissements, essoufflement, éruptions cutanées, palpitations",ORL
+Hypertension,"perte de poids, vertiges, éruptions cutanées",Hématologie
+Thyroïdite,"maux de tête, diarrhée, essoufflement, palpitations",ORL
+Cancer du foie,"toux, essoufflement, vertiges, douleur abdominale, fièvre",Endocrinologie
+Cancer du sein,"perte de poids, fièvre, fatigue, éruptions cutanées",Médecine générale
+Otite,"perte de poids, vomissements, essoufflement",Endocrinologie
+Tuberculose,"palpitations, jaunisse, fièvre, perte de poids",Neurologie
+Méningite,"maux de tête, palpitations, fièvre, vomissements, toux",Hématologie
+Gastrite,"perte de poids, douleurs articulaires, douleur abdominale, vomissements",ORL
+Alzheimer,"nausées, douleur abdominale, perte de poids",Oncologie
+Cataracte,"éruptions cutanées, douleurs articulaires, nausées",Pédiatrie
+Gastrite,"vomissements, douleur abdominale, fièvre",Rhumatologie
+Cancer du foie,"vomissements, palpitations, perte de poids",ORL
+Migraine,"essoufflement, éruptions cutanées, fatigue, vertiges, palpitations",Dermatologie
+Méningite,"perte de poids, éruptions cutanées, douleurs articulaires, vertiges, douleur abdominale",Infectiologie
+Anémie,"jaunisse, diarrhée, douleur abdominale",Hématologie
+Alzheimer,"douleur abdominale, fatigue, jaunisse",Rhumatologie
+Anémie,"éruptions cutanées, vertiges, douleur abdominale",Hématologie
+Insuffisance rénale,"fièvre, douleur abdominale, essoufflement",Endocrinologie
+Migraine,"perte de poids, palpitations, éruptions cutanées, jaunisse, douleur abdominale",Gastroentérologie
+Sclérose,"fatigue, toux, maux de tête, diarrhée",Hématologie
+Méningite,"fatigue, maux de tête, douleurs articulaires",Hématologie
+VIH,"fièvre, éruptions cutanées, toux",Chirurgie générale
+Cancer du foie,"perte de poids, essoufflement, toux",Ophtalmologie
+Hépatite,"essoufflement, toux, jaunisse, palpitations",Dermatologie
+VIH,"palpitations, éruptions cutanées, essoufflement, nausées, douleurs articulaires",Endocrinologie
+Thyroïdite,"douleur abdominale, vertiges, jaunisse, fatigue",Hématologie
+Cirrhose,"essoufflement, éruptions cutanées, diarrhée, perte de poids, jaunisse",ORL
+Insuffisance rénale,"vomissements, perte de poids, maux de tête, douleur abdominale",ORL
+Cirrhose,"diarrhée, nausées, douleur abdominale, vomissements, perte de poids",ORL
+Otite,"fatigue, essoufflement, douleur abdominale, jaunisse",Neurologie
+Appendicite,"nausées, éruptions cutanées, diarrhée",Neurologie
+Colite,"vomissements, jaunisse, toux",Dermatologie
+Thyroïdite,"fatigue, fièvre, douleur abdominale",Oncologie
+Alzheimer,"vomissements, diarrhée, fièvre, vertiges, essoufflement",Médecine générale
+Zona,"maux de tête, vomissements, essoufflement, fièvre",Cardiologie
+Sinusite,"douleur abdominale, essoufflement, vertiges, nausées, perte de poids",ORL
+Zona,"essoufflement, fatigue, vertiges",Infectiologie
+Hypertension,"perte de poids, vertiges, jaunisse",Oncologie
+Conjonctivite,"vertiges, diarrhée, douleurs articulaires",Gastroentérologie
+Asthme,"toux, éruptions cutanées, vertiges, fatigue",Gastroentérologie
+Cataracte,"toux, fatigue, maux de tête",Pneumologie
+Otite,"perte de poids, douleur abdominale, fièvre, essoufflement",Oncologie
+Arthrite,"essoufflement, nausées, fatigue, vomissements, diarrhée",Chirurgie générale
+Epilepsie,"douleurs articulaires, toux, jaunisse, palpitations",Cardiologie
+Sinusite,"nausées, perte de poids, fatigue, vertiges",Neurologie
+Bronchite,"douleur abdominale, maux de tête, éruptions cutanées, toux, diarrhée",Médecine générale
+Dermatite,"perte de poids, jaunisse, vomissements",Cardiologie
+Hypertension,"essoufflement, nausées, douleurs articulaires, douleur abdominale, vomissements",Ophtalmologie
+Arthrite,"nausées, éruptions cutanées, diarrhée, douleur abdominale, perte de poids",Infectiologie
+Tuberculose,"vertiges, maux de tête, éruptions cutanées, fatigue, toux",Rhumatologie
+Migraine,"maux de tête, fatigue, palpitations, éruptions cutanées",Neurologie
+Cancer de la peau,"vomissements, fièvre, essoufflement, maux de tête, jaunisse",Cardiologie
+Hypertension,"jaunisse, douleur abdominale, douleurs articulaires",Chirurgie générale
+Sclérose,"nausées, vertiges, diarrhée",Dermatologie
+Parkinson,"vertiges, palpitations, maux de tête, douleur abdominale, fatigue",Gastroentérologie
+Sinusite,"perte de poids, vomissements, diarrhée",Dermatologie
+VIH,"maux de tête, diarrhée, nausées",Pneumologie
+Asthme,"toux, nausées, vertiges, éruptions cutanées",Endocrinologie
+Asthme,"jaunisse, douleur abdominale, vertiges, maux de tête",Rhumatologie
+Appendicite,"douleurs articulaires, éruptions cutanées, jaunisse, toux, maux de tête",Cardiologie
+Cataracte,"fièvre, vomissements, nausées",Gastroentérologie
+Psoriasis,"fatigue, nausées, essoufflement, vomissements",Chirurgie générale
+Hépatite,"fièvre, vertiges, jaunisse, éruptions cutanées",Pédiatrie
+Grippe,"nausées, fièvre, toux, vertiges",Pneumologie
+Appendicite,"perte de poids, fièvre, fatigue",Hématologie
+Diabète,"fièvre, vomissements, perte de poids, jaunisse, vertiges",Endocrinologie
+Parkinson,"fièvre, vomissements, perte de poids, éruptions cutanées",Infectiologie
+Conjonctivite,"douleurs articulaires, vomissements, palpitations, jaunisse",Dermatologie
+Méningite,"vomissements, maux de tête, vertiges, essoufflement, palpitations",Infectiologie
+Conjonctivite,"perte de poids, vertiges, fièvre, fatigue",Gastroentérologie
+Cancer du foie,"toux, fièvre, essoufflement, éruptions cutanées",Hématologie
+Dermatite,"douleur abdominale, diarrhée, toux, vomissements, douleurs articulaires",Pédiatrie
+Diabète,"douleurs articulaires, toux, essoufflement, diarrhée",Neurologie
+Arthrose,"nausées, vomissements, toux, douleur abdominale",Neurologie
+Pneumonie,"fatigue, jaunisse, vertiges, diarrhée, palpitations",Ophtalmologie
+Anémie,"jaunisse, essoufflement, vomissements",Hématologie
+Zona,"diarrhée, maux de tête, fatigue, fièvre",Neurologie
+Gastrite,"vomissements, palpitations, perte de poids, vertiges",Infectiologie
+Cancer de la peau,"palpitations, nausées, perte de poids, vomissements",Rhumatologie
+Insuffisance rénale,"douleur abdominale, nausées, essoufflement",Dermatologie
+Diabète,"fatigue, diarrhée, vomissements, nausées",Endocrinologie
+COVID-19,"vertiges, éruptions cutanées, fatigue, palpitations",Hématologie
+Cirrhose,"vomissements, essoufflement, vertiges, jaunisse, maux de tête",Pneumologie
+Appendicite,"fatigue, fièvre, éruptions cutanées, essoufflement",Neurologie
+Ulcère,"jaunisse, fièvre, vomissements",Neurologie
+Anémie,"vertiges, toux, essoufflement, diarrhée, palpitations",Oncologie
+Anémie,"toux, vertiges, jaunisse",Cardiologie
+COVID-19,"essoufflement, vertiges, douleur abdominale, douleurs articulaires",ORL
+Arthrite,"douleurs articulaires, perte de poids, nausées, diarrhée",Pneumologie
+Bronchite,"douleur abdominale, fièvre, toux, diarrhée",Neurologie
+Thyroïdite,"jaunisse, palpitations, essoufflement, vertiges, perte de poids",Hématologie
+Colite,"maux de tête, fièvre, jaunisse, diarrhée, palpitations",Infectiologie
+Obésité,"éruptions cutanées, vertiges, palpitations, fièvre",Infectiologie
+Hépatite,"perte de poids, douleurs articulaires, palpitations, maux de tête, douleur abdominale",Hématologie
+Dermatite,"fièvre, palpitations, douleur abdominale",Pneumologie
+Pneumonie,"douleur abdominale, fièvre, palpitations",Cardiologie
+Dermatite,"vertiges, douleur abdominale, toux",Pédiatrie
+Goutte,"douleurs articulaires, essoufflement, diarrhée, douleur abdominale",ORL
+Goutte,"maux de tête, fièvre, palpitations, douleur abdominale",Neurologie
+Epilepsie,"éruptions cutanées, toux, nausées, essoufflement",Hématologie
+Sinusite,"douleur abdominale, fièvre, essoufflement, fatigue",Gastroentérologie
+Cancer du sein,"fatigue, fièvre, vomissements, éruptions cutanées, nausées",Chirurgie générale
+Crohn,"douleur abdominale, diarrhée, éruptions cutanées, maux de tête",Endocrinologie
+Alzheimer,"maux de tête, éruptions cutanées, toux, fièvre",Chirurgie générale
+Hépatite,"jaunisse, maux de tête, essoufflement, diarrhée, douleur abdominale",Rhumatologie
+Obésité,"toux, douleurs articulaires, maux de tête",Ophtalmologie
+Colite,"douleurs articulaires, fièvre, fatigue, toux",Infectiologie
+Ulcère,"fatigue, maux de tête, éruptions cutanées, toux",Hématologie
+Migraine,"vomissements, toux, fatigue, jaunisse",Pneumologie
+Appendicite,"douleurs articulaires, fièvre, fatigue",Pédiatrie
+Tuberculose,"palpitations, vomissements, diarrhée, douleurs articulaires",ORL
+Otite,"vertiges, diarrhée, palpitations, vomissements",Médecine générale
+Sclérose,"vomissements, vertiges, douleur abdominale, toux, palpitations",Ophtalmologie
+Glaucome,"jaunisse, fièvre, vomissements, palpitations",Chirurgie générale
+Méningite,"fatigue, éruptions cutanées, maux de tête",Dermatologie
+Grippe,"jaunisse, douleur abdominale, diarrhée, toux, fatigue",Pneumologie
+Goutte,"éruptions cutanées, jaunisse, fièvre, maux de tête",Neurologie
+Thyroïdite,"fièvre, toux, palpitations",Endocrinologie
+Méningite,"maux de tête, toux, essoufflement, vertiges, diarrhée",Pédiatrie
+Ulcère,"perte de poids, fatigue, nausées",Endocrinologie
+COVID-19,"éruptions cutanées, toux, palpitations",Médecine générale
+Hypertension,"essoufflement, toux, perte de poids, vertiges",Chirurgie générale
+Zona,"fatigue, nausées, fièvre, douleurs articulaires, éruptions cutanées",Neurologie
+Epilepsie,"nausées, diarrhée, essoufflement, fièvre",Cardiologie
+Thyroïdite,"perte de poids, éruptions cutanées, nausées, vomissements, fatigue",Endocrinologie
+Cancer du sein,"vomissements, fatigue, diarrhée",Dermatologie
+Colite,"douleur abdominale, toux, maux de tête",Médecine générale
+Asthme,"fatigue, essoufflement, jaunisse",ORL
+Dermatite,"maux de tête, toux, diarrhée",Neurologie
+Migraine,"vomissements, palpitations, éruptions cutanées",Neurologie
+Zona,"douleur abdominale, essoufflement, maux de tête",Gastroentérologie
+Insuffisance rénale,"palpitations, fatigue, nausées",Infectiologie
+Glaucome,"maux de tête, vomissements, fatigue, fièvre",Dermatologie
+Arthrite,"toux, jaunisse, éruptions cutanées",Neurologie
+Bronchite,"douleurs articulaires, nausées, vomissements, perte de poids, fatigue",Rhumatologie
+Paludisme,"jaunisse, nausées, douleur abdominale, diarrhée",Gastroentérologie
+Zona,"diarrhée, jaunisse, éruptions cutanées, nausées",ORL
+COVID-19,"vomissements, toux, diarrhée, palpitations, jaunisse",Pédiatrie
+Anémie,"fièvre, douleurs articulaires, toux, éruptions cutanées, diarrhée",Gastroentérologie
+Psoriasis,"douleurs articulaires, éruptions cutanées, essoufflement",Chirurgie générale
+Bronchite,"diarrhée, douleurs articulaires, perte de poids, vomissements, essoufflement",Pneumologie
+Méningite,"palpitations, essoufflement, vomissements, éruptions cutanées",Ophtalmologie
+Anémie,"vertiges, maux de tête, douleur abdominale, essoufflement, jaunisse",Chirurgie générale
+Migraine,"essoufflement, jaunisse, fatigue, fièvre",Cardiologie
+Tuberculose,"douleur abdominale, fatigue, palpitations, nausées, fièvre",ORL
+Paludisme,"vertiges, toux, essoufflement, vomissements",Hématologie
+Sclérose,"perte de poids, fièvre, jaunisse, toux",Pneumologie
+Hernie,"fièvre, douleurs articulaires, nausées",Pédiatrie
+Ulcère,"éruptions cutanées, maux de tête, douleurs articulaires, toux",Endocrinologie
+Cataracte,"fièvre, jaunisse, toux",Médecine générale
+Tuberculose,"maux de tête, perte de poids, palpitations, vertiges",Pneumologie
+VIH,"perte de poids, éruptions cutanées, fatigue, jaunisse",Neurologie
+Anémie,"douleurs articulaires, fatigue, toux, diarrhée",Endocrinologie
+Appendicite,"fièvre, perte de poids, maux de tête, fatigue, douleur abdominale",Médecine générale
+Zona,"éruptions cutanées, fatigue, jaunisse, vomissements",Cardiologie
+Hypertension,"éruptions cutanées, maux de tête, vertiges, fièvre, essoufflement",Infectiologie
+Migraine,"vertiges, palpitations, maux de tête, douleur abdominale, essoufflement",Gastroentérologie
+Goutte,"diarrhée, maux de tête, fièvre",Chirurgie générale
+Goutte,"diarrhée, douleurs articulaires, essoufflement, fatigue, douleur abdominale",Hématologie
+COVID-19,"palpitations, nausées, vomissements",Pédiatrie
+Diabète,"douleurs articulaires, douleur abdominale, maux de tête",Cardiologie
+Sinusite,"essoufflement, vertiges, éruptions cutanées, diarrhée",Ophtalmologie
+Migraine,"nausées, éruptions cutanées, toux",Chirurgie générale
+Cirrhose,"toux, perte de poids, nausées, vertiges",Pédiatrie
+Asthme,"fatigue, nausées, éruptions cutanées, perte de poids, douleur abdominale",Dermatologie
+Paludisme,"essoufflement, nausées, perte de poids, douleurs articulaires",Neurologie
+Diabète,"nausées, toux, douleur abdominale, perte de poids",Médecine générale
+Asthme,"toux, nausées, perte de poids, jaunisse",Cardiologie
+Pneumonie,"vertiges, diarrhée, nausées",ORL
+Bronchite,"fièvre, vertiges, vomissements",Dermatologie
+Cataracte,"maux de tête, vertiges, toux",Neurologie
+Pneumonie,"jaunisse, nausées, toux, fièvre",ORL
+Méningite,"jaunisse, douleurs articulaires, nausées, éruptions cutanées",Endocrinologie
+Gastrite,"douleur abdominale, essoufflement, fatigue, toux",Neurologie
+Epilepsie,"fatigue, palpitations, douleur abdominale, jaunisse",Cardiologie
+Otite,"fièvre, vertiges, essoufflement, toux",Chirurgie générale
+Lupus,"douleurs articulaires, jaunisse, essoufflement, nausées",Neurologie
+Alzheimer,"perte de poids, douleur abdominale, éruptions cutanées, toux, diarrhée",Hématologie
+Hernie,"palpitations, perte de poids, douleurs articulaires, jaunisse",Cardiologie
+Glaucome,"diarrhée, vertiges, maux de tête",Oncologie
+Ulcère,"fièvre, maux de tête, palpitations",Oncologie
+Crohn,"douleurs articulaires, vertiges, fièvre, diarrhée",Dermatologie
+Grippe,"diarrhée, nausées, essoufflement, vertiges",Infectiologie
+Diabète,"fièvre, fatigue, jaunisse",Ophtalmologie
+Ulcère,"toux, nausées, diarrhée, maux de tête, palpitations",Rhumatologie
+Anémie,"vomissements, toux, maux de tête, nausées, palpitations",Ophtalmologie
+Asthme,"vomissements, fatigue, jaunisse",Cardiologie
+Anémie,"maux de tête, vomissements, douleurs articulaires, fièvre, perte de poids",Pédiatrie
+Asthme,"diarrhée, perte de poids, douleur abdominale, douleurs articulaires",Pneumologie
+Crohn,"palpitations, essoufflement, nausées, vomissements",Médecine générale
+Psoriasis,"jaunisse, douleur abdominale, fatigue, perte de poids, vomissements",Cardiologie
+Méningite,"éruptions cutanées, vomissements, jaunisse, essoufflement, diarrhée",Médecine générale
+Arthrite,"palpitations, douleur abdominale, fièvre, nausées",Ophtalmologie
+Anémie,"jaunisse, fatigue, maux de tête, éruptions cutanées, vomissements",ORL
+Zona,"douleurs articulaires, vertiges, fièvre",Neurologie
+Zona,"jaunisse, vertiges, douleur abdominale, nausées, palpitations",Gastroentérologie
+Dermatite,"perte de poids, diarrhée, nausées",Neurologie
+Dermatite,"douleurs articulaires, essoufflement, douleur abdominale, toux, vomissements",Pneumologie
+Ulcère,"fièvre, nausées, palpitations",Hématologie
+Cataracte,"douleurs articulaires, diarrhée, éruptions cutanées",Ophtalmologie
+Arthrose,"éruptions cutanées, fièvre, douleur abdominale, fatigue, jaunisse",Ophtalmologie
+Conjonctivite,"fièvre, douleur abdominale, maux de tête, vertiges",Ophtalmologie
+Arthrite,"vomissements, fatigue, douleurs articulaires, toux",ORL
+Otite,"vomissements, essoufflement, diarrhée",Médecine générale
+Bronchite,"fatigue, vertiges, vomissements, éruptions cutanées",Hématologie
+Cirrhose,"essoufflement, jaunisse, nausées",Endocrinologie
+Parkinson,"éruptions cutanées, vertiges, douleurs articulaires, nausées",Dermatologie
+Crohn,"diarrhée, douleurs articulaires, perte de poids",ORL
+Cancer du foie,"diarrhée, fièvre, perte de poids, maux de tête, palpitations",Médecine générale
+Alzheimer,"diarrhée, perte de poids, maux de tête, éruptions cutanées, toux",Cardiologie
+Cancer de la peau,"vomissements, fièvre, éruptions cutanées, jaunisse",Hématologie
+Otite,"palpitations, fatigue, fièvre",Ophtalmologie
+Goutte,"fatigue, fièvre, vomissements, perte de poids, diarrhée",ORL
+Lupus,"éruptions cutanées, vomissements, toux, jaunisse, diarrhée",Ophtalmologie
+Zona,"douleurs articulaires, nausées, palpitations",Pédiatrie
+Crohn,"essoufflement, diarrhée, vertiges, fatigue, éruptions cutanées",Rhumatologie
+Cancer du sein,"nausées, jaunisse, essoufflement",ORL
+Pneumonie,"diarrhée, toux, nausées, éruptions cutanées",Gastroentérologie
+Appendicite,"vertiges, perte de poids, palpitations",Rhumatologie
+Insuffisance rénale,"diarrhée, douleur abdominale, nausées, maux de tête, perte de poids",Pédiatrie
+Sinusite,"perte de poids, nausées, douleur abdominale, essoufflement, vertiges",Chirurgie générale
+Insuffisance rénale,"diarrhée, jaunisse, maux de tête",ORL
+Anémie,"douleurs articulaires, nausées, palpitations, vertiges, vomissements",Neurologie
+Sclérose,"essoufflement, toux, palpitations, diarrhée, fatigue",Neurologie
+Lupus,"essoufflement, palpitations, vomissements, perte de poids, douleurs articulaires",Médecine générale
+Thyroïdite,"palpitations, jaunisse, perte de poids",Neurologie
+Cancer de la peau,"nausées, diarrhée, maux de tête, perte de poids, toux",Neurologie
+Epilepsie,"toux, vertiges, palpitations, éruptions cutanées",Neurologie
+Sinusite,"vertiges, douleur abdominale, perte de poids, douleurs articulaires, palpitations",Gastroentérologie
+Parkinson,"diarrhée, éruptions cutanées, fatigue",Neurologie
+Grippe,"diarrhée, toux, perte de poids, palpitations, éruptions cutanées",Chirurgie générale
+Cancer du foie,"vomissements, perte de poids, éruptions cutanées, diarrhée, palpitations",Médecine générale
+Appendicite,"fièvre, nausées, essoufflement",Oncologie
+Grippe,"nausées, éruptions cutanées, perte de poids",Rhumatologie
+Pneumonie,"palpitations, vomissements, fièvre",Gastroentérologie
+Appendicite,"essoufflement, fièvre, perte de poids",Chirurgie générale
+Cancer de la peau,"diarrhée, maux de tête, perte de poids, jaunisse",ORL
+Otite,"vomissements, essoufflement, maux de tête, nausées",Neurologie
+Diabète,"douleurs articulaires, palpitations, jaunisse, perte de poids, vomissements",Ophtalmologie
+Psoriasis,"douleur abdominale, vomissements, éruptions cutanées, vertiges",Infectiologie
+Cancer du foie,"essoufflement, vertiges, maux de tête, perte de poids",Endocrinologie
+Paludisme,"vomissements, perte de poids, éruptions cutanées",Cardiologie
+Paludisme,"maux de tête, diarrhée, fièvre",Rhumatologie
+Sclérose,"maux de tête, vomissements, vertiges, perte de poids, jaunisse",Endocrinologie
+Cataracte,"éruptions cutanées, essoufflement, diarrhée, vertiges",Pédiatrie
+Cancer de la peau,"toux, éruptions cutanées, fatigue, jaunisse",Ophtalmologie
+Colite,"essoufflement, perte de poids, nausées, diarrhée, jaunisse",Hématologie
+Conjonctivite,"vertiges, nausées, douleur abdominale, éruptions cutanées, jaunisse",Pédiatrie
+COVID-19,"palpitations, perte de poids, essoufflement, fièvre",Gastroentérologie
+VIH,"fièvre, vertiges, douleur abdominale, palpitations",Endocrinologie
+Conjonctivite,"perte de poids, diarrhée, vertiges, essoufflement",Neurologie
+Appendicite,"palpitations, douleurs articulaires, nausées, vertiges",ORL
+Otite,"éruptions cutanées, douleur abdominale, fièvre",Neurologie
+Migraine,"fièvre, fatigue, vomissements, essoufflement",Gastroentérologie
+Hépatite,"diarrhée, fièvre, nausées, vomissements",Pneumologie
+Cancer de la peau,"vertiges, douleurs articulaires, fièvre",Pneumologie
+VIH,"jaunisse, toux, palpitations, douleurs articulaires, diarrhée",Ophtalmologie
+Gastrite,"fatigue, nausées, vomissements, essoufflement, toux",Chirurgie générale
+Cancer de la peau,"éruptions cutanées, douleurs articulaires, fièvre, palpitations, essoufflement",Dermatologie
+Tuberculose,"perte de poids, essoufflement, douleur abdominale, diarrhée",Rhumatologie
+Epilepsie,"vertiges, vomissements, maux de tête, éruptions cutanées",Dermatologie
+Conjonctivite,"éruptions cutanées, fièvre, diarrhée, palpitations",Endocrinologie
+Crohn,"jaunisse, vomissements, douleur abdominale, fièvre, fatigue",Chirurgie générale
+Anémie,"toux, jaunisse, nausées, perte de poids",Gastroentérologie
+Alzheimer,"douleur abdominale, fièvre, essoufflement, toux",Cardiologie
+Tuberculose,"toux, douleur abdominale, douleurs articulaires, fièvre, palpitations",Neurologie
+Grippe,"diarrhée, éruptions cutanées, douleur abdominale, nausées, vertiges",Médecine générale
+Gastrite,"maux de tête, perte de poids, vertiges",Ophtalmologie
+Hypertension,"douleur abdominale, fièvre, éruptions cutanées, essoufflement, fatigue",Neurologie
+Anémie,"douleur abdominale, jaunisse, douleurs articulaires, nausées, fatigue",Rhumatologie
+Paludisme,"palpitations, diarrhée, toux",ORL
+Sclérose,"perte de poids, fatigue, essoufflement, jaunisse",Neurologie
+Otite,"fatigue, douleurs articulaires, douleur abdominale, vertiges",Pédiatrie
+Diabète,"palpitations, jaunisse, douleurs articulaires, maux de tête, douleur abdominale",Infectiologie
+Lupus,"diarrhée, fièvre, nausées, toux",Pédiatrie
+Anémie,"douleurs articulaires, vomissements, palpitations, diarrhée, vertiges",Hématologie
+Paludisme,"palpitations, diarrhée, vomissements, toux",Rhumatologie
+Crohn,"fièvre, palpitations, jaunisse, toux, essoufflement",Neurologie
+Psoriasis,"vomissements, jaunisse, essoufflement, maux de tête",Neurologie
+COVID-19,"fièvre, douleurs articulaires, fatigue",Infectiologie
+Cancer du foie,"fièvre, diarrhée, palpitations",Médecine générale
+Thyroïdite,"vomissements, jaunisse, perte de poids, douleur abdominale, douleurs articulaires",Endocrinologie
+Conjonctivite,"fatigue, vertiges, éruptions cutanées, palpitations",Neurologie
+COVID-19,"essoufflement, jaunisse, douleur abdominale",Oncologie
+Cancer du sein,"nausées, douleur abdominale, éruptions cutanées, diarrhée",Cardiologie
+VIH,"diarrhée, vertiges, fièvre, douleurs articulaires",Chirurgie générale
+Otite,"vertiges, éruptions cutanées, toux, douleur abdominale, fatigue",Endocrinologie
+Crohn,"vertiges, fièvre, diarrhée",Endocrinologie
+Sinusite,"douleur abdominale, diarrhée, nausées, éruptions cutanées",ORL
+Colite,"essoufflement, fièvre, diarrhée",Cardiologie
+Cirrhose,"vomissements, douleurs articulaires, perte de poids",Dermatologie
+Lupus,"toux, diarrhée, palpitations",Rhumatologie
+Arthrite,"nausées, vomissements, fatigue, jaunisse",Gastroentérologie
+Ulcère,"fièvre, toux, douleurs articulaires",Dermatologie
+Zona,"fièvre, douleur abdominale, jaunisse",Endocrinologie
+Insuffisance rénale,"douleurs articulaires, perte de poids, toux, fièvre",Cardiologie
+Gastrite,"palpitations, vomissements, fatigue, nausées",Dermatologie
+Zona,"essoufflement, vertiges, vomissements, diarrhée, douleur abdominale",Dermatologie
+Epilepsie,"vomissements, éruptions cutanées, douleur abdominale",Cardiologie
+Conjonctivite,"nausées, palpitations, vertiges, vomissements",Médecine générale
+Obésité,"éruptions cutanées, jaunisse, diarrhée, essoufflement, perte de poids",ORL
+VIH,"toux, maux de tête, vertiges",Hématologie
+Appendicite,"palpitations, nausées, essoufflement, diarrhée, toux",Endocrinologie
+Crohn,"éruptions cutanées, douleurs articulaires, toux, essoufflement",Neurologie
+Hypertension,"nausées, fièvre, vertiges, maux de tête",Gastroentérologie
+Sinusite,"éruptions cutanées, douleur abdominale, palpitations, vomissements, douleurs articulaires",Hématologie
+Arthrose,"fièvre, jaunisse, perte de poids, vertiges",Gastroentérologie
+Lupus,"éruptions cutanées, perte de poids, fièvre",ORL
+Paludisme,"essoufflement, jaunisse, fièvre, fatigue",Infectiologie
+VIH,"toux, jaunisse, fatigue, éruptions cutanées, diarrhée",Pédiatrie
+Obésité,"vertiges, fièvre, fatigue, nausées",Gastroentérologie
+Glaucome,"fatigue, fièvre, douleur abdominale",Dermatologie
+Pneumonie,"essoufflement, palpitations, éruptions cutanées, douleurs articulaires, perte de poids",Endocrinologie
+Glaucome,"éruptions cutanées, douleurs articulaires, nausées, diarrhée, maux de tête",Infectiologie
+Méningite,"nausées, éruptions cutanées, toux",Neurologie
+Cancer du foie,"fatigue, éruptions cutanées, vertiges",Ophtalmologie
+Obésité,"douleurs articulaires, palpitations, vomissements",Dermatologie
+Asthme,"diarrhée, vertiges, fatigue, éruptions cutanées, fièvre",Chirurgie générale
+Anémie,"vertiges, jaunisse, diarrhée",Cardiologie
+Psoriasis,"douleurs articulaires, fièvre, vomissements",Ophtalmologie
+Zona,"douleur abdominale, fatigue, douleurs articulaires, vomissements",Infectiologie
+Appendicite,"douleurs articulaires, éruptions cutanées, nausées, fatigue",Dermatologie
+Appendicite,"palpitations, douleur abdominale, jaunisse, toux, douleurs articulaires",Rhumatologie
+Lupus,"perte de poids, essoufflement, nausées, douleurs articulaires, toux",Pédiatrie
+Sinusite,"fatigue, douleurs articulaires, toux",Cardiologie
+Psoriasis,"vertiges, fatigue, nausées",Gastroentérologie
+Pneumonie,"vertiges, maux de tête, toux, fatigue, jaunisse",Endocrinologie
+Pneumonie,"éruptions cutanées, nausées, douleurs articulaires, diarrhée, toux",Rhumatologie
+Glaucome,"diarrhée, essoufflement, éruptions cutanées",Ophtalmologie
+Colite,"palpitations, vertiges, éruptions cutanées, vomissements, fatigue",Ophtalmologie
+Paludisme,"essoufflement, douleurs articulaires, palpitations, éruptions cutanées, fièvre",ORL
+Arthrose,"perte de poids, vomissements, douleur abdominale",Chirurgie générale
+Tuberculose,"vertiges, diarrhée, fièvre, éruptions cutanées",Chirurgie générale
+Grippe,"diarrhée, fatigue, perte de poids, essoufflement",Neurologie
+Paludisme,"vertiges, perte de poids, éruptions cutanées",Dermatologie
+Thyroïdite,"douleurs articulaires, nausées, essoufflement, maux de tête",Oncologie
+Cataracte,"palpitations, nausées, essoufflement, jaunisse, fatigue",Pneumologie
+Sclérose,"fièvre, diarrhée, palpitations, fatigue",Rhumatologie
+Cancer du foie,"diarrhée, vertiges, essoufflement, toux, douleurs articulaires",Chirurgie générale
+Sinusite,"perte de poids, fièvre, douleur abdominale, palpitations",Cardiologie
+Arthrite,"jaunisse, essoufflement, douleur abdominale",Hématologie
+Asthme,"douleurs articulaires, fièvre, diarrhée, éruptions cutanées",Infectiologie
+COVID-19,"jaunisse, essoufflement, vertiges, perte de poids, fièvre",ORL
+Cirrhose,"douleurs articulaires, nausées, essoufflement, éruptions cutanées, diarrhée",Endocrinologie
+Tuberculose,"nausées, éruptions cutanées, douleur abdominale",Hématologie
+Goutte,"nausées, palpitations, fatigue, éruptions cutanées, douleur abdominale",Pneumologie
+Tuberculose,"diarrhée, toux, nausées",Chirurgie générale
+Gastrite,"douleur abdominale, toux, vomissements, maux de tête, perte de poids",Neurologie
+Gastrite,"fièvre, nausées, fatigue, douleur abdominale",Neurologie
+Appendicite,"perte de poids, vomissements, éruptions cutanées, diarrhée, toux",Hématologie
+Appendicite,"fièvre, palpitations, diarrhée, toux, éruptions cutanées",Pédiatrie
+Sinusite,"perte de poids, jaunisse, toux, éruptions cutanées, maux de tête",ORL
+Sclérose,"fièvre, essoufflement, fatigue",Infectiologie
+Anémie,"fatigue, toux, douleur abdominale, douleurs articulaires",Endocrinologie
+Grippe,"éruptions cutanées, nausées, toux, essoufflement",Hématologie
+COVID-19,"nausées, vertiges, douleurs articulaires, toux, essoufflement",Gastroentérologie
+Arthrose,"toux, perte de poids, éruptions cutanées",Hématologie
+Parkinson,"palpitations, maux de tête, diarrhée, toux, perte de poids",ORL
+Cataracte,"douleur abdominale, jaunisse, fièvre, palpitations, vomissements",Pédiatrie
+Migraine,"diarrhée, maux de tête, nausées",Endocrinologie
+Glaucome,"nausées, toux, perte de poids",Gastroentérologie
+Asthme,"jaunisse, perte de poids, fatigue, maux de tête",Endocrinologie
+Tuberculose,"éruptions cutanées, palpitations, fatigue",Infectiologie
+Conjonctivite,"diarrhée, essoufflement, vertiges",Rhumatologie
+Sclérose,"toux, perte de poids, éruptions cutanées",Rhumatologie
+Ulcère,"fièvre, nausées, essoufflement",Endocrinologie
+Hernie,"essoufflement, diarrhée, jaunisse",Pédiatrie
+VIH,"jaunisse, toux, douleur abdominale, fatigue, vomissements",Cardiologie
+COVID-19,"palpitations, maux de tête, fatigue",Médecine générale
+Obésité,"essoufflement, nausées, fatigue, douleurs articulaires",ORL
+Bronchite,"essoufflement, maux de tête, vomissements, jaunisse",Pédiatrie
+Appendicite,"fatigue, toux, nausées",Cardiologie
+Alzheimer,"éruptions cutanées, maux de tête, palpitations, douleurs articulaires",Neurologie
+Arthrite,"douleur abdominale, palpitations, douleurs articulaires, vomissements",Ophtalmologie
+Insuffisance rénale,"diarrhée, douleurs articulaires, jaunisse",Pédiatrie
+Dermatite,"perte de poids, douleur abdominale, fièvre, fatigue",Pneumologie
+Grippe,"vertiges, maux de tête, douleurs articulaires, essoufflement",Pneumologie
+Goutte,"jaunisse, douleurs articulaires, maux de tête",Chirurgie générale
+Cancer du foie,"vomissements, maux de tête, palpitations, éruptions cutanées, diarrhée",Oncologie
+Cataracte,"nausées, fatigue, essoufflement",Cardiologie
+Paludisme,"douleur abdominale, douleurs articulaires, fièvre, toux, perte de poids",Rhumatologie
+Arthrite,"vertiges, fièvre, vomissements, diarrhée",Médecine générale
+Thyroïdite,"jaunisse, douleurs articulaires, nausées",ORL
+Conjonctivite,"jaunisse, éruptions cutanées, essoufflement, douleur abdominale, fatigue",Cardiologie
+Arthrose,"douleur abdominale, essoufflement, fatigue, fièvre",Endocrinologie
+Arthrose,"nausées, douleur abdominale, douleurs articulaires, essoufflement",Endocrinologie
+Méningite,"perte de poids, maux de tête, toux, essoufflement",Dermatologie
+Colite,"toux, douleurs articulaires, fatigue",Endocrinologie
+Diabète,"diarrhée, jaunisse, fièvre, fatigue, douleur abdominale",Dermatologie
+Sclérose,"essoufflement, toux, douleur abdominale, éruptions cutanées, palpitations",Oncologie
+Sclérose,"douleurs articulaires, maux de tête, vomissements, nausées",Pédiatrie
+Parkinson,"essoufflement, douleurs articulaires, palpitations, fièvre",Pneumologie
+Insuffisance rénale,"éruptions cutanées, nausées, palpitations, jaunisse",Dermatologie
+Obésité,"vertiges, éruptions cutanées, perte de poids, essoufflement, vomissements",Neurologie
+Epilepsie,"vomissements, fièvre, vertiges, diarrhée, perte de poids",Rhumatologie
+Crohn,"essoufflement, vomissements, toux",Oncologie
+Psoriasis,"éruptions cutanées, nausées, douleur abdominale, fièvre, maux de tête",Infectiologie
+Anémie,"jaunisse, perte de poids, fatigue, palpitations, vomissements",Oncologie
+Diabète,"perte de poids, vertiges, éruptions cutanées, douleurs articulaires",Pédiatrie
+Migraine,"jaunisse, diarrhée, éruptions cutanées, fatigue",Neurologie
+Migraine,"douleurs articulaires, diarrhée, douleur abdominale",Hématologie
+Méningite,"essoufflement, nausées, maux de tête",Ophtalmologie
+Cancer de la peau,"douleurs articulaires, diarrhée, fatigue",Dermatologie
+Crohn,"palpitations, vertiges, fatigue, jaunisse",Hématologie
+Alzheimer,"vertiges, éruptions cutanées, perte de poids, jaunisse",Médecine générale
+Paludisme,"toux, jaunisse, vomissements, maux de tête, éruptions cutanées",Oncologie
+Tuberculose,"jaunisse, douleurs articulaires, douleur abdominale, vomissements, vertiges",Médecine générale
+Hypertension,"essoufflement, fatigue, toux",Infectiologie
+Cirrhose,"diarrhée, fatigue, douleurs articulaires, vertiges, maux de tête",Oncologie
+Cancer de la peau,"jaunisse, fatigue, palpitations, fièvre",Cardiologie
+Conjonctivite,"jaunisse, fièvre, perte de poids, toux",Hématologie
+Gastrite,"essoufflement, diarrhée, palpitations, perte de poids",Chirurgie générale
+Colite,"diarrhée, vomissements, perte de poids",Rhumatologie
+Obésité,"perte de poids, fatigue, essoufflement, douleurs articulaires, vertiges",Oncologie
+Asthme,"perte de poids, douleurs articulaires, diarrhée",Pédiatrie
+Parkinson,"maux de tête, diarrhée, douleur abdominale, jaunisse, fièvre",Pédiatrie
+VIH,"douleur abdominale, douleurs articulaires, toux, palpitations",Médecine générale
+Conjonctivite,"fièvre, toux, perte de poids, essoufflement",Pneumologie
+Hépatite,"toux, vomissements, éruptions cutanées",Médecine générale
+Goutte,"fatigue, maux de tête, éruptions cutanées",ORL
+Alzheimer,"douleurs articulaires, toux, palpitations",Endocrinologie
+Arthrite,"jaunisse, vertiges, maux de tête, douleur abdominale",Oncologie
+Colite,"vomissements, perte de poids, nausées, fièvre",Infectiologie
+Cancer de la peau,"fatigue, diarrhée, douleur abdominale, jaunisse, essoufflement",Ophtalmologie
+Thyroïdite,"essoufflement, douleur abdominale, vertiges, jaunisse, fièvre",ORL
+Grippe,"vertiges, toux, perte de poids, jaunisse, douleur abdominale",Chirurgie générale
+Epilepsie,"palpitations, vomissements, douleur abdominale",Rhumatologie
+Psoriasis,"jaunisse, perte de poids, maux de tête, douleurs articulaires, vertiges",Oncologie
+Alzheimer,"essoufflement, fatigue, fièvre, palpitations",Rhumatologie
+Asthme,"palpitations, toux, perte de poids",Neurologie
+Asthme,"nausées, jaunisse, palpitations, fièvre, douleurs articulaires",Pneumologie
+Hernie,"nausées, toux, fièvre, essoufflement, éruptions cutanées",Neurologie
+Conjonctivite,"nausées, éruptions cutanées, fièvre, diarrhée",Infectiologie
+Goutte,"fièvre, toux, maux de tête, éruptions cutanées, nausées",Pédiatrie
+Appendicite,"fièvre, palpitations, vomissements, éruptions cutanées, vertiges",Oncologie
+Conjonctivite,"vomissements, perte de poids, nausées, fatigue",Cardiologie
+Cancer de la peau,"jaunisse, essoufflement, toux, maux de tête",Pédiatrie
+Sclérose,"fièvre, toux, fatigue, maux de tête",Rhumatologie
+Sclérose,"vertiges, jaunisse, éruptions cutanées",Chirurgie générale
+Psoriasis,"perte de poids, vomissements, nausées, vertiges, palpitations",Cardiologie
+Hernie,"toux, fatigue, palpitations",Pédiatrie
+COVID-19,"vomissements, éruptions cutanées, nausées, fatigue, diarrhée",Oncologie
+Hépatite,"palpitations, maux de tête, essoufflement, éruptions cutanées",ORL
+Obésité,"diarrhée, perte de poids, douleurs articulaires, toux",Pédiatrie
+Conjonctivite,"toux, diarrhée, vomissements, essoufflement, douleur abdominale",Neurologie
+Colite,"douleur abdominale, perte de poids, essoufflement, fièvre",Pédiatrie
+Conjonctivite,"maux de tête, douleur abdominale, diarrhée, vertiges",Chirurgie générale
+Anémie,"nausées, fièvre, vertiges, éruptions cutanées, douleur abdominale",Oncologie
+Arthrite,"fièvre, toux, nausées, éruptions cutanées, palpitations",Gastroentérologie
+Epilepsie,"jaunisse, nausées, vertiges, palpitations, vomissements",Médecine générale
+Tuberculose,"vertiges, palpitations, perte de poids",Cardiologie
+Arthrite,"éruptions cutanées, jaunisse, fièvre, palpitations, nausées",Endocrinologie
+Dermatite,"perte de poids, douleur abdominale, diarrhée, jaunisse",Pédiatrie
+Obésité,"maux de tête, douleurs articulaires, palpitations, essoufflement, vomissements",Endocrinologie
+Grippe,"vomissements, douleur abdominale, essoufflement",Oncologie
+Parkinson,"fièvre, maux de tête, toux, palpitations",Pédiatrie
+Alzheimer,"vomissements, nausées, éruptions cutanées, vertiges",Ophtalmologie
+Arthrose,"douleurs articulaires, essoufflement, palpitations, toux, douleur abdominale",Pédiatrie
+Asthme,"vertiges, toux, perte de poids, douleurs articulaires",Hématologie
+Migraine,"toux, vertiges, douleurs articulaires, fièvre, diarrhée",Cardiologie
+Tuberculose,"toux, douleurs articulaires, perte de poids, fatigue",Chirurgie générale
+Dermatite,"jaunisse, perte de poids, vomissements, douleur abdominale",ORL
+Colite,"douleur abdominale, éruptions cutanées, perte de poids, douleurs articulaires, diarrhée",Infectiologie
+Paludisme,"nausées, vertiges, douleur abdominale, douleurs articulaires, vomissements",Pédiatrie
+Conjonctivite,"vertiges, diarrhée, essoufflement",Neurologie
+Cancer du sein,"éruptions cutanées, douleur abdominale, vomissements, palpitations",Cardiologie
+Otite,"palpitations, toux, diarrhée, maux de tête, vomissements",Rhumatologie
+Hypertension,"douleur abdominale, essoufflement, nausées, diarrhée",Oncologie
+Méningite,"fatigue, vomissements, nausées",Dermatologie
+Alzheimer,"maux de tête, nausées, perte de poids, douleur abdominale",Ophtalmologie
+Paludisme,"nausées, palpitations, douleurs articulaires, perte de poids",Médecine générale
+Hépatite,"essoufflement, fièvre, diarrhée, toux",ORL
+Alzheimer,"douleur abdominale, vomissements, perte de poids",Rhumatologie
+VIH,"diarrhée, éruptions cutanées, fièvre",ORL
+Bronchite,"perte de poids, essoufflement, maux de tête",Neurologie
+Arthrite,"nausées, éruptions cutanées, diarrhée, douleurs articulaires",Dermatologie
+Sinusite,"fatigue, jaunisse, vomissements, palpitations",Endocrinologie
+Dermatite,"diarrhée, toux, nausées, vertiges",Oncologie
+Sinusite,"douleur abdominale, perte de poids, toux, diarrhée",Endocrinologie
+COVID-19,"jaunisse, vertiges, douleur abdominale, maux de tête",Ophtalmologie
+Grippe,"vertiges, palpitations, essoufflement",Pédiatrie
+Colite,"nausées, douleur abdominale, éruptions cutanées, douleurs articulaires, palpitations",Médecine générale
+Parkinson,"perte de poids, douleur abdominale, vertiges, nausées, éruptions cutanées",Pneumologie
+Arthrose,"fatigue, vomissements, diarrhée, palpitations",ORL
+Obésité,"fièvre, essoufflement, perte de poids, fatigue, toux",Pédiatrie
+Gastrite,"douleur abdominale, éruptions cutanées, essoufflement",Médecine générale
+Diabète,"douleur abdominale, éruptions cutanées, maux de tête, vomissements, fièvre",Médecine générale
+Diabète,"vomissements, jaunisse, douleur abdominale, toux",Endocrinologie
+Cancer du foie,"fatigue, perte de poids, diarrhée",Hématologie
+Glaucome,"éruptions cutanées, vomissements, diarrhée, nausées",ORL
+Ulcère,"maux de tête, fatigue, éruptions cutanées, jaunisse",Hématologie
+Parkinson,"douleurs articulaires, vomissements, maux de tête, douleur abdominale, fièvre",Dermatologie
+Cataracte,"vertiges, éruptions cutanées, vomissements, essoufflement",Neurologie
+Cataracte,"maux de tête, fatigue, vomissements",Endocrinologie
+Epilepsie,"vertiges, maux de tête, vomissements, douleur abdominale, palpitations",Dermatologie
+Diabète,"diarrhée, maux de tête, perte de poids, fièvre, vertiges",Médecine générale
+Sclérose,"toux, fatigue, diarrhée, maux de tête, perte de poids",Ophtalmologie
+Conjonctivite,"vomissements, éruptions cutanées, fatigue",Médecine générale
+Colite,"diarrhée, fièvre, toux, jaunisse, palpitations",Médecine générale
+Sclérose,"perte de poids, maux de tête, jaunisse, douleur abdominale",Infectiologie
+Alzheimer,"éruptions cutanées, douleur abdominale, palpitations, vomissements, vertiges",Infectiologie
+Pneumonie,"diarrhée, jaunisse, toux",ORL
+Gastrite,"douleurs articulaires, éruptions cutanées, nausées, palpitations, jaunisse",Endocrinologie
+Cancer de la peau,"douleurs articulaires, nausées, fièvre",ORL
+Goutte,"nausées, vertiges, essoufflement, douleurs articulaires",Rhumatologie
+Arthrite,"jaunisse, éruptions cutanées, fatigue, perte de poids, palpitations",Chirurgie générale
+Pneumonie,"vomissements, jaunisse, toux, maux de tête",Dermatologie
+Hypertension,"vertiges, diarrhée, éruptions cutanées, vomissements, perte de poids",Rhumatologie
+Conjonctivite,"vertiges, jaunisse, fièvre, douleur abdominale",Médecine générale
+Méningite,"toux, perte de poids, vomissements",Médecine générale
+Cancer du foie,"nausées, toux, éruptions cutanées, fièvre",Endocrinologie
+Hernie,"palpitations, essoufflement, jaunisse",Gastroentérologie
+Pneumonie,"toux, vertiges, jaunisse, diarrhée",ORL
+Appendicite,"diarrhée, palpitations, jaunisse, douleurs articulaires",Dermatologie
+Sclérose,"maux de tête, éruptions cutanées, vomissements",Médecine générale
+Migraine,"vertiges, éruptions cutanées, fièvre, diarrhée, toux",ORL
+Cancer de la peau,"jaunisse, douleurs articulaires, perte de poids, essoufflement",Endocrinologie
+Cirrhose,"nausées, palpitations, fièvre, maux de tête, toux",ORL
+Asthme,"nausées, toux, éruptions cutanées",Ophtalmologie
+Parkinson,"fièvre, diarrhée, palpitations, perte de poids",Gastroentérologie
+Arthrite,"palpitations, diarrhée, perte de poids, nausées",Gastroentérologie
+Goutte,"nausées, fatigue, vertiges, éruptions cutanées, toux",Pneumologie
+Paludisme,"essoufflement, jaunisse, douleur abdominale",Chirurgie générale
+Sclérose,"nausées, douleurs articulaires, maux de tête, toux",Rhumatologie
+Obésité,"fièvre, douleur abdominale, jaunisse, douleurs articulaires",Hématologie
+Alzheimer,"fatigue, fièvre, éruptions cutanées, diarrhée",Pédiatrie
+Arthrose,"jaunisse, perte de poids, vertiges, douleurs articulaires, toux",Dermatologie
+Lupus,"vertiges, fatigue, jaunisse, perte de poids, toux",Hématologie
+Sinusite,"fatigue, jaunisse, vertiges, vomissements, maux de tête",Hématologie
+Dermatite,"maux de tête, douleur abdominale, palpitations",ORL
+Obésité,"perte de poids, essoufflement, fatigue, douleurs articulaires, diarrhée",Ophtalmologie
+Colite,"essoufflement, douleurs articulaires, nausées",Médecine générale
+Cancer du sein,"douleur abdominale, nausées, essoufflement",Cardiologie
+Thyroïdite,"douleurs articulaires, nausées, palpitations, vertiges, douleur abdominale",Neurologie
+COVID-19,"fièvre, douleur abdominale, douleurs articulaires",Infectiologie
+Parkinson,"éruptions cutanées, douleurs articulaires, perte de poids, vertiges, jaunisse",Endocrinologie
+Obésité,"douleurs articulaires, maux de tête, toux, essoufflement",Hématologie
+Parkinson,"vertiges, perte de poids, toux",Dermatologie
+Gastrite,"maux de tête, nausées, éruptions cutanées",Endocrinologie
+Méningite,"toux, maux de tête, diarrhée, douleurs articulaires",Pneumologie
+Obésité,"palpitations, toux, essoufflement",Hématologie
+Parkinson,"essoufflement, nausées, perte de poids, vomissements",Neurologie
+Dermatite,"fatigue, essoufflement, palpitations",Hématologie
+Appendicite,"diarrhée, jaunisse, douleur abdominale, palpitations, perte de poids",Ophtalmologie
+Appendicite,"essoufflement, vertiges, fièvre, nausées",Rhumatologie
+Cataracte,"fièvre, douleur abdominale, perte de poids, toux, palpitations",Ophtalmologie
+Otite,"fatigue, diarrhée, douleurs articulaires, perte de poids",Oncologie
+Cancer du sein,"fatigue, essoufflement, perte de poids",Chirurgie générale
+Hypertension,"maux de tête, palpitations, éruptions cutanées, perte de poids, toux",Oncologie
+Conjonctivite,"éruptions cutanées, palpitations, essoufflement",Pédiatrie
+Colite,"maux de tête, jaunisse, diarrhée, éruptions cutanées, vomissements",Dermatologie
+Tuberculose,"toux, jaunisse, vertiges",Ophtalmologie
+Dermatite,"perte de poids, fièvre, essoufflement, jaunisse",Gastroentérologie
+Anémie,"jaunisse, perte de poids, toux, vertiges",Cardiologie
+Anémie,"palpitations, maux de tête, vertiges",Médecine générale
+Arthrose,"vomissements, fièvre, diarrhée, nausées, jaunisse",Oncologie
+Cancer de la peau,"jaunisse, douleurs articulaires, perte de poids, éruptions cutanées",Rhumatologie
+Alzheimer,"vomissements, nausées, diarrhée",Gastroentérologie
+Obésité,"douleur abdominale, nausées, vomissements",Hématologie
+Grippe,"essoufflement, douleur abdominale, fatigue, vomissements",Endocrinologie
+Hypertension,"diarrhée, fatigue, perte de poids, éruptions cutanées, douleur abdominale",Pneumologie
+Cancer du sein,"éruptions cutanées, fièvre, douleur abdominale, perte de poids, essoufflement",Pédiatrie
+Hépatite,"vomissements, douleurs articulaires, maux de tête, douleur abdominale, nausées",Infectiologie
+Anémie,"maux de tête, fièvre, vomissements, palpitations",Pneumologie
+Appendicite,"diarrhée, palpitations, nausées, vertiges",Neurologie
+Conjonctivite,"essoufflement, éruptions cutanées, nausées",Dermatologie
+Thyroïdite,"perte de poids, éruptions cutanées, fatigue, vertiges, palpitations",ORL
+Cancer du sein,"douleur abdominale, toux, maux de tête",Rhumatologie
+Sclérose,"jaunisse, fièvre, fatigue",Pédiatrie
+Bronchite,"essoufflement, palpitations, jaunisse",Ophtalmologie
+Ulcère,"maux de tête, jaunisse, perte de poids",Gastroentérologie
+Insuffisance rénale,"palpitations, maux de tête, perte de poids, douleurs articulaires, vomissements",Rhumatologie
+Pneumonie,"vomissements, vertiges, douleur abdominale, jaunisse, diarrhée",Infectiologie
+Bronchite,"jaunisse, nausées, diarrhée, toux",Hématologie
+Psoriasis,"perte de poids, maux de tête, vertiges",Infectiologie
+COVID-19,"douleur abdominale, vertiges, palpitations, maux de tête",Oncologie
+Paludisme,"essoufflement, toux, perte de poids, douleur abdominale, jaunisse",ORL
+Crohn,"vomissements, éruptions cutanées, maux de tête",Cardiologie
+Goutte,"essoufflement, fatigue, palpitations",ORL
+Appendicite,"douleurs articulaires, essoufflement, perte de poids, fatigue",Gastroentérologie
+Zona,"fatigue, jaunisse, vomissements",Infectiologie
+Cancer de la peau,"essoufflement, douleurs articulaires, palpitations",Hématologie
+COVID-19,"jaunisse, perte de poids, essoufflement, nausées",Chirurgie générale
+Arthrite,"diarrhée, vertiges, douleurs articulaires",Médecine générale
+Conjonctivite,"maux de tête, nausées, toux, jaunisse",Chirurgie générale
+Anémie,"essoufflement, palpitations, perte de poids, toux",Médecine générale
+Asthme,"diarrhée, éruptions cutanées, douleurs articulaires, maux de tête",Gastroentérologie
+Lupus,"éruptions cutanées, essoufflement, vomissements, jaunisse",Infectiologie
+COVID-19,"jaunisse, diarrhée, maux de tête, fièvre",Neurologie
+Sclérose,"palpitations, douleurs articulaires, vertiges",Chirurgie générale
+Goutte,"jaunisse, palpitations, fatigue",Pneumologie
+Asthme,"fatigue, essoufflement, fièvre, toux",Endocrinologie
+COVID-19,"douleurs articulaires, nausées, vertiges, perte de poids",Cardiologie
+Hernie,"diarrhée, essoufflement, jaunisse, vertiges",Médecine générale
+Psoriasis,"fièvre, essoufflement, douleur abdominale",Rhumatologie
+Hépatite,"jaunisse, palpitations, nausées, maux de tête, éruptions cutanées",Médecine générale
+Anémie,"nausées, toux, douleurs articulaires, douleur abdominale",Oncologie
+Psoriasis,"fatigue, vomissements, diarrhée, perte de poids",Pédiatrie
+Goutte,"douleur abdominale, jaunisse, fièvre, douleurs articulaires, maux de tête",Hématologie
+Sinusite,"palpitations, douleur abdominale, diarrhée",Ophtalmologie
+Cataracte,"fatigue, essoufflement, perte de poids",Infectiologie
+Méningite,"fièvre, palpitations, diarrhée",ORL
+Crohn,"éruptions cutanées, perte de poids, toux, jaunisse, vomissements",Neurologie
+Anémie,"fièvre, diarrhée, jaunisse, éruptions cutanées, fatigue",Infectiologie
+Alzheimer,"nausées, toux, jaunisse, vertiges",Médecine générale
+Conjonctivite,"essoufflement, diarrhée, douleur abdominale, palpitations",Cardiologie
+Ulcère,"nausées, maux de tête, douleurs articulaires, essoufflement, perte de poids",Neurologie
+COVID-19,"palpitations, vertiges, diarrhée, vomissements, douleur abdominale",Cardiologie
+Ulcère,"palpitations, éruptions cutanées, vertiges, maux de tête",Oncologie
+Anémie,"fièvre, perte de poids, vomissements",ORL
+Goutte,"nausées, fatigue, fièvre, éruptions cutanées, perte de poids",Rhumatologie
+Hypertension,"maux de tête, douleur abdominale, perte de poids, fièvre",Hématologie
+Glaucome,"fatigue, douleurs articulaires, essoufflement, vomissements, toux",Infectiologie
+Goutte,"vomissements, diarrhée, jaunisse, nausées",Dermatologie
+Pneumonie,"palpitations, essoufflement, jaunisse, douleur abdominale",Gastroentérologie
+Dermatite,"jaunisse, vertiges, vomissements, éruptions cutanées, nausées",Dermatologie
+Hernie,"douleur abdominale, éruptions cutanées, fatigue, fièvre, perte de poids",Pédiatrie
+Grippe,"douleur abdominale, palpitations, fièvre, diarrhée, nausées",Rhumatologie
+Zona,"nausées, vomissements, jaunisse, perte de poids, palpitations",Dermatologie
+Crohn,"douleurs articulaires, nausées, douleur abdominale, essoufflement, toux",Médecine générale
+Colite,"essoufflement, douleurs articulaires, vertiges, fièvre, diarrhée",Cardiologie
+Dermatite,"perte de poids, jaunisse, essoufflement, nausées, maux de tête",Endocrinologie
+Méningite,"jaunisse, maux de tête, diarrhée, douleurs articulaires",Hématologie
+Obésité,"nausées, perte de poids, essoufflement",Ophtalmologie
+Sinusite,"fièvre, vertiges, perte de poids, douleur abdominale, vomissements",Pneumologie
+Sclérose,"éruptions cutanées, perte de poids, jaunisse, nausées",Ophtalmologie
+Cirrhose,"nausées, jaunisse, essoufflement, vomissements",Neurologie
+Sinusite,"vomissements, fatigue, toux, douleurs articulaires, maux de tête",Hématologie
+Parkinson,"toux, essoufflement, vertiges",Rhumatologie
+Parkinson,"vertiges, éruptions cutanées, fièvre, toux, essoufflement",Infectiologie
+Diabète,"vomissements, diarrhée, éruptions cutanées, fièvre",Chirurgie générale
+Cirrhose,"maux de tête, perte de poids, vomissements, essoufflement",Médecine générale
+Hernie,"nausées, maux de tête, essoufflement, palpitations, fatigue",ORL
+Diabète,"jaunisse, fièvre, nausées, toux",Rhumatologie
+Asthme,"essoufflement, perte de poids, éruptions cutanées, diarrhée, douleur abdominale",Ophtalmologie
+Psoriasis,"nausées, douleurs articulaires, palpitations, essoufflement, perte de poids",Rhumatologie
+Otite,"perte de poids, vomissements, jaunisse, palpitations",Médecine générale
+Ulcère,"toux, douleurs articulaires, essoufflement, palpitations, perte de poids",Pédiatrie
+Gastrite,"douleurs articulaires, maux de tête, éruptions cutanées, fièvre, diarrhée",Ophtalmologie
+Gastrite,"palpitations, éruptions cutanées, essoufflement, fatigue, jaunisse",Hématologie
+Cancer du sein,"jaunisse, fièvre, palpitations, vertiges",Chirurgie générale
+Pneumonie,"nausées, toux, essoufflement, douleur abdominale",Pneumologie
+Diabète,"douleurs articulaires, vertiges, maux de tête, fatigue",Cardiologie
+VIH,"vomissements, essoufflement, toux, vertiges",Médecine générale
+Ulcère,"toux, fièvre, fatigue, palpitations, vertiges",Pneumologie
+Colite,"fièvre, essoufflement, vertiges, éruptions cutanées",Neurologie
+Thyroïdite,"essoufflement, perte de poids, palpitations, vertiges",Dermatologie
+Migraine,"vomissements, éruptions cutanées, douleur abdominale",Chirurgie générale
+Parkinson,"toux, perte de poids, fatigue, maux de tête, fièvre",Médecine générale
+VIH,"diarrhée, maux de tête, vertiges, vomissements",Hématologie
+Pneumonie,"jaunisse, douleurs articulaires, nausées, palpitations, perte de poids",Ophtalmologie
+Anémie,"fatigue, palpitations, nausées, diarrhée, douleurs articulaires",Hématologie
+Hépatite,"nausées, maux de tête, douleur abdominale, jaunisse, éruptions cutanées",Chirurgie générale
+Crohn,"nausées, douleur abdominale, maux de tête",Ophtalmologie
+Anémie,"vertiges, diarrhée, jaunisse, palpitations",Cardiologie
+Hernie,"vomissements, perte de poids, douleur abdominale",Rhumatologie
+Alzheimer,"perte de poids, toux, éruptions cutanées",Médecine générale
+Cancer de la peau,"douleurs articulaires, palpitations, éruptions cutanées",Rhumatologie
+Diabète,"douleur abdominale, fièvre, perte de poids, toux",Hématologie
+Diabète,"essoufflement, douleurs articulaires, nausées, fatigue, fièvre",Infectiologie
+Tuberculose,"douleur abdominale, fièvre, vertiges, diarrhée",Endocrinologie
+Thyroïdite,"vomissements, essoufflement, éruptions cutanées, perte de poids, vertiges",ORL
+Psoriasis,"douleurs articulaires, fièvre, diarrhée, fatigue",Cardiologie
+Cancer du sein,"maux de tête, fièvre, perte de poids, vertiges, douleurs articulaires",Rhumatologie
+Cancer du sein,"vomissements, palpitations, maux de tête, douleurs articulaires, fatigue",Pneumologie
+Dermatite,"palpitations, douleurs articulaires, fatigue, fièvre",Rhumatologie
+Paludisme,"essoufflement, palpitations, nausées, jaunisse",Dermatologie
+Arthrite,"éruptions cutanées, fièvre, perte de poids",Ophtalmologie
+Glaucome,"fièvre, douleurs articulaires, maux de tête",Ophtalmologie
+Cancer de la peau,"diarrhée, éruptions cutanées, toux, essoufflement",Pneumologie
+Grippe,"éruptions cutanées, nausées, palpitations, fièvre",Oncologie
+Cancer de la peau,"palpitations, vomissements, essoufflement",Neurologie
+Pneumonie,"vomissements, nausées, fièvre, jaunisse",Oncologie
+Cancer de la peau,"maux de tête, nausées, vomissements, palpitations, fièvre",ORL
+Arthrose,"nausées, toux, perte de poids",Infectiologie
+Ulcère,"éruptions cutanées, nausées, palpitations, fatigue",Pédiatrie
+Otite,"douleur abdominale, vomissements, fatigue, toux, diarrhée",Endocrinologie
+Ulcère,"palpitations, vertiges, fièvre, perte de poids",Pneumologie
+Cataracte,"perte de poids, éruptions cutanées, nausées, essoufflement, vertiges",Chirurgie générale
+Sclérose,"douleurs articulaires, nausées, perte de poids, fatigue",Ophtalmologie
+Glaucome,"maux de tête, douleur abdominale, éruptions cutanées, essoufflement",Oncologie
+Diabète,"maux de tête, vomissements, essoufflement",Cardiologie
+Insuffisance rénale,"douleur abdominale, douleurs articulaires, nausées, maux de tête, vertiges",Neurologie
+Tuberculose,"fièvre, douleur abdominale, toux, perte de poids",Infectiologie
+Alzheimer,"toux, maux de tête, diarrhée",Chirurgie générale
+VIH,"toux, éruptions cutanées, perte de poids",Neurologie
+Hypertension,"douleur abdominale, essoufflement, vertiges, nausées, éruptions cutanées",Rhumatologie
+Paludisme,"douleur abdominale, fatigue, jaunisse",Oncologie
+Cancer du foie,"nausées, douleurs articulaires, maux de tête, douleur abdominale, diarrhée",Infectiologie
+Arthrite,"perte de poids, toux, fatigue",Infectiologie
+Paludisme,"douleur abdominale, essoufflement, maux de tête",Cardiologie
+Tuberculose,"perte de poids, vomissements, diarrhée, vertiges",Chirurgie générale
+Anémie,"vertiges, vomissements, douleurs articulaires",Dermatologie
+Cataracte,"perte de poids, douleur abdominale, palpitations, toux",Cardiologie
+VIH,"fièvre, douleurs articulaires, éruptions cutanées, nausées, diarrhée",Dermatologie
+Zona,"diarrhée, palpitations, vertiges",Dermatologie
+Paludisme,"fièvre, maux de tête, essoufflement, jaunisse",Chirurgie générale
+Méningite,"toux, douleur abdominale, palpitations",Hématologie
+Crohn,"fatigue, vomissements, maux de tête, éruptions cutanées, diarrhée",Pédiatrie
+Tuberculose,"éruptions cutanées, maux de tête, diarrhée, vomissements, toux",Infectiologie
+Conjonctivite,"vertiges, fatigue, douleur abdominale",Oncologie
+Thyroïdite,"éruptions cutanées, palpitations, nausées",Chirurgie générale
+Insuffisance rénale,"essoufflement, fatigue, palpitations, maux de tête, toux",Pédiatrie
+Arthrite,"maux de tête, essoufflement, nausées, vomissements, palpitations",Pneumologie
+Hépatite,"essoufflement, fatigue, éruptions cutanées",Neurologie
+Cataracte,"vomissements, perte de poids, éruptions cutanées, nausées",Gastroentérologie
+Diabète,"vertiges, douleurs articulaires, diarrhée",Ophtalmologie
+Arthrite,"éruptions cutanées, vertiges, diarrhée, nausées, fièvre",Oncologie
+Psoriasis,"nausées, éruptions cutanées, essoufflement",Dermatologie
+Tuberculose,"toux, essoufflement, vomissements, douleur abdominale, palpitations",Pneumologie
+Zona,"nausées, douleur abdominale, vomissements, toux",Pneumologie
+Goutte,"fièvre, vertiges, toux, palpitations",Hématologie
+Glaucome,"toux, éruptions cutanées, vomissements, diarrhée, palpitations",Cardiologie
+Cirrhose,"douleur abdominale, perte de poids, maux de tête",Pédiatrie
+Ulcère,"palpitations, nausées, toux, jaunisse",Pédiatrie
+Crohn,"palpitations, fièvre, vomissements, essoufflement",Chirurgie générale
+Dermatite,"fièvre, fatigue, perte de poids",Dermatologie
+Arthrose,"fièvre, jaunisse, éruptions cutanées",Pneumologie
+Anémie,"toux, fatigue, palpitations, éruptions cutanées",Endocrinologie
+Cataracte,"éruptions cutanées, perte de poids, vertiges, fièvre, douleur abdominale",Oncologie
+Pneumonie,"jaunisse, essoufflement, toux",Cardiologie
+Colite,"douleur abdominale, maux de tête, douleurs articulaires, perte de poids",Endocrinologie
+VIH,"fièvre, toux, maux de tête, vertiges, nausées",Neurologie
+Otite,"diarrhée, vertiges, maux de tête, essoufflement, fatigue",Dermatologie
+Psoriasis,"vertiges, palpitations, jaunisse, éruptions cutanées",Neurologie
+Bronchite,"maux de tête, vomissements, nausées, douleur abdominale",Hématologie
+Zona,"nausées, fatigue, diarrhée, éruptions cutanées, essoufflement",Cardiologie
+Paludisme,"essoufflement, perte de poids, douleurs articulaires, maux de tête",Pneumologie
+Thyroïdite,"nausées, palpitations, jaunisse, toux, diarrhée",Hématologie
+Asthme,"diarrhée, douleurs articulaires, maux de tête",Infectiologie
+Epilepsie,"diarrhée, éruptions cutanées, essoufflement, jaunisse",Infectiologie
+Colite,"vertiges, diarrhée, fièvre, palpitations",Médecine générale
+Sclérose,"fatigue, vomissements, jaunisse",Cardiologie
+Thyroïdite,"perte de poids, douleur abdominale, nausées, fatigue, fièvre",Ophtalmologie
+Insuffisance rénale,"douleur abdominale, éruptions cutanées, essoufflement, nausées",Infectiologie
+Hépatite,"nausées, douleur abdominale, essoufflement, vertiges, douleurs articulaires",Cardiologie
+Dermatite,"palpitations, douleur abdominale, maux de tête, vomissements",Infectiologie
+Gastrite,"nausées, fièvre, perte de poids",Oncologie
+VIH,"vomissements, douleurs articulaires, fièvre, vertiges, éruptions cutanées",Cardiologie
+Arthrite,"nausées, vertiges, toux, fatigue, essoufflement",Ophtalmologie
+COVID-19,"fièvre, essoufflement, toux, vomissements, douleur abdominale",Pédiatrie
+Insuffisance rénale,"perte de poids, vertiges, vomissements, diarrhée",Hématologie
+Cancer du foie,"fièvre, fatigue, maux de tête, vertiges, douleur abdominale",Rhumatologie
+Ulcère,"vertiges, maux de tête, diarrhée, douleur abdominale",Chirurgie générale
+Thyroïdite,"douleur abdominale, perte de poids, fatigue",Ophtalmologie
+Grippe,"douleurs articulaires, jaunisse, vertiges",Endocrinologie
+Dermatite,"fièvre, perte de poids, palpitations",Médecine générale
+Cataracte,"nausées, douleurs articulaires, fièvre, vomissements, éruptions cutanées",ORL
+Ulcère,"toux, vomissements, jaunisse",Rhumatologie
+Cirrhose,"essoufflement, perte de poids, toux",Chirurgie générale
+Sclérose,"nausées, douleurs articulaires, vomissements, maux de tête",Pédiatrie
+Hypertension,"douleurs articulaires, nausées, douleur abdominale, éruptions cutanées, maux de tête",Médecine générale
+Sclérose,"éruptions cutanées, essoufflement, perte de poids",Ophtalmologie
+Thyroïdite,"essoufflement, éruptions cutanées, nausées",Cardiologie
+Psoriasis,"jaunisse, maux de tête, nausées",Endocrinologie
+Conjonctivite,"palpitations, fatigue, essoufflement",Rhumatologie
+Thyroïdite,"vomissements, nausées, fatigue",Rhumatologie
+Parkinson,"vomissements, toux, palpitations, diarrhée, essoufflement",ORL
+Cancer du sein,"diarrhée, perte de poids, vomissements, palpitations, fièvre",Médecine générale
+Crohn,"toux, douleurs articulaires, essoufflement",Chirurgie générale
+Cancer de la peau,"douleurs articulaires, fièvre, toux",Médecine générale
+Hépatite,"fatigue, palpitations, jaunisse",Gastroentérologie
+Cancer de la peau,"douleurs articulaires, vertiges, éruptions cutanées",Hématologie
+Zona,"fièvre, fatigue, douleur abdominale",Hématologie
+Hépatite,"vomissements, douleurs articulaires, maux de tête",Médecine générale
+Obésité,"fatigue, essoufflement, nausées, vomissements",Pédiatrie
+Ulcère,"maux de tête, palpitations, vertiges, essoufflement",ORL
+COVID-19,"éruptions cutanées, toux, palpitations",Oncologie
+Cancer du foie,"douleur abdominale, fatigue, palpitations, fièvre, éruptions cutanées",Rhumatologie
+Appendicite,"éruptions cutanées, toux, fièvre",Rhumatologie
+Diabète,"éruptions cutanées, perte de poids, vertiges",Endocrinologie
+Goutte,"jaunisse, nausées, fatigue",ORL
+Tuberculose,"maux de tête, palpitations, vomissements, diarrhée",Médecine générale
+Alzheimer,"fièvre, essoufflement, toux, douleur abdominale, fatigue",Pédiatrie
+Dermatite,"douleurs articulaires, vertiges, diarrhée",Infectiologie
+Sinusite,"douleur abdominale, éruptions cutanées, fièvre, vertiges, perte de poids",Dermatologie
+Asthme,"toux, éruptions cutanées, vertiges, perte de poids",Infectiologie
+Arthrose,"vertiges, jaunisse, éruptions cutanées, maux de tête",Rhumatologie
+Otite,"essoufflement, fatigue, douleur abdominale, toux, maux de tête",Neurologie
+Anémie,"essoufflement, douleurs articulaires, nausées",Neurologie
+Zona,"nausées, diarrhée, toux",Dermatologie
+Epilepsie,"vertiges, jaunisse, nausées",Endocrinologie
+Colite,"douleur abdominale, nausées, perte de poids, vertiges",Ophtalmologie
+Arthrite,"fièvre, douleur abdominale, perte de poids",Neurologie
+Arthrose,"fatigue, maux de tête, toux, douleur abdominale, douleurs articulaires",Chirurgie générale
+Dermatite,"perte de poids, douleur abdominale, nausées, diarrhée, douleurs articulaires",Endocrinologie
+Migraine,"jaunisse, vomissements, diarrhée",Dermatologie
+Colite,"jaunisse, vomissements, diarrhée, vertiges",Rhumatologie
+Parkinson,"vomissements, douleur abdominale, diarrhée, palpitations",Chirurgie générale
+Hernie,"maux de tête, jaunisse, vertiges, douleur abdominale",Cardiologie
+Goutte,"palpitations, douleur abdominale, éruptions cutanées, douleurs articulaires, maux de tête",Endocrinologie
+Conjonctivite,"essoufflement, vertiges, palpitations, vomissements",Chirurgie générale
+Alzheimer,"nausées, palpitations, fatigue, douleur abdominale",Oncologie
+Thyroïdite,"palpitations, éruptions cutanées, douleur abdominale, fatigue",Médecine générale
+Diabète,"maux de tête, douleur abdominale, fièvre, diarrhée",Pneumologie
+Alzheimer,"toux, fièvre, palpitations, fatigue, douleurs articulaires",Oncologie
+Obésité,"vertiges, maux de tête, éruptions cutanées",Chirurgie générale
+Méningite,"jaunisse, vomissements, diarrhée, éruptions cutanées, fatigue",Oncologie
+Cirrhose,"douleur abdominale, essoufflement, fatigue, diarrhée, toux",ORL
+COVID-19,"éruptions cutanées, nausées, essoufflement, vertiges, palpitations",Neurologie
+Arthrite,"éruptions cutanées, douleur abdominale, maux de tête, toux",Infectiologie
+Glaucome,"toux, douleur abdominale, diarrhée, éruptions cutanées, douleurs articulaires",Dermatologie
+Psoriasis,"perte de poids, diarrhée, palpitations",Chirurgie générale
+Zona,"jaunisse, perte de poids, diarrhée",Endocrinologie
+Anémie,"essoufflement, jaunisse, douleur abdominale, douleurs articulaires",Médecine générale
+Méningite,"vomissements, douleurs articulaires, perte de poids, diarrhée",Pédiatrie
+Crohn,"palpitations, jaunisse, maux de tête, diarrhée, perte de poids",Pneumologie
+Crohn,"palpitations, vertiges, douleurs articulaires, perte de poids, éruptions cutanées",Endocrinologie
+Paludisme,"fatigue, toux, diarrhée, fièvre",Pédiatrie
+Conjonctivite,"palpitations, diarrhée, toux",Hématologie
+Colite,"essoufflement, perte de poids, palpitations",Endocrinologie
+Hypertension,"vomissements, toux, essoufflement",ORL
+Insuffisance rénale,"essoufflement, éruptions cutanées, fatigue, maux de tête, vertiges",Neurologie
+Cirrhose,"palpitations, vertiges, douleur abdominale, fatigue",Cardiologie
+Goutte,"vomissements, maux de tête, fatigue, essoufflement, fièvre",ORL
+Diabète,"nausées, vertiges, diarrhée",Infectiologie
+Anémie,"douleur abdominale, essoufflement, perte de poids, diarrhée, nausées",Chirurgie générale
+Goutte,"fièvre, maux de tête, nausées, toux",Neurologie
+Cirrhose,"perte de poids, vertiges, douleur abdominale",Rhumatologie
+Cancer du foie,"toux, vertiges, douleurs articulaires",Cardiologie
+Glaucome,"essoufflement, diarrhée, toux",Gastroentérologie
+Epilepsie,"jaunisse, maux de tête, vertiges, douleur abdominale",Chirurgie générale
+Colite,"douleurs articulaires, fièvre, perte de poids, palpitations, éruptions cutanées",Pneumologie
+Obésité,"toux, douleur abdominale, diarrhée, jaunisse",Gastroentérologie
+Bronchite,"diarrhée, éruptions cutanées, jaunisse, vertiges",Endocrinologie
+Insuffisance rénale,"vomissements, diarrhée, douleur abdominale",Pneumologie
+Gastrite,"fièvre, nausées, jaunisse, fatigue",ORL
+Arthrose,"perte de poids, douleurs articulaires, diarrhée, maux de tête",Ophtalmologie
+Obésité,"éruptions cutanées, toux, jaunisse, vomissements",Pneumologie
+Migraine,"maux de tête, douleurs articulaires, douleur abdominale",Rhumatologie
+Parkinson,"jaunisse, éruptions cutanées, essoufflement, perte de poids",Médecine générale
+Arthrose,"fièvre, douleur abdominale, maux de tête, vertiges",ORL
+Cancer du sein,"nausées, vertiges, maux de tête, perte de poids",Chirurgie générale
+Crohn,"diarrhée, douleur abdominale, éruptions cutanées, essoufflement, palpitations",Pneumologie
+Cirrhose,"fièvre, toux, palpitations, fatigue, vomissements",Gastroentérologie
+Zona,"éruptions cutanées, palpitations, nausées, vomissements, vertiges",Dermatologie
+Paludisme,"fièvre, essoufflement, nausées",Gastroentérologie
+Méningite,"essoufflement, vomissements, éruptions cutanées, maux de tête, perte de poids",ORL
+Méningite,"perte de poids, essoufflement, douleur abdominale, diarrhée, vertiges",Dermatologie
+Psoriasis,"éruptions cutanées, toux, vertiges, nausées, fièvre",Hématologie
+Hépatite,"vomissements, fatigue, vertiges",Oncologie
+Cancer de la peau,"diarrhée, maux de tête, douleur abdominale, douleurs articulaires, éruptions cutanées",Cardiologie
+Insuffisance rénale,"jaunisse, nausées, essoufflement, diarrhée, douleurs articulaires",Oncologie
+Hernie,"vertiges, douleur abdominale, maux de tête, diarrhée, perte de poids",Rhumatologie
+Dermatite,"diarrhée, jaunisse, fatigue, palpitations, vomissements",ORL
+Glaucome,"fièvre, vomissements, jaunisse",Dermatologie
+Cancer du foie,"diarrhée, essoufflement, palpitations",Dermatologie
+COVID-19,"éruptions cutanées, toux, palpitations, douleur abdominale, diarrhée",Cardiologie
+Dermatite,"maux de tête, douleurs articulaires, fatigue, essoufflement",Dermatologie
+Migraine,"fatigue, fièvre, douleurs articulaires, palpitations",Ophtalmologie
+Hépatite,"jaunisse, essoufflement, perte de poids",Chirurgie générale
+Zona,"essoufflement, fatigue, vertiges, douleur abdominale, toux",Chirurgie générale
+Sclérose,"jaunisse, vomissements, éruptions cutanées, essoufflement, fièvre",ORL
+Gastrite,"vertiges, diarrhée, douleurs articulaires",Oncologie
+Migraine,"éruptions cutanées, perte de poids, vomissements",Ophtalmologie
+Glaucome,"jaunisse, perte de poids, diarrhée, toux",Ophtalmologie
+Hypertension,"diarrhée, douleurs articulaires, fièvre",Gastroentérologie
+Grippe,"maux de tête, vomissements, perte de poids, diarrhée, douleurs articulaires",Rhumatologie
+Paludisme,"douleurs articulaires, diarrhée, douleur abdominale, nausées, vomissements",Hématologie
+Parkinson,"nausées, essoufflement, fatigue",ORL
+Cancer de la peau,"fièvre, nausées, fatigue",Cardiologie
+Migraine,"éruptions cutanées, douleurs articulaires, jaunisse, douleur abdominale",Cardiologie
+Obésité,"jaunisse, fatigue, toux, palpitations, vomissements",Dermatologie
+COVID-19,"maux de tête, douleur abdominale, éruptions cutanées, fatigue",Endocrinologie
+Cirrhose,"nausées, douleur abdominale, maux de tête, éruptions cutanées",Infectiologie
+Epilepsie,"essoufflement, éruptions cutanées, palpitations",Oncologie
+Cancer de la peau,"toux, douleurs articulaires, douleur abdominale, nausées",Rhumatologie
+Crohn,"vertiges, douleur abdominale, maux de tête, palpitations, essoufflement",Hématologie
+Tuberculose,"douleurs articulaires, diarrhée, vertiges, perte de poids, jaunisse",Rhumatologie
+Ulcère,"vomissements, douleurs articulaires, fièvre",Ophtalmologie
+Diabète,"douleurs articulaires, toux, perte de poids, maux de tête, fièvre",Dermatologie
+Anémie,"douleur abdominale, vomissements, nausées, éruptions cutanées",Gastroentérologie
+Anémie,"éruptions cutanées, palpitations, maux de tête, douleurs articulaires",Ophtalmologie
+Insuffisance rénale,"toux, diarrhée, essoufflement, fièvre",Cardiologie
+Dermatite,"diarrhée, perte de poids, douleur abdominale, vomissements",Dermatologie
+Cataracte,"vomissements, toux, vertiges, nausées, maux de tête",Oncologie
+Goutte,"toux, diarrhée, maux de tête, perte de poids",Ophtalmologie
+Migraine,"fièvre, perte de poids, jaunisse",Neurologie
+Sclérose,"vertiges, maux de tête, douleurs articulaires, jaunisse",Rhumatologie
+Epilepsie,"diarrhée, perte de poids, vertiges, jaunisse, éruptions cutanées",Neurologie
+Insuffisance rénale,"fièvre, perte de poids, palpitations",Chirurgie générale
