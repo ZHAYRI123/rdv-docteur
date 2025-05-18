@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import loginImg from "../image/login.png";
 
 const Login = ({ userType = 'patient' }) => {
 	const [showPassword, setShowPassword] = useState(false);
 	const navigate = useNavigate();
+	const location = useLocation();
 
 	const handleLogin = async (event) => {
 		event.preventDefault();
@@ -66,10 +67,16 @@ const Login = ({ userType = 'patient' }) => {
 			localStorage.setItem('userType', userType);
 
 			setTimeout(() => {
-				if (userType === 'patient') navigate('/patient-dashboard');
-				else if (userType === 'doctor') navigate('/doctor-dashboard');
-				else navigate('/hospital/admin');
-			}, 1500);
+				const redirectTo = location.state?.redirectTo;
+                if (userType === 'patient' && redirectTo) {
+                    navigate(redirectTo);
+                } else {
+                    // Use default redirects
+                    if (userType === 'patient') navigate('/patient-dashboard');
+                    else if (userType === 'doctor') navigate('/doctor-dashboard');
+                    else navigate('/hospital/admin');
+                }
+            }, 1500);
 
 		} catch (err) {
 			toast.error("Erreur réseau");

@@ -1,4 +1,5 @@
 import { useCalendar } from './useCalendar';
+import { toast } from 'react-toastify';
 
 const Calendar = () => {
   const {
@@ -8,7 +9,8 @@ const Calendar = () => {
     appointments,
     monthNames,
     changeMonth,
-    getCalendarDays
+    getCalendarDays,
+    fetchAppointments
   } = useCalendar();
 
   const formatSelectedDate = (date) => {
@@ -19,6 +21,32 @@ const Calendar = () => {
       day: 'numeric'
     }).format(date);
   };
+
+  const handleCancelAppointment = async (appointmentId) => {
+    if (window.confirm('Êtes-vous sûr de vouloir annuler ce rendez-vous ?')) {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`http://localhost:5000/rdv/deleteRdv/${appointmentId}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          toast.success('Rendez-vous annulé avec succès');
+          fetchAppointments(); // Refresh the appointments list
+        } else {
+          toast.error('Erreur lors de l\'annulation du rendez-vous');
+        }
+      } catch (error) {
+        console.error('Error canceling appointment:', error);
+        toast.error('Erreur de connexion au serveur');
+      }
+    }
+  };
+
 
   return (
     <section className="bg-white rounded-lg shadow p-6 mb-8">
@@ -84,17 +112,39 @@ const Calendar = () => {
             Rendez-vous du {formatSelectedDate(selectedDate)}
           </h3>
           <div className="space-y-3">
-            {appointments.map((apt, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <div className="font-medium">{apt.time} - {apt.patient}</div>
-                  <div className="text-sm text-gray-500">{apt.doctor} - {apt.type}</div>
+            {appointments
+              .filter(apt => new Date(apt.date).toISOString().split('T')[0] === selectedDate.toISOString().split('T')[0])
+              .map((apt) => (
+                <div key={apt._id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                  <div className="flex-1">
+                    <div className="font-medium">
+                      {apt.heure} - {apt.patient?.nom} {apt.patient?.prenom}
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      Dr. {apt.docteur?.nom} {apt.docteur?.prenom}
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      Symptômes: {apt.symptoms}
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      Status: {apt.status}
+                    </div>
+                  </div>
+                  <button 
+                    onClick={() => handleCancelAppointment(apt._id)}
+                    className="text-red-500 hover:text-red-700 transition-colors"
+                  >
+                    Annuler
+                  </button>
                 </div>
-                <button className="text-red-500 hover:text-red-700">
-                  Annuler
-                </button>
+              ))}
+            {appointments.filter(apt => 
+              new Date(apt.date).toISOString().split('T')[0] === selectedDate.toISOString().split('T')[0]
+            ).length === 0 && (
+              <div className="text-center text-gray-500">
+                Aucun rendez-vous pour cette date
               </div>
-            ))}
+            )}
           </div>
         </div>
       )}

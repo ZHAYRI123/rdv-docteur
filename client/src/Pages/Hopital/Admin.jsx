@@ -15,6 +15,7 @@ const Admin = () => {
           <SpecialityManagement />
           <br />
           <DoctorManagement />
+          <PatientManagement />
           <Calendar />
         </div>
       </main>
@@ -64,6 +65,7 @@ const StatisticsSection = () => {
     totalAppointments: 0,
     todayAppointments: 0,
     activeDoctors: 0,
+    totalPatients: 0,
     loading: true
   });
 
@@ -76,27 +78,36 @@ const StatisticsSection = () => {
       const token = localStorage.getItem('token');
       
       
-      const rdvResponse = await fetch('http://localhost:5000/rdv/getAllRdv', {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        }
-      });
-
-    
-      const doctorsResponse = await fetch('http://localhost:5000/doctor/all', {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        }
-      });
-
-      if (!rdvResponse.ok || !doctorsResponse.ok) {
+      const [rdvResponse, doctorsResponse, patientsResponse] = await Promise.all([
+        fetch('http://localhost:5000/rdv/getAllRdv', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        }),
+        fetch('http://localhost:5000/doctor/all', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        }),
+        fetch('http://localhost:5000/patient/getAllPatients', {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        })
+      ]);
+  
+      if (!rdvResponse.ok || !doctorsResponse.ok || !patientsResponse.ok) {
         throw new Error('Failed to fetch statistics');
       }
-
-      const appointments = await rdvResponse.json();
-      const doctors = await doctorsResponse.json();
+  
+      const [appointments, doctors, patients] = await Promise.all([
+        rdvResponse.json(),
+        doctorsResponse.json(),
+        patientsResponse.json()
+      ]);
 
       // Get today's date in YYYY-MM-DD format
       const today = new Date().toISOString().split('T')[0];
@@ -120,6 +131,7 @@ const StatisticsSection = () => {
         totalAppointments: appointments.length,
         todayAppointments,
         activeDoctors: doctors.length,
+        totalPatients: patients.length,
         percentageChange,
         loading: false
       });
@@ -149,6 +161,10 @@ const StatisticsSection = () => {
       title: "Médecins Actifs", 
       value: stats.activeDoctors 
     },
+    { 
+      title: "Patients Total", 
+      value: stats.totalPatients 
+    }
   ];
 
   return (
@@ -312,5 +328,111 @@ const DoctorManagement = () => {
   );
 }
 
+const PatientManagement = () => {
+  const [patients, setPatients] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchPatients();
+  }, []);
+
+  const fetchPatients = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:5000/patient/getAllPatients', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setPatients(data);
+      } else {
+        toast.error('Erreur lors du chargement des patients');
+      }
+    } catch (error) {
+      console.error('Fetch error:', error);
+      toast.error('Erreur de connexion au serveur');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    if (window.confirm('Êtes-vous sûr de vouloir supprimer ce patient ?')) {
+      try {
+        const token = localStorage.getItem('token');
+        const response = await fetch(`http://localhost:5000/patient/deletePatient/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          toast.success('Patient supprimé avec succès');
+          fetchPatients();
+        } else {
+          const errorData = await response.text();
+          console.error('Server response:', errorData);
+          toast.error('Erreur lors de la suppression');
+        }
+      } catch (error) {
+        console.error('Delete error:', error);
+        toast.error('Erreur de connexion au serveur');
+      }
+    }
+  };
+
+  if (loading) {
+    return <div>Chargement...</div>;
+  }
+
+  return (
+    <section className="bg-white rounded-lg shadow p-6 mb-8">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-xl font-bold text-gray-800">Gestion des Patients</h2>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Nom</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Prénom</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Email</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Téléphone</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Date de naissance</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Actions</th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {patients.map((patient) => (
+              <tr key={patient._id}>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.nom}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.prenom}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.email}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{patient.telephone}</td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {new Date(patient.dateNaissance).toLocaleDateString()}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <button
+                    onClick={() => handleDelete(patient._id)}
+                    className="text-red-500 hover:text-red-700 transition-colors"
+                  >
+                    Supprimer
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+};
 
 export default Admin;

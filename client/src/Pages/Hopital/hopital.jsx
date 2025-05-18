@@ -35,7 +35,7 @@ const Header = () => {
 const LoginCard = () => {
   const accountTypes = [
     {
-      title: "Administrateur",
+      title: "Administration",
       description: "Accédez aux fonctionnalités de gestion de l'hôpital",
       path: "/login/hospital",
       hoverColor: "blue"
