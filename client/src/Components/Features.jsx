@@ -1,16 +1,33 @@
+import { useNavigate } from 'react-router-dom';
 import iaMed from "../image/aiMedical.png";
 import rdv from "../image/rdv.png";
 import protection from "../image/protection.png";
 
-
 function Features() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (buttonText) => {
+    switch (buttonText) {
+      case "Prendre rendez-vous":
+      case "Accéder à mes documents":
+        navigate('/login/patient');
+        break;
+      case "Commencer la detection":
+        navigate('/login/patient', { 
+          state: { redirectTo: '/ia' } 
+        });
+        break;
+      default:
+        break;
+    }
+  };
+
   const features = [
     {
       title: "Consultation assistée par IA",
-      description: "Notre système d'intelligence artificielle vous guide à travers un processus personnalisé pour identifier vos besoins médicaux. En répondant à quelques questions simples, nous vous aidons à trouver le bon spécialiste et le meilleur créneau pour votre rendez-vous.",
+      description: "Notre système d'intelligence artificielle vous guide à travers un processus personnalisé pour identifier votre maladie en fournissant les symptome dont vous souffrez. Ensuite nous vous aidons à trouver le bon spécialiste et le meilleur créneau pour votre rendez-vous.",
       image: iaMed,
-      buttonText: "Commencer la consultation",
-      imagePosition: "left"
+      buttonText: "Commencer la detection",      imagePosition: "left"
     },
     {
       title: "Prise de rendez-vous directe",
@@ -39,7 +56,10 @@ function Features() {
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">{feature.title}</h2>
               <p className="text-gray-600 mb-4">{feature.description}</p>
-              <button className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors">
+              <button 
+                onClick={() => handleButtonClick(feature.buttonText)}
+                className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors"
+              >
                 {feature.buttonText}
               </button>
             </div>

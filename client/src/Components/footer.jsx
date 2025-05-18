@@ -1,4 +1,28 @@
+import { useNavigate } from 'react-router-dom';
+ 
 function Footer() {
+  const navigate = useNavigate();
+
+  const handleServiceClick = (service) => {
+    switch (service) {
+      case "Prise de RDV":
+      case "Documents Médicaux":
+        navigate('/login/patient');
+        break;
+      case "Consultation IA":
+        navigate('/login/patient', { 
+          state: { redirectTo: '/ia' } 
+        });
+        break;
+      default:
+        break;
+    }
+  };
+  const services = [
+    { name: "Consultation IA", path: "#" },
+    { name: "Prise de RDV", path: "/login/patient" },
+    { name: "Documents Médicaux", path: "/login/patient" }
+  ];
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -22,9 +46,14 @@ function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              {["Consultation IA", "Prise de RDV", "Documents Médicaux"].map((item, index) => (
+              {services.map((service, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">{item}</a>
+                  <button
+                    onClick={() => handleServiceClick(service.name)}
+                    className="text-gray-400 hover:text-blue-500 transition-colors text-left"
+                  >
+                    {service.name}
+                  </button>
                 </li>
               ))}
             </ul>
